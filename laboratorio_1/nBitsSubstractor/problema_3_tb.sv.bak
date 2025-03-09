@@ -1,0 +1,50 @@
+module problema_3_tb();
+    
+    parameter int n = 6; // Bits de entrada
+    
+    logic clk, reset, dec;
+    logic [n - 1:0] count;
+    logic [6:0] segA, segB;
+    
+   
+    problema_3 #(.n(n)) p3 (
+        .clk(clk),
+        .reset(reset),
+        .dec(dec),
+        .count(count),
+        .segA(segA), 
+        .segB(segB)  
+    );
+    
+    always #5 clk = ~clk; 
+    
+    initial begin
+        
+        clk = 0;
+        reset = 1;
+        dec = 0;
+        
+        
+        #10 reset = 0;
+        
+        
+        for (int i = 0; i < (2**n) + 1; i++) begin
+            #10 dec = 1;   // Activar la señal de decremento
+            #10 dec = 0;   // Desactivar la señal de decremento
+        end
+        
+        // Prueba de reset
+        reset = 1;
+        #10 reset = 0;      
+        
+        // Finalización de la simulación
+        #100 $stop;
+    end
+    
+    initial begin
+        // Monitor para visualizar las señales
+        $monitor("Tiempo=%0t | reset=%b | dec=%b | count=%b | segA=%b | segB=%b", 
+                 $time, reset, dec, count, segA, segB);
+    end
+
+endmodule

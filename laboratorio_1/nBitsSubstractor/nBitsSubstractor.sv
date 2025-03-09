@@ -11,10 +11,6 @@ module nBitsSubstractor #(
 	
 	assign b_inv = ~b;
 	assign carry[0] = 1;
-
-	 
-	
-	
 	
 	genvar i;
 	generate
