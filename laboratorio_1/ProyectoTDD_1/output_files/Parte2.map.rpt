@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Parte2
-Mon Mar 10 13:13:32 2025
+Tue Mar 11 15:57:33 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -43,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 10 13:13:32 2025          ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 11 15:57:33 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Parte2                                         ;
-; Top-level Entity Name           ; Parte2                                         ;
+; Top-level Entity Name           ; problema_2                                     ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
 ; Total registers                 ; 0                                              ;
-; Total pins                      ; 13                                             ;
+; Total pins                      ; 16                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; Parte2             ; Parte2             ;
+; Top-level entity name                                                           ; problema_2         ; Parte2             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
 ; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
@@ -156,7 +156,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -167,49 +167,53 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
-; Parte2.vhd                       ; yes             ; User VHDL File  ; C:/ProyectoTDD_1/Parte2.vhd  ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                    ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
+; sum_4.vhd                        ; yes             ; User VHDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd      ;         ;
+; bcd_4.vhd                        ; yes             ; User VHDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd      ;         ;
+; problema_2.vhd                   ; yes             ; User VHDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 4          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 6          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 1          ;
-;     -- 5 input functions                    ; 2          ;
-;     -- 4 input functions                    ; 2          ;
-;     -- <=3 input functions                  ; 1          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 13         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; a[0]~input ;
-; Maximum fan-out                             ; 4          ;
-; Total fan-out                               ; 44         ;
-; Average fan-out                             ; 1.38       ;
-+---------------------------------------------+------------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 7                    ;
+;                                             ;                      ;
+; Combinational ALUT usage for logic          ; 13                   ;
+;     -- 7 input functions                    ; 0                    ;
+;     -- 6 input functions                    ; 1                    ;
+;     -- 5 input functions                    ; 2                    ;
+;     -- 4 input functions                    ; 9                    ;
+;     -- <=3 input functions                  ; 1                    ;
+;                                             ;                      ;
+; Dedicated logic registers                   ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 16                   ;
+;                                             ;                      ;
+; Total DSP Blocks                            ; 0                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; sum_4:parte_sum|y[0] ;
+; Maximum fan-out                             ; 7                    ;
+; Total fan-out                               ; 78                   ;
+; Average fan-out                             ; 1.73                 ;
++---------------------------------------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Parte2                    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |Parte2             ; Parte2      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
+; |problema_2                ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 16   ; 0            ; |problema_2                 ; problema_2  ; work         ;
+;    |bcd_4:parte_bcd|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |problema_2|bcd_4:parte_bcd ; bcd_4       ; work         ;
+;    |sum_4:parte_sum|       ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |problema_2|sum_4:parte_sum ; sum_4       ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,16 +237,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
+; arriav_lcell_comb     ; 14                          ;
+;     normal            ; 14                          ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 1                           ;
-;         4 data inputs ; 2                           ;
+;         4 data inputs ; 9                           ;
 ;         5 data inputs ; 2                           ;
 ;         6 data inputs ; 1                           ;
-; boundary_port         ; 13                          ;
+; boundary_port         ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.50                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -261,25 +266,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Mar 10 13:13:25 2025
+    Info: Processing started: Tue Mar 11 15:57:21 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Parte2 -c Parte2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file parte2.vhd
-    Info (12022): Found design unit 1: Parte2-concurrent File: C:/ProyectoTDD_1/Parte2.vhd Line: 11
-    Info (12023): Found entity 1: Parte2 File: C:/ProyectoTDD_1/Parte2.vhd Line: 3
-Info (12127): Elaborating entity "Parte2" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file sum_4_tb.vhd
+    Info (12022): Found design unit 1: sum_4_tb-behavior File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd Line: 9
+    Info (12023): Found entity 1: sum_4_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file sum_4.vhd
+    Info (12022): Found design unit 1: sum_4-concurrent File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd Line: 11
+    Info (12023): Found entity 1: sum_4 File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file bcd_4.vhd
+    Info (12022): Found design unit 1: bcd_4-behavioral File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd Line: 9
+    Info (12023): Found entity 1: bcd_4 File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file problema_2.vhd
+    Info (12022): Found design unit 1: problema_2-behavioral File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd Line: 13
+    Info (12023): Found entity 1: problema_2 File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd Line: 3
+Info (12127): Elaborating entity "problema_2" for the top level hierarchy
+Info (12128): Elaborating entity "sum_4" for hierarchy "sum_4:parte_sum" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd Line: 37
+Info (12128): Elaborating entity "bcd_4" for hierarchy "bcd_4:parte_bcd" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd Line: 47
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 29 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 6 logic cells
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 13 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4929 megabytes
-    Info: Processing ended: Mon Mar 10 13:13:32 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Processing ended: Tue Mar 11 15:57:33 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 

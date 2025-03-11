@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Mar 10 13:13:32 2025
+Analysis & Synthesis Status : Successful - Tue Mar 11 15:57:33 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Parte2
-Top-level Entity Name : Parte2
+Top-level Entity Name : problema_2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 13
+Total pins : 16
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

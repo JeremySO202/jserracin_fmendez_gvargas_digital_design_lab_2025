@@ -1,0 +1,193 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/simulation/questa
+T_opt
+!s110 1741730060
+VnOU4NQM5L8_bGdWI^QYGf2
+04 8 8 work sum_4_tb behavior 1
+=1-e0d55eabcbc1-67d0b10c-209-6094
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ebcd_4
+Z2 w1741729296
+Z3 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 1
+R1
+Z5 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd
+Z6 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd
+l0
+L3 1
+VX@RX:n=6F@M5HI?ccV?Jn3
+!s100 8G]82NZ2;ObFX73;=80l22
+Z7 OL;C;2023.3;77
+33
+Z8 !s110 1741730059
+!i10b 1
+Z9 !s108 1741730059.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd|
+Z11 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd|
+!i113 0
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R3
+R4
+DEx4 work 5 bcd_4 0 22 X@RX:n=6F@M5HI?ccV?Jn3
+!i122 1
+l10
+L9 25
+VT0l]C]6@3@UfVU[kQBME91
+!s100 <j3kolj@mD[GG<Vh2[NZf3
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eproblema_2
+Z14 w1741729578
+R3
+R4
+!i122 2
+R1
+Z15 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd
+Z16 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd
+l0
+L3 1
+V1b9E6N4a`===D<3SzP]dj0
+!s100 8e1K0@]RD5U[i`WLYdE`:1
+R7
+33
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-2008|-work|work|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd|
+Z18 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd|
+!i113 0
+R12
+R13
+Abehavioral
+R3
+R4
+DEx4 work 10 problema_2 0 22 1b9E6N4a`===D<3SzP]dj0
+!i122 2
+l35
+L13 41
+VY:hYX7BamKSQa<kVhOF6_1
+!s100 z]`l21e8H_DPh`=9g;dFh2
+R7
+33
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 0
+R12
+R13
+Esum_4
+R2
+R3
+R4
+!i122 0
+R1
+Z19 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd
+Z20 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd
+l0
+L3 1
+Vzh5TabaA52I;2_UTMz]^_2
+!s100 ^=RY5?E]kZ@AYS[_PD?B90
+R7
+33
+Z21 !s110 1741730058
+!i10b 1
+Z22 !s108 1741730058.000000
+Z23 !s90 -reportprogress|300|-2008|-work|work|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd|
+Z24 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd|
+!i113 0
+R12
+R13
+Aconcurrent
+R3
+R4
+DEx4 work 5 sum_4 0 22 zh5TabaA52I;2_UTMz]^_2
+!i122 0
+l14
+L11 29
+Vn8;=O@CA4>P8d^[00Fcnd3
+!s100 HYJ9dln;_SkYlKjDA<X@]2
+R7
+33
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 0
+R12
+R13
+Esum_4_tb
+R2
+Z25 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
+Z26 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
+R3
+R4
+!i122 3
+R1
+Z27 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd
+Z28 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd
+l0
+L6 1
+VI2:?GfO616Zi8WKRWUKIa1
+!s100 1Pc<mYimhUNnCXScfU:[A0
+R7
+33
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-2008|-work|work|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd|
+Z30 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd|
+!i113 0
+R12
+R13
+Abehavior
+R25
+R26
+R3
+R4
+DEx4 work 8 sum_4_tb 0 22 I2:?GfO616Zi8WKRWUKIa1
+!i122 3
+l25
+L9 58
+V[kmAW3[?CHg>PhVh=0eii0
+!s100 ^71=U^dX4UoC^?;GL5X8o2
+R7
+33
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 0
+R12
+R13

@@ -1,11 +1,11 @@
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 
 entity problema_2 is
-	port (n1, n2 : in STD_LOGIC_VECTOR(3 down to 0);
+	port (n1, n2 : in STD_LOGIC_VECTOR(3 downto 0);
 	 
 	 cout : out STD_LOGIC;
 	 
-	 y : out STD_LOGIC_VECTOR(6 down to 0));
+	 y : out STD_LOGIC_VECTOR(6 downto 0));
 	 
 	
 	end problema_2;
@@ -29,7 +29,7 @@ architecture behavioral of problema_2 is
 	end component;
 	
 	--variables temporales
-	signal s: STD_LOGIC_VECTOR(3 down to 0);
+	signal s: STD_LOGIC_VECTOR(3 downto 0);
 	signal vout : STD_LOGIC;
 	
 	begin
