@@ -1,0 +1,100 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s12c _opt
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/simulation/questa
+T_opt
+!s110 1741658414
+V8VD762a;F_88KQZgoAYSR2
+Z3 04 12 4 work bcd_4bits_tb fast 0
+=1-e0d55eabcbc1-67cf992d-2cc-15e0
+R1
+Z4 !s12b OEM100
+Z5 !s124 OEM10U2 
+Z6 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2023.3;77
+R2
+T_opt1
+!s110 1741659582
+V`1GmLJS:N?P[VKh<jU:X02
+R3
+=1-e0d55eabcbc1-67cf9dbe-1b3-4c28
+R1
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+vbcd_4bits
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 !s110 1741659581
+!i10b 1
+!s100 Ekc>dm@W@PGN0N;XLmoal3
+IjWU>>@T2j?3E8=3J:@]G;2
+S1
+R2
+w1741659544
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv
+!i122 0
+L0 1 29
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1741659580.000000
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv|
+!i113 0
+Z13 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+vbcd_4bits_tb
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv
+R9
+R10
+!i10b 1
+!s100 ]ImHJR7=j60gDU[5ZWkM01
+IO_V<ilWNIZh@DaFHAU6><3
+S1
+R2
+w1741659488
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv
+!i122 1
+L0 1 46
+R11
+R12
+r1
+!s85 0
+31
+!s108 1741659581.000000
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv|
+!i113 0
+R13
+R14
+R7

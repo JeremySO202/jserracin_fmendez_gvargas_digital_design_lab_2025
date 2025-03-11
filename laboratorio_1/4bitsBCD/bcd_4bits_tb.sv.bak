@@ -1,0 +1,50 @@
+module tb_bcd_4bits;
+    logic [3:0] num;
+    logic [6:0] y;
+
+    // Instancia del módulo bajo prueba (DUT)
+    bcd_4bits dut (
+        .num(num),
+        .y(y)
+    );
+
+    // Matriz con los valores esperados de salida para cada entrada (0 a 15)
+    logic [6:0] expected_outputs [15:0] = '{
+        7'b0000001,  // 0
+        7'b1001111,  // 1
+        7'b0010010,  // 2
+        7'b0000110,  // 3
+        7'b1001100,  // 4
+        7'b0100100,  // 5
+        7'b0100000,  // 6
+        7'b0001111,  // 7
+        7'b0000000,  // 8
+        7'b0001100,  // 9
+        7'b1111111,  // 10
+        7'b1111111,  // 11
+        7'b1111111,  // 12
+        7'b1111111,  // 13
+        7'b1111111,  // 14
+        7'b1111111   // 15
+    };
+
+    initial begin
+        $display("Iniciando pruebas...");
+
+        // Iterar sobre todas las combinaciones de entrada (0 a 15)
+        for (int i = 0; i < 16; i++) begin
+            num = i; // Asignar entrada
+            #10; // Esperar para estabilización
+
+            // Verificar si la salida es la esperada
+            if (y !== expected_outputs[i]) begin
+                $error("Error en num=%d: esperado %b, obtenido %b", num, expected_outputs[i], y);
+            end else begin
+                $display("num=%d → y=%b ✅", num, y);
+            end
+        end
+
+        $display("Pruebas completadas.");
+        $finish;
+    end
+endmodule
