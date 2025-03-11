@@ -1,0 +1,41 @@
+|bcd_4bits
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[3] => y.IN1
+num[2] => y.IN1
+num[2] => y.IN1
+num[2] => y.IN1
+num[2] => y.IN1
+num[2] => y.IN1
+num[2] => y.IN1
+num[2] => y.IN1
+num[2] => y.IN1
+num[1] => y.IN0
+num[1] => y.IN0
+num[1] => y.IN0
+num[1] => y.IN0
+num[0] => y.IN1
+num[0] => y.IN1
+num[0] => y.IN1
+num[0] => y.IN1
+y[6] << y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] << y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] << y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] << y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] << y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] << y.DB_MAX_OUTPUT_PORT_TYPE
+y[0] << y.DB_MAX_OUTPUT_PORT_TYPE
+
+
