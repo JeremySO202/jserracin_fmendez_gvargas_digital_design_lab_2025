@@ -1,0 +1,39 @@
+library IEEE; use IEEE.STD_LOGIC_1164.all;
+
+entity Parte2 is
+	port(a, b: in STD_LOGIC_VECTOR(3 downto 0);
+	
+	cout: out STD_LOGIC;
+	y : out STD_LOGIC_VECTOR(3 downto 0));
+	
+	
+end;
+architecture concurrent of Parte2 is
+	signal v0, v1, v2 : STD_LOGIC;
+
+begin
+
+--Para la de menor grado (digamos), el ultimo
+
+	y(0) <= a(0) xor b(0);
+	v0 <= a(0) and b(0);
+
+	--Para la de menor grado+1 ,(el penultimo)
+
+	y(1) <= (a(1) xor b(1) ) xor v0;
+	v1 <= (a(1) and b(1) ) or  (a(1) and v0) or (b(1) and v0);
+	--v1 <= (a(1) and b(1) ) or ( a(1)xor b(1) and v0) se supone que esto es lo mismo que eso pero sigo sin poder entender pq 
+
+	--Para el antepenultimo, por el tercero de atras a adelante
+	--Tercer bit(supongo-creo)
+
+	y(2) <= (a(2) xor b(2) ) xor v1;
+	v2 <= (a(2) and b(2)) or (a(2) and v1) or (a(2) and v1);
+
+	--Ya para el ultimo 
+
+	y(3) <= (a(3) xor b(3)) xor v2;
+	cout <= (a(3) and b(3)) or (a(3) and v2) or (a(3) and v2);
+
+	--Tmb se podría hacer un for e ir iterando por cada uno pero como son solo 4 podemos dejarlo así por mientras :))
+end;
