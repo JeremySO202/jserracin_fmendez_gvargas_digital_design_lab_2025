@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/simulation/questa
 T_opt
-!s110 1741485409
-Vj=:BP4bDF]D]=<LHzZjPg0
+!s110 1741652835
+VC:e97[COL>cJh_FQKeJ742
 04 13 4 work problema_3_tb fast 0
-=1-e0d55eabcbc1-67ccf561-1f4-4ec8
+=1-e0d55eabcbc1-67cf8363-f4-3060
 R0
 !s12b OEM100
 !s124 OEM10U10 
@@ -26,7 +26,7 @@ OL;O;2023.3;77
 vbcd_6bits
 2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1741485408
+Z4 !s110 1741652834
 !i10b 1
 !s100 943Y]z6i<WTmTONjNA1aT3
 Ig0nzTUG2eV]dSIk0Oe7bP0
@@ -42,7 +42,7 @@ Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z7 !s108 1741485408.000000
+Z7 !s108 1741652834.000000
 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv|
 !i113 0
@@ -68,7 +68,7 @@ R6
 r1
 !s85 0
 31
-R7
+Z10 !s108 1741652833.000000
 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv|
 !i113 0
@@ -79,7 +79,7 @@ nfull@adder
 vnBitsSubstractor
 2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv
 R3
-R4
+Z11 !s110 1741652833
 !i10b 1
 !s100 T]LeJcN7NoT4;82V@c67O0
 IJL`K4AY`H>DIla<M5:JgQ0
@@ -95,7 +95,7 @@ R6
 r1
 !s85 0
 31
-R7
+R10
 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv|
 !i113 0
@@ -106,23 +106,23 @@ nn@bits@substractor
 vproblema_3
 2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv
 R3
-!s110 1741485407
+R11
 !i10b 1
-!s100 >78e7OLGjMf<[=f69n17n2
-IOQV::H;R@^:R29KL6QzUZ0
+!s100 X[6F37_RI6ZzE@H6@KS0R2
+IfN0ER5a2O1X<C^cbS4]WV1
 S1
 R1
-w1741485283
+w1741652718
 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv
 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv
 !i122 0
-Z10 L0 1 47
+L0 1 49
 R5
 R6
 r1
 !s85 0
 31
-!s108 1741485407.000000
+R10
 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv|
 !i113 0
@@ -134,15 +134,15 @@ vproblema_3_tb
 R3
 R4
 !i10b 1
-!s100 na1gNV:H`e1znnPJQC^V>3
-If`>EEG`D[J`ehF4<C1jS01
+!s100 e9<]MAXF^PR>SXeVlPEgP3
+IKmE:GTHH>62MR9EN`MCQJ0
 S1
 R1
-w1741485386
+w1741652809
 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv
 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv
 !i122 4
-R10
+L0 1 79
 R5
 R6
 r1

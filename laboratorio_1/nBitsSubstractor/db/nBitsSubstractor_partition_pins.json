@@ -84,6 +84,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "num1",
+					"strict" : false
+				},
+				{
+					"name" : "num2",
+					"strict" : false
+				},
+				{
+					"name" : "num3",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				}

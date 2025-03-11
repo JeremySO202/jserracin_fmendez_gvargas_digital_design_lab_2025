@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nBitsSubstractor
-Sat Mar  8 20:01:04 2025
+Mon Mar 10 18:30:46 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -47,14 +47,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Mar  8 20:01:04 2025          ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 10 18:30:46 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; nBitsSubstractor                               ;
 ; Top-level Entity Name           ; problema_3                                     ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
 ; Total registers                 ; 6                                              ;
-; Total pins                      ; 22                                             ;
+; Total pins                      ; 25                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -183,31 +183,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 9             ;
-;                                             ;               ;
-; Combinational ALUT usage for logic          ; 16            ;
-;     -- 7 input functions                    ; 0             ;
-;     -- 6 input functions                    ; 1             ;
-;     -- 5 input functions                    ; 1             ;
-;     -- 4 input functions                    ; 8             ;
-;     -- <=3 input functions                  ; 6             ;
-;                                             ;               ;
-; Dedicated logic registers                   ; 6             ;
-;                                             ;               ;
-; I/O pins                                    ; 22            ;
-;                                             ;               ;
-; Total DSP Blocks                            ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; count[0]~reg0 ;
-; Maximum fan-out                             ; 14            ;
-; Total fan-out                               ; 114           ;
-; Average fan-out                             ; 1.73          ;
-+---------------------------------------------+---------------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 18         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 35         ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 1          ;
+;     -- 5 input functions                    ; 1          ;
+;     -- 4 input functions                    ; 17         ;
+;     -- <=3 input functions                  ; 16         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 6          ;
+;                                             ;            ;
+; I/O pins                                    ; 25         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; count[0]~2 ;
+; Maximum fan-out                             ; 14         ;
+; Total fan-out                               ; 180        ;
+; Average fan-out                             ; 1.98       ;
++---------------------------------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,10 +215,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name      ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+------------------+--------------+
-; |problema_3                           ; 16 (5)              ; 6 (6)                     ; 0                 ; 0          ; 22   ; 0            ; |problema_3                                                     ; problema_3       ; work         ;
+; |problema_3                           ; 35 (24)             ; 6 (6)                     ; 0                 ; 0          ; 25   ; 0            ; |problema_3                                                     ; problema_3       ; work         ;
 ;    |bcd_6bits:bcd|                    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |problema_3|bcd_6bits:bcd                                       ; bcd_6bits        ; work         ;
 ;    |nBitsSubstractor:subs|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |problema_3|nBitsSubstractor:subs                               ; nBitsSubstractor ; work         ;
-;       |fullAdder:adder_loop[5].adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[5].adder ; fullAdder        ; work         ;
+;       |fullAdder:adder_loop[3].adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[3].adder ; fullAdder        ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -284,19 +284,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 6                           ;
 ;     CLR               ; 6                           ;
-; arriav_lcell_comb     ; 19                          ;
-;     normal            ; 19                          ;
+; arriav_lcell_comb     ; 39                          ;
+;     normal            ; 39                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 8                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 17                          ;
 ;         5 data inputs ; 1                           ;
 ;         6 data inputs ; 1                           ;
-; boundary_port         ; 22                          ;
+; boundary_port         ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.11                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.19                        ;
 +-----------------------+-----------------------------+
 
 
@@ -315,7 +315,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sat Mar  8 20:00:54 2025
+    Info: Processing started: Mon Mar 10 18:30:36 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nBitsSubstractor -c nBitsSubstractor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -333,28 +333,35 @@ Info (12021): Found 1 design units, including 1 entities, in source file fulladd
     Info (12023): Found entity 1: fullAdder File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bcd_6bits.sv
     Info (12023): Found entity 1: bcd_6bits File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/adder.sv Line: 1
 Info (12127): Elaborating entity "problema_3" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at problema_3.sv(37): truncated value with size 32 to match size of target (6) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at problema_3.sv(39): truncated value with size 32 to match size of target (6) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 39
 Info (12128): Elaborating entity "nBitsSubstractor" for hierarchy "nBitsSubstractor:subs" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 23
 Info (12128): Elaborating entity "fullAdder" for hierarchy "nBitsSubstractor:subs|fullAdder:adder_loop[0].adder" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv Line: 24
 Info (12128): Elaborating entity "bcd_6bits" for hierarchy "bcd_6bits:bcd" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 29
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "bcd_6bits:bcd|Ram0" is uninferred due to inappropriate RAM size File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 7
     Info (276004): RAM logic "bcd_6bits:bcd|Ram1" is uninferred due to inappropriate RAM size File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 7
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "count[0]~reg0" is converted into an equivalent circuit using register "count[0]~reg0_emulated" and latch "count[0]~1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[1]~reg0" is converted into an equivalent circuit using register "count[1]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[2]~reg0" is converted into an equivalent circuit using register "count[2]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[3]~reg0" is converted into an equivalent circuit using register "count[3]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[4]~reg0" is converted into an equivalent circuit using register "count[4]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[5]~reg0" is converted into an equivalent circuit using register "count[5]~reg0_emulated" and latch "count[5]~15" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "segB[5]" is stuck at GND File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 16 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info (21061): Implemented 35 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Sat Mar  8 20:01:04 2025
+    Info: Processing ended: Mon Mar 10 18:30:46 2025
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:25
 
 
