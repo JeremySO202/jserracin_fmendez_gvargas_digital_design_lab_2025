@@ -1,0 +1,28 @@
+|Parte2
+a[0] => y.IN0
+a[0] => v0.IN0
+a[1] => y.IN0
+a[1] => v1.IN0
+a[1] => v1.IN1
+a[2] => y.IN0
+a[2] => v2.IN0
+a[2] => v2.IN1
+a[3] => y.IN0
+a[3] => cout.IN0
+a[3] => cout.IN1
+b[0] => y.IN1
+b[0] => v0.IN1
+b[1] => y.IN1
+b[1] => v1.IN1
+b[1] => v1.IN1
+b[2] => y.IN1
+b[2] => v2.IN1
+b[3] => y.IN1
+b[3] => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
