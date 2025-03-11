@@ -1,5 +1,5 @@
 Flow report for nBitsSubstractor
-Mon Mar 10 18:31:50 2025
+Tue Mar 11 17:11:44 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Mon Mar 10 18:31:50 2025          ;
+; Flow Status                     ; Successful - Tue Mar 11 17:11:44 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; nBitsSubstractor                               ;
 ; Top-level Entity Name           ; problema_3                                     ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/10/2025 18:30:36 ;
+; Start date & time ; 03/11/2025 17:10:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; nBitsSubstractor    ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value    ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 247207020972993.174165303622020        ; --               ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 247207020972993.174173463013452        ; --               ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; problema_3_tb  ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; problema_3_tb                          ; --               ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --               ; --          ; eda_simulation ;
@@ -105,12 +105,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4874 MB             ; 00:00:24                           ;
-; Fitter               ; 00:00:45     ; 1.0                     ; 6955 MB             ; 00:02:00                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 5215 MB             ; 00:00:07                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4866 MB             ; 00:00:25                           ;
+; Fitter               ; 00:00:44     ; 1.0                     ; 6955 MB             ; 00:01:57                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 5215 MB             ; 00:00:07                           ;
 ; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 5356 MB             ; 00:00:05                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4743 MB             ; 00:00:01                           ;
-; Total                ; 00:01:08     ; --                      ; --                  ; 00:02:37                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:02:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
