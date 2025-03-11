@@ -1,0 +1,47 @@
+module problema_3#(
+    parameter int n = 2
+)
+
+(
+	input logic clk, reset, dec,
+	output logic [n:0] count,  
+	output logic [6:0] segA, segB
+);
+
+	
+	logic [n - 1:0] a,b,s;
+	logic rgr;
+	
+	assign a = count;a
+	assign b = 1;
+	
+	nBitsSubstractor #(.n(n)) subs(
+		.a(a),
+		.b(b),
+		.s(s),
+		.cout(rgr)
+	);
+	
+	bcd_6bits bcd(
+		.bits(count),
+		.segA(segA), 
+		.segB(segB)
+	);
+
+	always_ff @(posedge clk or posedge reset) begin
+	
+		if(reset)
+			count <= 0;
+		else begin
+			if (dec) begin
+			
+				if(!rgr)
+					count <= '1;
+				else
+					count <= s;
+			end
+		end
+			
+	end
+
+endmodule
