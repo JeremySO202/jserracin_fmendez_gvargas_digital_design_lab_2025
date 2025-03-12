@@ -6,6 +6,7 @@ module bcd_4bits
 
 	logic a,b,c,d;
 	
+	//variables para facil manejo de las entradas
 	assign a = num[0];
 	assign b = num[1];
 	assign c = num[2];
@@ -26,7 +27,8 @@ module bcd_4bits
 	assign y_A[6] = ~a&~b&~c&~d|~a&~b&~c&d|~a&b&c&d|a&~b&c&~d|a&~b&c&d;
 	
 	assign y_B[0] = a&~b&c&~d|a&~b&c&d|a&b&~c&~d|a&b&~c&d|a&b&c&~d|a&b&c&d;
-						
+	
+	//Siempre encendido					
 	assign y_B[1] = 0;
 						
 	assign y_B[2] = 0;
@@ -36,7 +38,8 @@ module bcd_4bits
 	assign y_B[4] = a&~b&c&~d|a&~b&c&d|a&b&~c&~d|a&b&~c&d|a&b&c&~d|a&b&c&d;
 						
 	assign y_B[5] = a&~b&c&~d|a&~b&c&d|a&b&~c&~d|a&b&~c&d|a&b&c&~d|a&b&c&d;
-
+	
+	//Siempre apagado
 	assign y_B[6] = 1;
 
 

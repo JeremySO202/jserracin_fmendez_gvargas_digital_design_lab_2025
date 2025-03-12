@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nBitsSubstractor
-Mon Mar 10 18:30:46 2025
+Wed Mar 12 08:04:05 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 10 18:30:46 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 12 08:04:05 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; nBitsSubstractor                               ;
 ; Top-level Entity Name           ; problema_3                                     ;
@@ -159,7 +159,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -171,16 +171,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; problema_3.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv       ;         ;
-; nBitsSubstractor.sv              ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv ;         ;
-; fullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv        ;         ;
-; bcd_6bits.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv        ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; problema_3.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv       ;         ;
+; nBitsSubstractor.sv              ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv ;         ;
+; fullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv        ;         ;
+; bcd_6bits.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv        ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -315,42 +315,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Mar 10 18:30:36 2025
+    Info: Processing started: Wed Mar 12 08:03:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nBitsSubstractor -c nBitsSubstractor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file problema_3_tb.sv
-    Info (12023): Found entity 1: problema_3_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv Line: 1
+    Info (12023): Found entity 1: problema_3_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file problema_3.sv
-    Info (12023): Found entity 1: problema_3 File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 1
+    Info (12023): Found entity 1: problema_3 File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbitssubstractor_tb.sv
-    Info (12023): Found entity 1: nBitsSubstractor_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor_tb.sv Line: 1
+    Info (12023): Found entity 1: nBitsSubstractor_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbitssubstractor.sv
-    Info (12023): Found entity 1: nBitsSubstractor File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv Line: 1
+    Info (12023): Found entity 1: nBitsSubstractor File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder_tb.sv
-    Info (12023): Found entity 1: fullAdder_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder_tb.sv Line: 1
+    Info (12023): Found entity 1: fullAdder_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: fullAdder File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv Line: 1
+    Info (12023): Found entity 1: fullAdder File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bcd_6bits.sv
-    Info (12023): Found entity 1: bcd_6bits File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 1
+    Info (12023): Found entity 1: bcd_6bits File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 1
 Info (12127): Elaborating entity "problema_3" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at problema_3.sv(37): truncated value with size 32 to match size of target (6) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 37
-Warning (10230): Verilog HDL assignment warning at problema_3.sv(39): truncated value with size 32 to match size of target (6) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 39
-Info (12128): Elaborating entity "nBitsSubstractor" for hierarchy "nBitsSubstractor:subs" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 23
-Info (12128): Elaborating entity "fullAdder" for hierarchy "nBitsSubstractor:subs|fullAdder:adder_loop[0].adder" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv Line: 24
-Info (12128): Elaborating entity "bcd_6bits" for hierarchy "bcd_6bits:bcd" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at problema_3.sv(37): truncated value with size 32 to match size of target (6) File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at problema_3.sv(39): truncated value with size 32 to match size of target (6) File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 39
+Info (12128): Elaborating entity "nBitsSubstractor" for hierarchy "nBitsSubstractor:subs" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 23
+Info (12128): Elaborating entity "fullAdder" for hierarchy "nBitsSubstractor:subs|fullAdder:adder_loop[0].adder" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv Line: 24
+Info (12128): Elaborating entity "bcd_6bits" for hierarchy "bcd_6bits:bcd" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 29
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276004): RAM logic "bcd_6bits:bcd|Ram0" is uninferred due to inappropriate RAM size File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 7
-    Info (276004): RAM logic "bcd_6bits:bcd|Ram1" is uninferred due to inappropriate RAM size File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 7
+    Info (276004): RAM logic "bcd_6bits:bcd|Ram0" is uninferred due to inappropriate RAM size File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 7
+    Info (276004): RAM logic "bcd_6bits:bcd|Ram1" is uninferred due to inappropriate RAM size File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv Line: 7
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "count[0]~reg0" is converted into an equivalent circuit using register "count[0]~reg0_emulated" and latch "count[0]~1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
-    Warning (13310): Register "count[1]~reg0" is converted into an equivalent circuit using register "count[1]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
-    Warning (13310): Register "count[2]~reg0" is converted into an equivalent circuit using register "count[2]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
-    Warning (13310): Register "count[3]~reg0" is converted into an equivalent circuit using register "count[3]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
-    Warning (13310): Register "count[4]~reg0" is converted into an equivalent circuit using register "count[4]~reg0_emulated" and latch "count[1]~5" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
-    Warning (13310): Register "count[5]~reg0" is converted into an equivalent circuit using register "count[5]~reg0_emulated" and latch "count[5]~15" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[0]~reg0" is converted into an equivalent circuit using register "count[0]~reg0_emulated" and latch "count[0]~1" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[1]~reg0" is converted into an equivalent circuit using register "count[1]~reg0_emulated" and latch "count[1]~5" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[2]~reg0" is converted into an equivalent circuit using register "count[2]~reg0_emulated" and latch "count[1]~5" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[3]~reg0" is converted into an equivalent circuit using register "count[3]~reg0_emulated" and latch "count[1]~5" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[4]~reg0" is converted into an equivalent circuit using register "count[4]~reg0_emulated" and latch "count[1]~5" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
+    Warning (13310): Register "count[5]~reg0" is converted into an equivalent circuit using register "count[5]~reg0_emulated" and latch "count[5]~15" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 40
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "segB[5]" is stuck at GND File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 9
+    Warning (13410): Pin "segB[5]" is stuck at GND File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -359,9 +359,9 @@ Info (21057): Implemented 60 device resources after synthesis - the final resour
     Info (21059): Implemented 20 output pins
     Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Mon Mar 10 18:30:46 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Wed Mar 12 08:04:05 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:15
 
 

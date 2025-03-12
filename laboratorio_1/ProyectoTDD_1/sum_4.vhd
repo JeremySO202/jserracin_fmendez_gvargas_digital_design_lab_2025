@@ -1,5 +1,7 @@
 library IEEE; use IEEE.STD_LOGIC_1164.all;
 
+--sumador de 4 bits
+
 entity sum_4 is
 	port(a, b: in STD_LOGIC_VECTOR(3 downto 0);
 	

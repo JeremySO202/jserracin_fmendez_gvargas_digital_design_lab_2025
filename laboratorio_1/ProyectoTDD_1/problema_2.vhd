@@ -1,5 +1,6 @@
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 
+--unión del bcd y suma
 entity problema_2 is
 	port (n1, n2 : in STD_LOGIC_VECTOR(3 downto 0);
 	 
