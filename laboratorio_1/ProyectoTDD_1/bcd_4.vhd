@@ -1,5 +1,7 @@
 library IEEE; use IEEE.STD_LOGIC_1164.all;
 
+-- archivo para pasar los numero de binario a hexadecimal para poder representarlos en el 7segmentos o fpga
+
 entity bcd_4 is 
 	port( bits: in STD_LOGIC_VECTOR(3 downto 0);
 	seg0 : out STD_LOGIC_VECTOR(6 downto 0));

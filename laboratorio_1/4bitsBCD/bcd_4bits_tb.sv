@@ -11,12 +11,10 @@ module bcd_4bits_tb;
         .y_B(y_B)
     );
 
-    // Valores esperados (puedes modificarlos)
     logic [6:0] expected_y_A [0:15];  
     logic [6:0] expected_y_B [0:15];  
 
     initial begin
-        // === Modifica estos valores como necesites ===
         expected_y_A = '{
             7'b0000001, 7'b1001111, 7'b0010010, 7'b0000110, 
             7'b1001100, 7'b0100100, 7'b0100000, 7'b0001111, 
@@ -51,8 +49,7 @@ module bcd_4bits_tb;
                 $display("num=%b -> y_B=%b ✅", num, y_B);
             end
         end
-
-        $display("Pruebas completadas.");
+		  
         $finish;
     end
 endmodule

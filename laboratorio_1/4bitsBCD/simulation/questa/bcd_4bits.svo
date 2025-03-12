@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "03/11/2025 17:46:17"
+// DATE "03/12/2025 08:09:28"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -33,9 +33,9 @@ module bcd_4bits (
 	num,
 	y_A,
 	y_B);
-input 	[0:3] num;
-output 	[0:6] y_A;
-output 	[0:6] y_B;
+input 	logic [0:3] num ;
+output 	logic [0:6] y_A ;
+output 	logic [0:6] y_B ;
 
 // Design Ports Information
 // y_A[6]	=>  Location: PIN_AH18,	 I/O Standard: 2.5 V,	 Current Strength: Default
