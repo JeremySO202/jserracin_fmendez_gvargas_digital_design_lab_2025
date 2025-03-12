@@ -1,0 +1,96 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do Parte2_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:54:18 on Mar 11,2025
+# vcom -reportprogress 300 -2008 -work work D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity sum_4
+# -- Compiling architecture concurrent of sum_4
+# End time: 15:54:18 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:54:19 on Mar 11,2025
+# vcom -reportprogress 300 -2008 -work work D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bcd_4
+# -- Compiling architecture behavioral of bcd_4
+# End time: 15:54:19 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:54:19 on Mar 11,2025
+# vcom -reportprogress 300 -2008 -work work D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity problema_2
+# -- Compiling architecture behavioral of problema_2
+# End time: 15:54:19 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:54:19 on Mar 11,2025
+# vcom -reportprogress 300 -2008 -work work D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity sum_4_tb
+# -- Compiling architecture behavior of sum_4_tb
+# End time: 15:54:19 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  sum_4_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" sum_4_tb 
+# Start time: 15:54:19 on Mar 11,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sum_4_tb(behavior)#1
+# Loading work.sum_4(concurrent)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 15:54:36 on Mar 11,2025, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 1

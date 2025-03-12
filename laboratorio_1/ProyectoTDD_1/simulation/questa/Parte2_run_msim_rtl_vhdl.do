@@ -1,0 +1,19 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4.vhd}
+vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/bcd_4.vhd}
+vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/problema_2.vhd}
+
+vcom -2008 -work work {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/ProyectoTDD_1/sum_4_tb.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  sum_4_tb
+
+add wave *
+view structure
+view signals
+run -all

@@ -1,0 +1,182 @@
+|problema_3
+reset => count[0].IN1
+reset => count[4].IN1
+reset => count[5].IN0
+reset => count[5].IN1
+reset => count[4].IN1
+reset => count[0].IN1
+dec => count[0]~reg0.CLK
+dec => count[1]~reg0.CLK
+dec => count[2]~reg0.CLK
+dec => count[3]~reg0.CLK
+dec => count[4]~reg0.CLK
+dec => count[5]~reg0.CLK
+num1 => count[0].IN1
+num1 => count[4].IN0
+num1 => count[5].IN1
+num1 => count[5].IN1
+num1 => count[4].IN1
+num1 => count[0].IN0
+num2 => count[0].IN1
+num2 => count[4].IN1
+num2 => count[5].IN0
+num2 => count[4].IN0
+num3 => count[4].IN1
+num3 => count[5].IN1
+count[0] << count[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] << count[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] << count[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] << count[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] << count[4].DB_MAX_OUTPUT_PORT_TYPE
+count[5] << count[5].DB_MAX_OUTPUT_PORT_TYPE
+segA[0] << bcd_6bits:bcd.segA[0]
+segA[1] << bcd_6bits:bcd.segA[1]
+segA[2] << bcd_6bits:bcd.segA[2]
+segA[3] << bcd_6bits:bcd.segA[3]
+segA[4] << bcd_6bits:bcd.segA[4]
+segA[5] << bcd_6bits:bcd.segA[5]
+segA[6] << bcd_6bits:bcd.segA[6]
+segB[0] << bcd_6bits:bcd.segB[0]
+segB[1] << bcd_6bits:bcd.segB[1]
+segB[2] << bcd_6bits:bcd.segB[2]
+segB[3] << bcd_6bits:bcd.segB[3]
+segB[4] << bcd_6bits:bcd.segB[4]
+segB[5] << bcd_6bits:bcd.segB[5]
+segB[6] << bcd_6bits:bcd.segB[6]
+
+
+|problema_3|nBitsSubstractor:subs
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+b[0] => b_inv[0].IN1
+b[1] => b_inv[1].IN1
+b[2] => b_inv[2].IN1
+b[3] => b_inv[3].IN1
+b[4] => b_inv[4].IN1
+b[5] => b_inv[5].IN1
+s[0] <= fullAdder:adder_loop[0].adder.s
+s[1] <= fullAdder:adder_loop[1].adder.s
+s[2] <= fullAdder:adder_loop[2].adder.s
+s[3] <= fullAdder:adder_loop[3].adder.s
+s[4] <= fullAdder:adder_loop[4].adder.s
+s[5] <= fullAdder:adder_loop[5].adder.s
+cout <= fullAdder:adder_loop[5].adder.cout
+
+
+|problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[0].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[1].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[2].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[3].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[4].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema_3|nBitsSubstractor:subs|fullAdder:adder_loop[5].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema_3|bcd_6bits:bcd
+bits[0] => Ram0.RADDR
+bits[0] => Ram1.RADDR
+bits[1] => Ram0.RADDR1
+bits[1] => Ram1.RADDR1
+bits[2] => Ram0.RADDR2
+bits[2] => Ram1.RADDR2
+bits[3] => Ram0.RADDR3
+bits[3] => Ram1.RADDR3
+bits[4] => Ram0.RADDR4
+bits[4] => Ram1.RADDR4
+bits[5] => Ram0.RADDR5
+bits[5] => Ram1.RADDR5
+segA[0] <= Ram0.DATAOUT
+segA[1] <= Ram0.DATAOUT1
+segA[2] <= Ram0.DATAOUT2
+segA[3] <= Ram0.DATAOUT3
+segA[4] <= Ram0.DATAOUT4
+segA[5] <= Ram0.DATAOUT5
+segA[6] <= Ram0.DATAOUT6
+segB[0] <= Ram1.DATAOUT
+segB[1] <= Ram1.DATAOUT1
+segB[2] <= Ram1.DATAOUT2
+segB[3] <= Ram1.DATAOUT3
+segB[4] <= Ram1.DATAOUT4
+segB[5] <= Ram1.DATAOUT5
+segB[6] <= Ram1.DATAOUT6
+
+

@@ -1,0 +1,243 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do nBitsSubstractor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:27:13 on Mar 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3.sv 
+# -- Compiling module problema_3
+# 
+# Top level modules:
+# 	problema_3
+# End time: 18:27:13 on Mar 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:27:13 on Mar 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/nBitsSubstractor.sv 
+# -- Compiling module nBitsSubstractor
+# 
+# Top level modules:
+# 	nBitsSubstractor
+# End time: 18:27:13 on Mar 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:27:13 on Mar 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/fullAdder.sv 
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# End time: 18:27:14 on Mar 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:27:14 on Mar 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/bcd_6bits.sv 
+# -- Compiling module bcd_6bits
+# 
+# Top level modules:
+# 	bcd_6bits
+# End time: 18:27:14 on Mar 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:27:14 on Mar 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv 
+# -- Compiling module problema_3_tb
+# 
+# Top level modules:
+# 	problema_3_tb
+# End time: 18:27:14 on Mar 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  problema_3_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" problema_3_tb 
+# Start time: 18:27:14 on Mar 10,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.problema_3_tb(fast)
+# Loading work.problema_3(fast)
+# Loading work.nBitsSubstractor(fast)
+# Loading work.fullAdder(fast)
+# Loading work.bcd_6bits(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Tiempo=0 | reset=1 | dec=0 | num1=0 | num2=0 | num3=0 | count=000000 | segA=0000001 | segB=0000001
+# Tiempo=10 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000000 | segA=0000001 | segB=0000001
+# Tiempo=20 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111111 | segA=0111000 | segB=0000110
+# Tiempo=30 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111111 | segA=0111000 | segB=0000110
+# Tiempo=40 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111110 | segA=0110000 | segB=0000110
+# Tiempo=50 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111110 | segA=0110000 | segB=0000110
+# Tiempo=60 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111101 | segA=1000010 | segB=0000110
+# Tiempo=70 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111101 | segA=1000010 | segB=0000110
+# Tiempo=80 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111100 | segA=0110001 | segB=0000110
+# Tiempo=90 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111100 | segA=0110001 | segB=0000110
+# Tiempo=100 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111011 | segA=1100000 | segB=0000110
+# Tiempo=110 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111011 | segA=1100000 | segB=0000110
+# Tiempo=120 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111010 | segA=0001000 | segB=0000110
+# Tiempo=130 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111010 | segA=0001000 | segB=0000110
+# Tiempo=140 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111001 | segA=0000100 | segB=0000110
+# Tiempo=150 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111001 | segA=0000100 | segB=0000110
+# Tiempo=160 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111000 | segA=0000000 | segB=0000110
+# Tiempo=170 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111000 | segA=0000000 | segB=0000110
+# Tiempo=180 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110111 | segA=0001111 | segB=0000110
+# Tiempo=190 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110111 | segA=0001111 | segB=0000110
+# Tiempo=200 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110110 | segA=0100000 | segB=0000110
+# Tiempo=210 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110110 | segA=0100000 | segB=0000110
+# Tiempo=220 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110101 | segA=0100100 | segB=0000110
+# Tiempo=230 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110101 | segA=0100100 | segB=0000110
+# Tiempo=240 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110100 | segA=1001100 | segB=0000110
+# Tiempo=250 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110100 | segA=1001100 | segB=0000110
+# Tiempo=260 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110011 | segA=0000110 | segB=0000110
+# Tiempo=270 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110011 | segA=0000110 | segB=0000110
+# Tiempo=280 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110010 | segA=0010010 | segB=0000110
+# Tiempo=290 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110010 | segA=0010010 | segB=0000110
+# Tiempo=300 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110001 | segA=1001111 | segB=0000110
+# Tiempo=310 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110001 | segA=1001111 | segB=0000110
+# Tiempo=320 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=110000 | segA=0000001 | segB=0000110
+# Tiempo=330 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=110000 | segA=0000001 | segB=0000110
+# Tiempo=340 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101111 | segA=0111000 | segB=0010010
+# Tiempo=350 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101111 | segA=0111000 | segB=0010010
+# Tiempo=360 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101110 | segA=0110000 | segB=0010010
+# Tiempo=370 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101110 | segA=0110000 | segB=0010010
+# Tiempo=380 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101101 | segA=1000010 | segB=0010010
+# Tiempo=390 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101101 | segA=1000010 | segB=0010010
+# Tiempo=400 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101100 | segA=0110001 | segB=0010010
+# Tiempo=410 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101100 | segA=0110001 | segB=0010010
+# Tiempo=420 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101011 | segA=1100000 | segB=0010010
+# Tiempo=430 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101011 | segA=1100000 | segB=0010010
+# Tiempo=440 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101010 | segA=0001000 | segB=0010010
+# Tiempo=450 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101010 | segA=0001000 | segB=0010010
+# Tiempo=460 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101001 | segA=0000100 | segB=0010010
+# Tiempo=470 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101001 | segA=0000100 | segB=0010010
+# Tiempo=480 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=101000 | segA=0000000 | segB=0010010
+# Tiempo=490 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=101000 | segA=0000000 | segB=0010010
+# Tiempo=500 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100111 | segA=0001111 | segB=0010010
+# Tiempo=510 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100111 | segA=0001111 | segB=0010010
+# Tiempo=520 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100110 | segA=0100000 | segB=0010010
+# Tiempo=530 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100110 | segA=0100000 | segB=0010010
+# Tiempo=540 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100101 | segA=0100100 | segB=0010010
+# Tiempo=550 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100101 | segA=0100100 | segB=0010010
+# Tiempo=560 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100100 | segA=1001100 | segB=0010010
+# Tiempo=570 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100100 | segA=1001100 | segB=0010010
+# Tiempo=580 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100011 | segA=0000110 | segB=0010010
+# Tiempo=590 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100011 | segA=0000110 | segB=0010010
+# Tiempo=600 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100010 | segA=0010010 | segB=0010010
+# Tiempo=610 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100010 | segA=0010010 | segB=0010010
+# Tiempo=620 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100001 | segA=1001111 | segB=0010010
+# Tiempo=630 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100001 | segA=1001111 | segB=0010010
+# Tiempo=640 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=100000 | segA=0000001 | segB=0010010
+# Tiempo=650 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100000 | segA=0000001 | segB=0010010
+# Tiempo=660 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011111 | segA=0111000 | segB=1001111
+# Tiempo=670 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011111 | segA=0111000 | segB=1001111
+# Tiempo=680 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011110 | segA=0110000 | segB=1001111
+# Tiempo=690 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011110 | segA=0110000 | segB=1001111
+# Tiempo=700 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011101 | segA=1000010 | segB=1001111
+# Tiempo=710 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011101 | segA=1000010 | segB=1001111
+# Tiempo=720 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011100 | segA=0110001 | segB=1001111
+# Tiempo=730 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011100 | segA=0110001 | segB=1001111
+# Tiempo=740 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011011 | segA=1100000 | segB=1001111
+# Tiempo=750 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011011 | segA=1100000 | segB=1001111
+# Tiempo=760 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011010 | segA=0001000 | segB=1001111
+# Tiempo=770 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011010 | segA=0001000 | segB=1001111
+# Tiempo=780 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011001 | segA=0000100 | segB=1001111
+# Tiempo=790 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011001 | segA=0000100 | segB=1001111
+# Tiempo=800 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=011000 | segA=0000000 | segB=1001111
+# Tiempo=810 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=011000 | segA=0000000 | segB=1001111
+# Tiempo=820 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010111 | segA=0001111 | segB=1001111
+# Tiempo=830 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010111 | segA=0001111 | segB=1001111
+# Tiempo=840 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010110 | segA=0100000 | segB=1001111
+# Tiempo=850 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010110 | segA=0100000 | segB=1001111
+# Tiempo=860 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010101 | segA=0100100 | segB=1001111
+# Tiempo=870 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010101 | segA=0100100 | segB=1001111
+# Tiempo=880 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010100 | segA=1001100 | segB=1001111
+# Tiempo=890 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010100 | segA=1001100 | segB=1001111
+# Tiempo=900 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010011 | segA=0000110 | segB=1001111
+# Tiempo=910 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010011 | segA=0000110 | segB=1001111
+# Tiempo=920 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010010 | segA=0010010 | segB=1001111
+# Tiempo=930 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010010 | segA=0010010 | segB=1001111
+# Tiempo=940 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010001 | segA=1001111 | segB=1001111
+# Tiempo=950 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010001 | segA=1001111 | segB=1001111
+# Tiempo=960 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=010000 | segA=0000001 | segB=1001111
+# Tiempo=970 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=010000 | segA=0000001 | segB=1001111
+# Tiempo=980 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001111 | segA=0111000 | segB=0000001
+# Tiempo=990 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001111 | segA=0111000 | segB=0000001
+# Tiempo=1000 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001110 | segA=0110000 | segB=0000001
+# Tiempo=1010 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001110 | segA=0110000 | segB=0000001
+# Tiempo=1020 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001101 | segA=1000010 | segB=0000001
+# Tiempo=1030 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001101 | segA=1000010 | segB=0000001
+# Tiempo=1040 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001100 | segA=0110001 | segB=0000001
+# Tiempo=1050 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001100 | segA=0110001 | segB=0000001
+# Tiempo=1060 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001011 | segA=1100000 | segB=0000001
+# Tiempo=1070 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001011 | segA=1100000 | segB=0000001
+# Tiempo=1080 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001010 | segA=0001000 | segB=0000001
+# Tiempo=1090 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001010 | segA=0001000 | segB=0000001
+# Tiempo=1100 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001001 | segA=0000100 | segB=0000001
+# Tiempo=1110 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001001 | segA=0000100 | segB=0000001
+# Tiempo=1120 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=001000 | segA=0000000 | segB=0000001
+# Tiempo=1130 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=001000 | segA=0000000 | segB=0000001
+# Tiempo=1140 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000111 | segA=0001111 | segB=0000001
+# Tiempo=1150 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000111 | segA=0001111 | segB=0000001
+# Tiempo=1160 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000110 | segA=0100000 | segB=0000001
+# Tiempo=1170 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000110 | segA=0100000 | segB=0000001
+# Tiempo=1180 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000101 | segA=0100100 | segB=0000001
+# Tiempo=1190 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000101 | segA=0100100 | segB=0000001
+# Tiempo=1200 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000100 | segA=1001100 | segB=0000001
+# Tiempo=1210 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000100 | segA=1001100 | segB=0000001
+# Tiempo=1220 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000011 | segA=0000110 | segB=0000001
+# Tiempo=1230 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000011 | segA=0000110 | segB=0000001
+# Tiempo=1240 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000010 | segA=0010010 | segB=0000001
+# Tiempo=1250 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000010 | segA=0010010 | segB=0000001
+# Tiempo=1260 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000001 | segA=1001111 | segB=0000001
+# Tiempo=1270 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000001 | segA=1001111 | segB=0000001
+# Tiempo=1280 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=000000 | segA=0000001 | segB=0000001
+# Tiempo=1290 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000000 | segA=0000001 | segB=0000001
+# Tiempo=1300 | reset=0 | dec=1 | num1=0 | num2=0 | num3=0 | count=111111 | segA=0111000 | segB=0000110
+# Tiempo=1310 | reset=1 | dec=0 | num1=0 | num2=0 | num3=0 | count=000000 | segA=0000001 | segB=0000001
+# Tiempo=1320 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000000 | segA=0000001 | segB=0000001
+# Tiempo=1330 | reset=0 | dec=0 | num1=1 | num2=0 | num3=0 | count=000001 | segA=1001111 | segB=0000001
+# Tiempo=1340 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=000001 | segA=1001111 | segB=0000001
+# Tiempo=1350 | reset=0 | dec=0 | num1=0 | num2=1 | num3=0 | count=100000 | segA=0000001 | segB=0010010
+# Tiempo=1360 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=100000 | segA=0000001 | segB=0010010
+# Tiempo=1370 | reset=0 | dec=0 | num1=0 | num2=0 | num3=1 | count=111111 | segA=0111000 | segB=0000110
+# ** Error: ERROR: num3 failed. Expected count = 0, got 63
+#    Time: 1380 ps  Scope: problema_3_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv Line: 67
+# Tiempo=1380 | reset=0 | dec=0 | num1=0 | num2=0 | num3=0 | count=111111 | segA=0111000 | segB=0000110
+# ** Note: $stop    : D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv(70)
+#    Time: 1480 ps  Iteration: 0  Instance: /problema_3_tb
+# Break in Module problema_3_tb at D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/nBitsSubstractor/problema_3_tb.sv line 70
+# End time: 18:28:34 on Mar 10,2025, Elapsed time: 0:01:20
+# Errors: 1, Warnings: 1
