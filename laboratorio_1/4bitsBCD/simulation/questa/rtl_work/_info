@@ -13,6 +13,8 @@ R0
 R1
 R0
 R1
+R0
+R1
 !s12c _opt
 R1
 !s11f vlog 2023.3 2023.07, Jul 17 2023
@@ -37,10 +39,10 @@ n@_opt
 Z8 OL;O;2023.3;77
 R2
 T_opt1
-!s110 1741736473
-VfmW9zMiMESlG;Cho6[fE_3
+!s110 1742247895
+V1GBZU;gPlU?;7@XgVjEkS3
 R3
-=1-e0d55eabcbc1-67d0ca18-213-150
+=1-e0d55eabcbc1-67d897d7-ea-4f2c
 R1
 R4
 R5
@@ -51,23 +53,23 @@ R8
 vbcd_4bits
 2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv
 Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z10 !s110 1741736471
+!s110 1742247893
 !i10b 1
-!s100 h8T?g8Efm;4jVLf74HACe3
-I=I`Pgo4j9iEl4`eL75EWz1
+!s100 BD2K2jQ8@gJaC>M=<BQlg2
+IKRAlShf7Z_Y^hRZKj18IY2
 S1
 R2
-w1741736182
+Z10 w1741824303
 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv
 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv
 !i122 0
-L0 1 43
+L0 1 46
 Z11 VDg1SIo80bB@j0V0VzS_@n1
 Z12 OL;L;2023.3;77
 r1
 !s85 0
 31
-!s108 1741736470.000000
+!s108 1742247893.000000
 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv|
 !i113 0
@@ -77,23 +79,23 @@ R7
 vbcd_4bits_tb
 2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv
 R9
-R10
+!s110 1742247894
 !i10b 1
-!s100 Y4TjG2f6UCO=9QUQBnY^V3
-I6^Hi<E@W93PSF<RN<@46B2
+!s100 D`iize5hRY4MV]h7?l9kQ3
+IiEfHZ5EjmYiC02T6Xgg0c0
 S1
 R2
-w1741736436
+R10
 8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv
 FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv
 !i122 1
-L0 3 56
+L0 3 53
 R11
 R12
 r1
 !s85 0
 31
-!s108 1741736471.000000
+!s108 1742247894.000000
 !s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv|
 !i113 0

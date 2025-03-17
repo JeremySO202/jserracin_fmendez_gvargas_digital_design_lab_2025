@@ -29,29 +29,29 @@
 # 
 # vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 17:41:10 on Mar 11,2025
+# Start time: 15:44:53 on Mar 17,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits.sv 
 # -- Compiling module bcd_4bits
 # 
 # Top level modules:
 # 	bcd_4bits
-# End time: 17:41:11 on Mar 11,2025, Elapsed time: 0:00:01
+# End time: 15:44:53 on Mar 17,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 17:41:11 on Mar 11,2025
+# Start time: 15:44:54 on Mar 17,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv 
 # -- Compiling module bcd_4bits_tb
 # 
 # Top level modules:
 # 	bcd_4bits_tb
-# End time: 17:41:11 on Mar 11,2025, Elapsed time: 0:00:00
+# End time: 15:44:54 on Mar 17,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  bcd_4bits_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" bcd_4bits_tb 
-# Start time: 17:41:11 on Mar 11,2025
+# Start time: 15:44:54 on Mar 17,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -62,9 +62,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: jerem  Hostname: MATILDA  ProcessID: 5600
-#           Attempting to use alternate WLF file "./wlftw54idd".
+#           Attempting to use alternate WLF file "./wlft56cghe".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftw54idd
+#           Using alternate file: ./wlft56cghe
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -103,10 +103,7 @@
 # num=1110 -> y_B=1001111 ✅
 # num=1111 -> y_A=0100100 ✅
 # num=1111 -> y_B=1001111 ✅
-# Pruebas completadas.
-# ** Note: $finish    : D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv(56)
+# ** Note: $finish    : D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv(53)
 #    Time: 160 ns  Iteration: 0  Instance: /bcd_4bits_tb
-# 1
-# Break in Module bcd_4bits_tb at D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_1/4bitsBCD/bcd_4bits_tb.sv line 56
-# End time: 17:41:34 on Mar 11,2025, Elapsed time: 0:00:23
+# End time: 15:45:29 on Mar 17,2025, Elapsed time: 0:00:35
 # Errors: 0, Warnings: 3
