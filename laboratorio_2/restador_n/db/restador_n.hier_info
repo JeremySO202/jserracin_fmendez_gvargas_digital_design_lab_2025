@@ -1,0 +1,7 @@
+|shift_right
+a[0] => ~NO_FANOUT~
+a[1] => s[0].DATAIN
+s[0] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= <GND>
+
+
