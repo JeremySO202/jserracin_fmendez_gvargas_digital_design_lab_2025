@@ -68,3 +68,4 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sum_N_tb -section_id sum_
 set_global_assignment -name EDA_TEST_BENCH_NAME sum_N_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_FILE sum_N_tb.sv -section_id sum_N_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
