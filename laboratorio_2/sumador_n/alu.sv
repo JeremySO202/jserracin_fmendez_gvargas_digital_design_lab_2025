@@ -25,7 +25,7 @@ module alu #(
 		.cout(sum_cout)
 	);
 	
-	//variables para la suma
+	//variables para la resta
 	logic [W-1:0] subs_y;
 	logic subs_cout;
 	
@@ -34,6 +34,17 @@ module alu #(
 		.b(B),
 		.s(subs_y),
 		.cout(subs_cout)
+	);
+	
+	//variables para la division
+	logic [W-1:0] div_c;  
+   logic [W-1:0] div_r;
+	
+	division #(.m(W)) div(
+		.dividendo(A),
+		.divisor(B),
+		.cociente(div_q),
+      .residuo(div_r)
 	);
 	
 
@@ -49,8 +60,8 @@ always_comb begin
 		end
 		4'b0001: op_result = subs_y; // agregarle las flags a la resta
 		4'b0010: op_result = A * B;
-		4'b0011: op_result = A / B;
-		4'b0100: op_result = A % B;
+		4'b0011: op_result = div_c;
+		4'b0100: op_result = div_r;
 		4'b0101: op_result = A & B;
 		4'b0110: op_result = A | B;
 		4'b0111: op_result = A ^ B;
