@@ -1,0 +1,79 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Lab2/simulation/questa
+T_opt
+Z2 !s110 1742024402
+VcjAP]C`:Qc4?jKAG9h1mi3
+04 8 4 work sum_N_tb fast 0
+=1-40c2baefe894-67d52ed2-26e-bc04
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vsum_N
+2C:/Lab2/sum_N.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R2
+!i10b 1
+!s100 dQ0;N;6Eg7=eH2kYTS`:72
+I@O1AlD^5az`B>3T:eVoe42
+S1
+R1
+w1742023177
+8C:/Lab2/sum_N.sv
+FC:/Lab2/sum_N.sv
+!i122 0
+L0 3 30
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1742024402.000000
+!s107 C:/Lab2/sum_N.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Lab2|C:/Lab2/sum_N.sv|
+!i113 0
+Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -sv -work work +incdir+C:/Lab2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+nsum_@n
+vsum_N_tb
+2C:/Lab2/sum_N_tb.sv
+R4
+R2
+!i10b 1
+!s100 icj_Dd8FMA47a1DLd_EA`0
+IVED@z54CA6Zo4MbIDohl@3
+S1
+R1
+w1742024384
+8C:/Lab2/sum_N_tb.sv
+FC:/Lab2/sum_N_tb.sv
+!i122 1
+L0 3 40
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Lab2/sum_N_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Lab2|C:/Lab2/sum_N_tb.sv|
+!i113 0
+R8
+R9
+R3
+nsum_@n_tb
