@@ -10,7 +10,7 @@ module alu #(
 		output logic [W-1:0] op_result,
 		
 		//lo pongo como un bus por mientras pero se puede tratar como cada una señal por aparte
-		output logic [3:0] flags
+		output logic N, Z, C, V
   
 );
 	
@@ -43,23 +43,37 @@ module alu #(
 	division #(.m(W)) div(
 		.dividendo(A),
 		.divisor(B),
-		.cociente(div_q),
+		.cociente(div_c),
       .residuo(div_r)
 	);
 	
+	// Inicializar flags
+	N = 0;
+	Z = 0;
+	C = 0;
+	V = 0;
+	
 
 always_comb begin
-
-	flags = 4'b0000;
 
 	case(op)
 	//pongo la asignación del flag ahí solo pq es la suma, si lo pongo afuera se asigna siempre pero no sé como se use sin la suma
 		4'b0000: begin
 		op_result = sum_y;
-		flags[0] = sum_cout;
+		C = sum_cout;
 		end
-		4'b0001: op_result = subs_y; // agregarle las flags a la resta
-		4'b0010: op_result = A * B;
+		
+		4'b0001: begin
+		op_result = subs_y; // agregarle las flags a la resta
+		N = -subs_cout;
+		C = subs_cout;
+		end
+			
+		4'b0010: begin
+		op_result = A * B;
+		C = |op_result[2*W-1:W]; // Carry si hay bits en la parte alta
+		end
+		
 		4'b0011: op_result = div_c;
 		4'b0100: op_result = div_r;
 		4'b0101: op_result = A & B;
@@ -69,6 +83,9 @@ always_comb begin
 		4'b1001: op_result = A >> 1;
 		default: op_result = 0;
 		endcase
+		
+        Z = (op_result == 0);   // Zero
+		
 	end
 		
 endmodule
