@@ -1,5 +1,5 @@
 Flow report for sum_N
-Sun Mar 23 00:10:14 2025
+Sun Mar 23 13:05:47 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Sun Mar 23 00:10:14 2025          ;
+; Flow Status                     ; Successful - Sun Mar 23 13:05:47 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; sum_N                                          ;
-; Top-level Entity Name           ; alu                                            ;
+; Top-level Entity Name           ; laboratorio_2                                  ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSXFC6D6F31C6                                 ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 35 / 41,910 ( < 1 % )                          ;
+; Logic utilization (in ALMs)     ; 40 / 41,910 ( < 1 % )                          ;
 ; Total registers                 ; 0                                              ;
 ; Total pins                      ; 34 / 499 ( 7 % )                               ;
 ; Total virtual pins              ; 0                                              ;
@@ -68,45 +68,45 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/23/2025 00:08:59 ;
+; Start date & time ; 03/23/2025 13:04:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sum_N               ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                ;
-+--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
-+--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 247207020972993.174271013922876        ; --            ; --          ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; sum_n_tb                          ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_tb                            ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; alu_tb                                 ; --            ; --          ; eda_simulation                    ;
-; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (SystemVerilog)      ; <None>        ; --          ; --                                ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; sum_N_tb.sv                            ; --            ; --          ; sum_N_tb                          ;
-; EDA_TEST_BENCH_FILE                  ; alu_tb.sv                              ; --            ; --          ; alu_tb                            ;
-; EDA_TEST_BENCH_MODULE_NAME           ; sum_N_tb                               ; --            ; --          ; sum_N_tb                          ;
-; EDA_TEST_BENCH_MODULE_NAME           ; alu_tb                                 ; --            ; --          ; alu_tb                            ;
-; EDA_TEST_BENCH_NAME                  ; sum_N_tb                               ; --            ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_NAME                  ; alu_tb                                 ; --            ; --          ; eda_simulation                    ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; alu                                    ; sum_N         ; --          ; --                                ;
-+--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                  ;
++--------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name   ; Section Id                        ;
++--------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 247207020972993.174275666821444        ; --            ; --            ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; sum_n_tb                          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; alu_tb                            ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; alu_tb                                 ; --            ; --            ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --            ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (SystemVerilog)      ; <None>        ; --            ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --            ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; sum_N_tb.sv                            ; --            ; --            ; sum_N_tb                          ;
+; EDA_TEST_BENCH_FILE                  ; alu_tb.sv                              ; --            ; --            ; alu_tb                            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; sum_N_tb                               ; --            ; --            ; sum_N_tb                          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; alu_tb                                 ; --            ; --            ; alu_tb                            ;
+; EDA_TEST_BENCH_NAME                  ; sum_N_tb                               ; --            ; --            ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; alu_tb                                 ; --            ; --            ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --            ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --            ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --            ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; laboratorio_2 ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; laboratorio_2 ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; laboratorio_2 ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --            ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --            ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --            ; --                                ;
+; TOP_LEVEL_ENTITY                     ; laboratorio_2                          ; sum_N         ; --            ; --                                ;
++--------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -114,12 +114,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4851 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:47     ; 1.0                     ; 7002 MB             ; 00:02:20                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 5217 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 5358 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4745 MB             ; 00:00:01                           ;
-; Total                ; 00:01:11     ; --                      ; --                  ; 00:02:57                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4851 MB             ; 00:00:30                           ;
+; Fitter               ; 00:00:46     ; 1.0                     ; 7002 MB             ; 00:01:57                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 5217 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.1                     ; 5373 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4745 MB             ; 00:00:01                           ;
+; Total                ; 00:01:14     ; --                      ; --                  ; 00:02:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

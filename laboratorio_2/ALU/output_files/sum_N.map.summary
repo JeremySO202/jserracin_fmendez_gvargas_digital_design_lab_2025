@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Sun Mar 23 00:09:08 2025
+Analysis & Synthesis Status : Successful - Sun Mar 23 13:04:40 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : sum_N
-Top-level Entity Name : alu
+Top-level Entity Name : laboratorio_2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0

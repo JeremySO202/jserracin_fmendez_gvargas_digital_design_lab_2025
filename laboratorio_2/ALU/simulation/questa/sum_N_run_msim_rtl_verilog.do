@@ -11,6 +11,7 @@ vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025
 vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv}
 vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv}
 vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv}
+vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv}
 
 vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv}
 

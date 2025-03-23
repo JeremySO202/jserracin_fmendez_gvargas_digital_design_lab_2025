@@ -2,19 +2,17 @@ module alu #(
 	parameter int W=4
 )(
 
-		input logic [W-1:0] A, B_inv,
+		input logic [W-1:0] A, B,
 		
 		//operation(identificador que hay que aumentar por la cantidad de cosillas que queramos implementar)
 		input logic [3:0] op,
 		
 		output logic [W-1:0] op_result,
-		output logic [0:6] seg_A, seg_B,
 		//lo pongo como un bus por mientras pero se puede tratar como cada una señal por aparte
 		output logic N, Z, C, V
   
 );
-	logic [W-1:0] B;
-	assign B = ~B_inv;
+	
 	
 	//variables para la suma
 	logic [W-1:0] sum_y;
@@ -50,11 +48,7 @@ module alu #(
       .residuo(div_r)
 	);
 	
-	bcd_4bits bcd(
-		.num(op_result),
-		.y_A(seg_A),
-		.y_B(seg_B)
-	);
+	
 	
 
 always_comb begin
@@ -75,7 +69,6 @@ always_comb begin
 		4'b0001: begin
 		op_result = subs_y; // agregarle las flags a la resta
 		N = ~subs_cout;
-		C = subs_cout;
 		end
 			
 		4'b0010: begin
