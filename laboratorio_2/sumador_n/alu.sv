@@ -17,6 +17,7 @@ module alu #(
 	//variables para la suma
 	logic [W-1:0] sum_y;
 	logic sum_cout;
+	logic [2*W-1:0] mul_result; // Resultado de la multiplicación (doble ancho)
 
 	sum_N #(.m(W)) sumN (
 		.a(A),
@@ -47,14 +48,13 @@ module alu #(
       .residuo(div_r)
 	);
 	
-	// Inicializar flags
-	N = 0;
-	Z = 0;
-	C = 0;
-	V = 0;
-	
 
 always_comb begin
+// Inicializar flags
+N = 0;
+Z = 0;
+C = 0;
+V = 0;
 
 	case(op)
 	//pongo la asignación del flag ahí solo pq es la suma, si lo pongo afuera se asigna siempre pero no sé como se use sin la suma
@@ -70,8 +70,9 @@ always_comb begin
 		end
 			
 		4'b0010: begin
-		op_result = A * B;
-		C = |op_result[2*W-1:W]; // Carry si hay bits en la parte alta
+		mul_result = A * B;
+		op_result = mul_result[W-1:0]; // Tomar solo los W bits inferiores
+		C = |mul_result[2*W-1:W]; // Carry si hay bits en la parte alta
 		end
 		
 		4'b0011: op_result = div_c;
@@ -84,7 +85,7 @@ always_comb begin
 		default: op_result = 0;
 		endcase
 		
-        Z = (op_result == 0);   // Zero
+   Z = (op_result == 0);   // Zero
 		
 	end
 		
