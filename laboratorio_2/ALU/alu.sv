@@ -2,7 +2,7 @@ module alu #(
 	parameter int W=4
 )(
 
-		input logic [W-1:0] A, B,
+		input logic [W-1:0] A, B_inv,
 		
 		//operation(identificador que hay que aumentar por la cantidad de cosillas que queramos implementar)
 		input logic [3:0] op,
@@ -13,6 +13,8 @@ module alu #(
 		output logic N, Z, C, V
   
 );
+	logic [W-1:0] B;
+	assign B = ~B_inv;
 	
 	//variables para la suma
 	logic [W-1:0] sum_y;
@@ -48,6 +50,12 @@ module alu #(
       .residuo(div_r)
 	);
 	
+	bcd_4bits bcd(
+		.num(op_result),
+		.y_A(seg_A),
+		.y_B(seg_B)
+	);
+	
 
 always_comb begin
 	// Inicializar flags
@@ -81,7 +89,7 @@ always_comb begin
 		4'b0101: op_result = A & B;
 		4'b0110: op_result = A | B;
 		4'b0111: op_result = A ^ B;
-		4'b1000: op_result = A << 2;
+		4'b1000: op_result = A << 1;
 		4'b1001: op_result = A >> 1;
 		default: op_result = 0;
 		endcase

@@ -61,14 +61,9 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH alu_tb -section
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sum_n_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sum_N_tb -section_id sum_N_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME sum_N_tb -section_id eda_simulation
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name EDA_TEST_BENCH_FILE sum_N_tb.sv -section_id sum_N_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME alu_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id alu_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_tb -section_id alu_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE alu_tb.sv -section_id alu_tb
 set_global_assignment -name SYSTEMVERILOG_FILE bcd_4bits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sum_N.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sum_N_tb.sv
@@ -79,4 +74,43 @@ set_global_assignment -name SYSTEMVERILOG_FILE nBitsSubstractor_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE division.sv
 set_global_assignment -name SYSTEMVERILOG_FILE division_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu_tb.sv
+set_location_assignment PIN_AC30 -to A[3]
+set_location_assignment PIN_AB28 -to A[2]
+set_location_assignment PIN_Y27 -to A[1]
+set_location_assignment PIN_AB30 -to A[0]
+set_location_assignment PIN_AC22 -to C
+set_location_assignment PIN_AB22 -to N
+set_location_assignment PIN_AF24 -to V
+set_location_assignment PIN_AE24 -to Z
+set_location_assignment PIN_AA30 -to op[3]
+set_location_assignment PIN_AC29 -to op[2]
+set_location_assignment PIN_AD30 -to op[1]
+set_location_assignment PIN_AC28 -to op[0]
+set_location_assignment PIN_AA24 -to op_result[0]
+set_location_assignment PIN_AB23 -to op_result[1]
+set_location_assignment PIN_AD24 -to op_result[3]
+set_location_assignment PIN_AC23 -to op_result[2]
+set_location_assignment PIN_W17 -to seg_A[0]
+set_location_assignment PIN_V18 -to seg_A[1]
+set_location_assignment PIN_AG17 -to seg_A[2]
+set_location_assignment PIN_AG16 -to seg_A[3]
+set_location_assignment PIN_AH17 -to seg_A[4]
+set_location_assignment PIN_AG18 -to seg_A[5]
+set_location_assignment PIN_AH18 -to seg_A[6]
+set_location_assignment PIN_AF16 -to seg_B[0]
+set_location_assignment PIN_V16 -to seg_B[1]
+set_location_assignment PIN_AE16 -to seg_B[2]
+set_location_assignment PIN_AD17 -to seg_B[3]
+set_location_assignment PIN_AE18 -to seg_B[4]
+set_location_assignment PIN_AE17 -to seg_B[5]
+set_location_assignment PIN_V17 -to seg_B[6]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE sum_N_tb.sv -section_id sum_N_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE alu_tb.sv -section_id alu_tb
+set_location_assignment PIN_AA15 -to B_inv[3]
+set_location_assignment PIN_AA14 -to B_inv[2]
+set_location_assignment PIN_AK4 -to B_inv[1]
+set_location_assignment PIN_AJ4 -to B_inv[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

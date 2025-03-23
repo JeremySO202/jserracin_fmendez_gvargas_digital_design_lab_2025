@@ -23,8 +23,8 @@ module alu_tb;
 
     initial begin
         // Caso de prueba 1: Suma (5 + 3)
-        A = 15;
-        B = 15;
+        A = 0;
+        B = 0;
         op = 4'b0000; // Suma
         #10;
         $display("Caso 1: %b + %b", A, B);

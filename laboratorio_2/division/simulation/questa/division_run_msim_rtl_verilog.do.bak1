@@ -1,9 +1,0 @@
-transcript on
-if {[file exists rtl_work]} {
-	vdel -lib rtl_work -all
-}
-vlib rtl_work
-vmap work rtl_work
-
-vlog -sv -work work +incdir+D:/Work/2025\ I/Taller\ de\ Diseno\ Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/division {D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/division/division.sv}
-
