@@ -1,8 +1,10 @@
 m255
 K4
 z2
-!s12c _opt
+!s12c _opt1
 Z0 !s99 nomlopt
+!s12c _opt
+R0
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -10,70 +12,188 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Lab2/simulation/questa
+Z1 dD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/simulation/questa
 T_opt
-Z2 !s110 1742024402
-VcjAP]C`:Qc4?jKAG9h1mi3
-04 8 4 work sum_N_tb fast 0
-=1-40c2baefe894-67d52ed2-26e-bc04
+!s110 1742692486
+V42HN2Hd<1Gze9Cd2VJ8W30
+Z2 04 6 4 work alu_tb fast 0
+=1-d8bbc10d36c1-67df6085-283-3934
 R0
-!s12b OEM100
-!s124 OEM10U2 
-o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
-Z3 tCvgOpt 0
+Z3 !s12b OEM100
+Z4 !s124 OEM10U9 
+Z5 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z6 tCvgOpt 0
 n@_opt
-OL;O;2023.3;77
-vsum_N
-2C:/Lab2/sum_N.sv
-Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R2
-!i10b 1
-!s100 dQ0;N;6Eg7=eH2kYTS`:72
-I@O1AlD^5az`B>3T:eVoe42
-S1
+Z7 OL;O;2023.3;77
 R1
-w1742023177
-8C:/Lab2/sum_N.sv
-FC:/Lab2/sum_N.sv
-!i122 0
-L0 3 30
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2023.3;77
-r1
-!s85 0
-31
-Z7 !s108 1742024402.000000
-!s107 C:/Lab2/sum_N.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Lab2|C:/Lab2/sum_N.sv|
-!i113 0
-Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z9 !s92 -sv -work work +incdir+C:/Lab2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+T_opt1
+Z8 !s110 1742692533
+V_=i77bia>>mVQ]I?D76>Z3
+R2
+=1-d8bbc10d36c1-67df60b5-141-5a24
+R0
 R3
-nsum_@n
-vsum_N_tb
-2C:/Lab2/sum_N_tb.sv
 R4
-R2
-!i10b 1
-!s100 icj_Dd8FMA47a1DLd_EA`0
-IVED@z54CA6Zo4MbIDohl@3
-S1
-R1
-w1742024384
-8C:/Lab2/sum_N_tb.sv
-FC:/Lab2/sum_N_tb.sv
-!i122 1
-L0 3 40
 R5
 R6
+n@_opt1
+R7
+valu
+2D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 !s110 1742692532
+!i10b 1
+!s100 l3Z`RPRokg3a5Jj><kb2U3
+Iofc4m[S>e<?KcAiVT>@z<1
+S1
+R1
+w1742692526
+8D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu.sv
+FD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu.sv
+!i122 1
+L0 1 92
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2023.3;77
 r1
 !s85 0
 31
-R7
-!s107 C:/Lab2/sum_N_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Lab2|C:/Lab2/sum_N_tb.sv|
+Z13 !s108 1742692532.000000
+!s107 D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n|D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu.sv|
 !i113 0
-R8
+Z14 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 -sv -work work {+incdir+D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R6
+valu_tb
+2D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu_tb.sv
 R9
-R3
-nsum_@n_tb
+R8
+!i10b 1
+!s100 >lUa[;fIO_F?hTBn:h?g:2
+I`5QIc@OhU10mVNl8mLb7@0
+S1
+R1
+w1742688019
+8D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu_tb.sv
+FD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu_tb.sv
+!i122 5
+L0 1 103
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n|D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/alu_tb.sv|
+!i113 0
+R14
+R15
+R6
+vdivision
+2D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/division.sv
+R9
+R10
+!i10b 1
+!s100 m<?U56dRcZL8hM^W;?]<l2
+IMfKjTV^o]k7J6fzoAa8bH0
+S1
+R1
+Z16 w1742575649
+8D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/division.sv
+FD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/division.sv
+!i122 4
+L0 14 51
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/division.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n|D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/division.sv|
+!i113 0
+R14
+R15
+R6
+vfullAdder
+2D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/fullAdder.sv
+R9
+R10
+!i10b 1
+!s100 jRY04AGBA73d`f9lGMMXh0
+IVY5GVYbgJd2]I]bnG_h7:3
+S1
+R1
+R16
+8D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/fullAdder.sv
+FD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/fullAdder.sv
+!i122 2
+L0 1 22
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/fullAdder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n|D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/fullAdder.sv|
+!i113 0
+R14
+R15
+R6
+nfull@adder
+vnBitsSubstractor
+2D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/nBitsSubstractor.sv
+R9
+R10
+!i10b 1
+!s100 ZG]jH>fZ38?1h[FLRhRk`0
+I:Y[:^KfKSVkIaG0LD>72=0
+S1
+R1
+R16
+8D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/nBitsSubstractor.sv
+FD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/nBitsSubstractor.sv
+!i122 3
+L0 1 45
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/nBitsSubstractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n|D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/nBitsSubstractor.sv|
+!i113 0
+R14
+R15
+R6
+nn@bits@substractor
+vsum_N
+2D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/sum_N.sv
+R9
+R10
+!i10b 1
+!s100 dQ0;N;6Eg7=eH2kYTS`:72
+I1PUB1oN2ZDYEYY6Dniie>2
+S1
+R1
+R16
+8D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/sum_N.sv
+FD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/sum_N.sv
+!i122 0
+L0 3 30
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/sum_N.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n|D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/sum_N.sv|
+!i113 0
+R14
+R15
+R6
+nsum_@n
