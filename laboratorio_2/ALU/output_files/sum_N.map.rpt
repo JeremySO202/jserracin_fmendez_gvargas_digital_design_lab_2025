@@ -1,5 +1,5 @@
-Analysis & Synthesis report for sum_N
-Sun Mar 23 13:04:40 2025
+Analysis & Elaboration report for sum_N
+Tue Mar 25 09:51:09 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -7,24 +7,15 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |laboratorio_2
- 12. Parameter Settings for User Entity Instance: alu:u_alu
- 13. Parameter Settings for User Entity Instance: alu:u_alu|sum_N:sumN
- 14. Parameter Settings for User Entity Instance: alu:u_alu|nBitsSubstractor:subs
- 15. Parameter Settings for User Entity Instance: alu:u_alu|division:div
- 16. Port Connectivity Checks: "alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[0].adder"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |alu
+  5. Parameter Settings for User Entity Instance: sum_N:sumN
+  6. Parameter Settings for User Entity Instance: nBitsSubstractor:subs
+  7. Parameter Settings for User Entity Instance: division:div
+  8. Analysis & Elaboration Settings
+  9. Port Connectivity Checks: "nBitsSubstractor:subs|fullAdder:adder_loop[0].adder"
+ 10. Analysis & Elaboration Messages
 
 
 
@@ -48,36 +39,87 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 23 13:04:40 2025          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
-; Revision Name                   ; sum_N                                          ;
-; Top-level Entity Name           ; laboratorio_2                                  ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 34                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 1                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Mar 25 09:51:09 2025          ;
+; Quartus Prime Version         ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                 ; sum_N                                          ;
+; Top-level Entity Name         ; alu                                            ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |alu ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; W              ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sum_N:sumN ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; m              ; 4     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: nBitsSubstractor:subs ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; n              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: division:div ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; m              ; 4     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; laboratorio_2      ; sum_N              ;
+; Top-level entity name                                                           ; alu                ; sum_N              ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -158,270 +200,60 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "nBitsSubstractor:subs|fullAdder:adder_loop[0].adder" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-; bcd_4bits.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv        ;         ;
-; sum_N.sv                         ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv            ;         ;
-; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv              ;         ;
-; fullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv        ;         ;
-; nBitsSubstractor.sv              ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv ;         ;
-; division.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv         ;         ;
-; laboratorio_2.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv    ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 39         ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 66         ;
-;     -- 7 input functions                    ; 3          ;
-;     -- 6 input functions                    ; 8          ;
-;     -- 5 input functions                    ; 11         ;
-;     -- 4 input functions                    ; 21         ;
-;     -- <=3 input functions                  ; 23         ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 34         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 1          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; B[1]~input ;
-; Maximum fan-out                             ; 17         ;
-; Total fan-out                               ; 331        ;
-; Average fan-out                             ; 2.45       ;
-+---------------------------------------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Entity Name      ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+------------------+--------------+
-; |laboratorio_2                           ; 66 (0)              ; 0 (0)                     ; 0                 ; 1          ; 34   ; 0            ; |laboratorio_2                                                               ; laboratorio_2    ; work         ;
-;    |alu:u_alu|                           ; 58 (29)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |laboratorio_2|alu:u_alu                                                     ; alu              ; work         ;
-;       |division:div|                     ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |laboratorio_2|alu:u_alu|division:div                                        ; division         ; work         ;
-;       |nBitsSubstractor:subs|            ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |laboratorio_2|alu:u_alu|nBitsSubstractor:subs                               ; nBitsSubstractor ; work         ;
-;          |fullAdder:adder_loop[1].adder| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |laboratorio_2|alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[1].adder ; fullAdder        ; work         ;
-;          |fullAdder:adder_loop[2].adder| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |laboratorio_2|alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[2].adder ; fullAdder        ; work         ;
-;       |sum_N:sumN|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |laboratorio_2|alu:u_alu|sum_N:sumN                                          ; sum_N            ; work         ;
-;    |bcd_4bits:bcd|                       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |laboratorio_2|bcd_4bits:bcd                                                 ; bcd_4bits        ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 1           ;
-; Total number of DSP blocks      ; 1           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 1           ;
-+---------------------------------+-------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |laboratorio_2|alu:u_alu|Mux1 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |laboratorio_2 ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; W              ; 4     ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: alu:u_alu ;
-+----------------+-------+-------------------------------+
-; Parameter Name ; Value ; Type                          ;
-+----------------+-------+-------------------------------+
-; W              ; 4     ; Signed Integer                ;
-+----------------+-------+-------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: alu:u_alu|sum_N:sumN ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; m              ; 4     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: alu:u_alu|nBitsSubstractor:subs ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; n              ; 4     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: alu:u_alu|division:div ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; m              ; 4     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[0].adder" ;
-+------+-------+----------+-----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                         ;
-+------+-------+----------+-----------------------------------------------------------------+
-; cin  ; Input ; Info     ; Stuck at VCC                                                    ;
-+------+-------+----------+-----------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 70                          ;
-;     arith             ; 15                          ;
-;         0 data inputs ; 3                           ;
-;         2 data inputs ; 3                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 3                           ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 52                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 15                          ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 8                           ;
-; arriav_mac            ; 1                           ;
-; boundary_port         ; 34                          ;
-;                       ;                             ;
-; Max LUT depth         ; 9.60                        ;
-; Average LUT depth     ; 7.44                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Mar 23 13:04:27 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sum_N -c sum_N
+    Info: Processing started: Tue Mar 25 09:51:03 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sum_N -c sum_N --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file bcd_4bits.sv
-    Info (12023): Found entity 1: bcd_4bits File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv Line: 1
+    Info (12023): Found entity 1: bcd_4bits File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sum_n.sv
-    Info (12023): Found entity 1: sum_N File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv Line: 3
+    Info (12023): Found entity 1: sum_N File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file sum_n_tb.sv
-    Info (12023): Found entity 1: sum_N_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N_tb.sv Line: 3
+    Info (12023): Found entity 1: sum_N_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 1
+    Info (12023): Found entity 1: alu File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: fullAdder File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv Line: 1
+    Info (12023): Found entity 1: fullAdder File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbitssubstractor.sv
-    Info (12023): Found entity 1: nBitsSubstractor File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv Line: 1
+    Info (12023): Found entity 1: nBitsSubstractor File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbitssubstractor_tb.sv
-    Info (12023): Found entity 1: nBitsSubstractor_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor_tb.sv Line: 1
+    Info (12023): Found entity 1: nBitsSubstractor_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file division.sv
-    Info (12023): Found entity 1: division File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv Line: 14
+    Info (12023): Found entity 1: division File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file division_tb.sv
-    Info (12023): Found entity 1: division_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division_tb.sv Line: 9
+    Info (12023): Found entity 1: division_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division_tb.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: alu_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv Line: 1
+    Info (12023): Found entity 1: alu_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file laboratorio_2.sv
-    Info (12023): Found entity 1: laboratorio_2 File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 1
-Info (12127): Elaborating entity "laboratorio_2" for the top level hierarchy
-Info (12128): Elaborating entity "alu" for hierarchy "alu:u_alu" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 26
-Info (12128): Elaborating entity "sum_N" for hierarchy "alu:u_alu|sum_N:sumN" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 27
-Info (12128): Elaborating entity "nBitsSubstractor" for hierarchy "alu:u_alu|nBitsSubstractor:subs" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 38
-Info (12128): Elaborating entity "fullAdder" for hierarchy "alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[0].adder" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv Line: 37
-Info (12128): Elaborating entity "division" for hierarchy "alu:u_alu|division:div" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 49
-Info (12128): Elaborating entity "bcd_4bits" for hierarchy "bcd_4bits:bcd" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 32
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg_B[6]" is stuck at VCC File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 11
-    Warning (13410): Pin "seg_B[2]" is stuck at GND File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 11
-    Warning (13410): Pin "seg_B[1]" is stuck at GND File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 11
-    Warning (13410): Pin "V" is stuck at GND File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 15
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 66 logic cells
-    Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Sun Mar 23 13:04:40 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+    Info (12023): Found entity 1: laboratorio_2 File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_cmp_tb.sv
+    Info (12023): Found entity 1: alu_cmp_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_cmp_tb_test.sv
+    Info (12023): Found entity 1: alu_cmp_tb_test File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv Line: 3
+Info (12127): Elaborating entity "alu" for the top level hierarchy
+Info (12128): Elaborating entity "sum_N" for hierarchy "sum_N:sumN" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 27
+Info (12128): Elaborating entity "nBitsSubstractor" for hierarchy "nBitsSubstractor:subs" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 38
+Info (12128): Elaborating entity "fullAdder" for hierarchy "nBitsSubstractor:subs|fullAdder:adder_loop[0].adder" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv Line: 37
+Info (12128): Elaborating entity "division" for hierarchy "division:div" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv Line: 49
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Tue Mar 25 09:51:09 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
 
 

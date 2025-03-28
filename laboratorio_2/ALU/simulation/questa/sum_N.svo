@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "03/23/2025 13:05:47"
+// DATE "03/23/2025 19:36:40"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -40,16 +40,16 @@ module laboratorio_2 (
 	Z,
 	C,
 	V);
-input 	logic [3:0] A ;
-input 	logic [3:0] B ;
-input 	logic [3:0] op ;
-output 	logic [3:0] op_result ;
-output 	logic [0:6] seg_A ;
-output 	logic [0:6] seg_B ;
-output 	logic N ;
-output 	logic Z ;
-output 	logic C ;
-output 	logic V ;
+input 	[3:0] A;
+input 	[3:0] B;
+input 	[3:0] op;
+output 	[3:0] op_result;
+output 	[0:6] seg_A;
+output 	[0:6] seg_B;
+output 	N;
+output 	Z;
+output 	C;
+output 	V;
 
 // Design Ports Information
 // op_result[0]	=>  Location: PIN_AA24,	 I/O Standard: 2.5 V,	 Current Strength: Default

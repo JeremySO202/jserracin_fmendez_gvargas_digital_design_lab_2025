@@ -20,6 +20,7 @@
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is gavalo@POLARIA.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is gavalo@POLARIA.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is jerem@MATILDA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is jerem@MATILDA.
 # vlib rtl_work
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Errors: 0, Warnings: 1
@@ -29,213 +30,80 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv}
+# vlog -sv -work work +incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:41 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv 
-# -- Compiling module bcd_4bits
-# 
-# Top level modules:
-# 	bcd_4bits
-# End time: 12:58:41 on Mar 23,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv}
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:42 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv 
+# Start time: 10:03:52 on Mar 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv 
 # -- Compiling module sum_N
 # 
 # Top level modules:
 # 	sum_N
-# End time: 12:58:42 on Mar 23,2025, Elapsed time: 0:00:00
+# End time: 10:03:52 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv}
+# vlog -sv -work work +incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:42 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv 
+# Start time: 10:03:53 on Mar 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 12:58:42 on Mar 23,2025, Elapsed time: 0:00:00
+# End time: 10:03:53 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv}
+# vlog -sv -work work +incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:42 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv 
+# Start time: 10:03:53 on Mar 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv 
 # -- Compiling module fullAdder
 # 
 # Top level modules:
 # 	fullAdder
-# End time: 12:58:42 on Mar 23,2025, Elapsed time: 0:00:00
+# End time: 10:03:53 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv}
+# vlog -sv -work work +incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:42 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv 
+# Start time: 10:03:53 on Mar 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv 
 # -- Compiling module nBitsSubstractor
 # 
 # Top level modules:
 # 	nBitsSubstractor
-# End time: 12:58:42 on Mar 23,2025, Elapsed time: 0:00:00
+# End time: 10:03:53 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv}
+# vlog -sv -work work +incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:42 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv 
+# Start time: 10:03:53 on Mar 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv 
 # -- Compiling module division
 # 
 # Top level modules:
 # 	division
-# End time: 12:58:42 on Mar 23,2025, Elapsed time: 0:00:00
+# End time: 10:03:53 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv}
+# 
+# vlog -sv -work work +incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:42 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/laboratorio_2.sv 
-# -- Compiling module laboratorio_2
+# Start time: 10:03:53 on Mar 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv 
+# -- Compiling module alu_cmp_tb_test
 # 
 # Top level modules:
-# 	laboratorio_2
-# End time: 12:58:42 on Mar 23,2025, Elapsed time: 0:00:00
+# 	alu_cmp_tb_test
+# End time: 10:03:53 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU {D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv}
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:58:42 on Mar 23,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU" D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv 
-# -- Compiling module alu_tb
-# 
-# Top level modules:
-# 	alu_tb
-# End time: 12:58:43 on Mar 23,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  alu_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" alu_tb 
-# Start time: 12:58:44 on Mar 23,2025
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  alu_cmp_tb_test
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" alu_cmp_tb_test 
+# Start time: 10:03:53 on Mar 25,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.alu_tb(fast)
-# Loading work.alu(fast)
-# Loading work.sum_N(fast)
-# Loading work.nBitsSubstractor(fast)
-# Loading work.fullAdder(fast)
-# Loading work.division(fast)
-# 
-# add wave *
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gavalo  Hostname: POLARIA  ProcessID: 14644
-#           Attempting to use alternate WLF file "./wlft9fg51n".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft9fg51n
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Inicio de la prueba de la ALU
-# Correcto: 0101 + 0011 = 1000
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 1111 + 0001 = 0000
-# Z = 1
-# C = 1
-# V = 0
-# N = 0
-# Correcto: 0011 - 0101 = 1110
-# Z = 0
-# C = 0
-# V = 0
-# N = 1
-# Correcto: 0101 - 0101 = 0000
-# Z = 1
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0011 * 0010 = 0110
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 1000 * 0010 = 0000
-# Z = 1
-# C = 1
-# V = 0
-# N = 0
-# Correcto: 1000 / 0010 = 0100
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 1010 / 0010 = 0101
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 1010 % 0011 = 0001
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 1010 % 0010 = 0000
-# Z = 1
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0101 & 0011 = 0001
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0111 & 0011 = 0011
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0101 | 0011 = 0111
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0101 | 1001 = 1101
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0101 ^ 0011 = 0110
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 1001 ^ 0011 = 1010
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0001 << 1 = 0010
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0010 << 1 = 0100
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 1000 >> 1 = 0100
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Correcto: 0100 >> 1 = 0010
-# Z = 0
-# C = 0
-# V = 0
-# N = 0
-# Fin de la prueba de la ALU
-# A time value could not be extracted from the current line
+# ** Error: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv(16): Module 'alu_cmp_tb' is not defined.
+#  For instance 'dut' at path 'alu_cmp_tb_test'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sum_N_run_msim_rtl_verilog.do PAUSED at line 16
+# End time: 10:04:04 on Mar 25,2025, Elapsed time: 0:00:11
+# Errors: 1, Warnings: 1
