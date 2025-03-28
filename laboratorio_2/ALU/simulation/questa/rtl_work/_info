@@ -1,35 +1,51 @@
 m255
 K4
 z2
-Z0 !s12c _opt2
+Z0 !s12c _opt4
 Z1 !s99 nomlopt
 R0
 R1
-R0
+Z2 !s12c _opt3
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+Z3 !s12c _opt2
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
 R1
 !s12c _opt1
 R1
@@ -42,227 +58,215 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 dD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/simulation/questa
+Z4 dD:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/sumador_n/simulation/questa
 T_opt
 !s110 1742692486
 V42HN2Hd<1Gze9Cd2VJ8W30
-Z3 04 6 4 work alu_tb fast 0
+Z5 04 6 4 work alu_tb fast 0
 =1-d8bbc10d36c1-67df6085-283-3934
 R1
-Z4 !s12b OEM100
-Z5 !s124 OEM10U9 
-Z6 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
-Z7 tCvgOpt 0
+Z6 !s12b OEM100
+Z7 !s124 OEM10U9 
+Z8 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z9 tCvgOpt 0
 n@_opt
-Z8 OL;O;2023.3;77
-R2
+Z10 OL;O;2023.3;77
+R4
 T_opt1
 !s110 1742692533
 V_=i77bia>>mVQ]I?D76>Z3
-R3
+R5
 =1-d8bbc10d36c1-67df60b5-141-5a24
 R1
-R4
-R5
 R6
 R7
-n@_opt1
 R8
-R2
+R9
+n@_opt1
+R10
+R4
 T_opt2
 !s110 1742709171
 Ve]mQlMfh^EWKSm:JlgEeR2
-R3
+R5
 =1-e0d55eabcbc1-67dfa1b3-36-1d0c
 R1
-R4
+R6
 !s124 OEM10U10 
+R8
+R9
+n@_opt2
+R10
+R4
+T_opt3
+!s110 1742756326
+VOgT_[Z8M_Z`JWSNBB5KDQ0
+R5
+=1-e0d55eabcbc1-67e059e5-2af-29f8
+R1
 R6
 R7
-n@_opt2
 R8
-valu
-2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv
-Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z10 !s110 1742709169
-!i10b 1
-!s100 ;CIggNWZXRg1mY_Z=:R^g0
-IT<TkRmmJCoi19=ca?e;Mk2
-S1
-Z11 dD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/simulation/questa
-w1742709088
-8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv
-FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv
-!i122 2
-L0 1 101
-Z12 VDg1SIo80bB@j0V0VzS_@n1
-Z13 OL;L;2023.3;77
-r1
-!s85 0
-31
-Z14 !s108 1742709169.000000
-!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv|
-!i113 0
-Z15 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z16 !s92 -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R7
-valu_tb
-2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv
 R9
-Z17 !s110 1742709170
-!i10b 1
-!s100 Q]6mL;oDKBd`@VVQjM?5[0
-IMIUWBifEYR=S0aU<zWeK11
-S1
-R11
-w1742709140
-8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv
-FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv
-!i122 6
-L0 1 121
-R12
-R13
-r1
-!s85 0
-31
-Z18 !s108 1742709170.000000
-!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_tb.sv|
-!i113 0
-R15
-R16
-R7
-vbcd_4bits
-2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv
-R9
+n@_opt3
 R10
+R4
+valu
+2C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z12 !s110 1742918633
 !i10b 1
-!s100 BD2K2jQ8@gJaC>M=<BQlg2
-I`kWNzmD266<GY[hITU;b]1
+!s100 B29R;JeWBbaJh9CF_<D6K0
+IoL:7X9RK8[hU891eUbIB03
 S1
-R11
-Z19 w1742706130
-8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv
-FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv
-!i122 0
-L0 1 46
-R12
-R13
+Z13 dC:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/simulation/questa
+w1742780055
+8C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv
+FC:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv
+!i122 1
+L0 1 94
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+Z15 OL;L;2023.3;77
 r1
 !s85 0
 31
-R14
-!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/bcd_4bits.sv|
+Z16 !s108 1742918633.000000
+!s107 C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu.sv|
 !i113 0
-R15
-R16
-R7
-vdivision
-2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv
+Z17 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z18 !s92 -sv -work work +incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R9
+valu_cmp_tb_test
+2C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv
+R11
+R12
+!i10b 1
+!s100 NjFh7J4ao7KG`8ZkjOg;[3
+Ikgkj8A9_cYKJF8If;H1VC0
+S1
+R13
+w1742917234
+8C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv
+FC:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv
+!i122 5
+L0 3 54
+R14
+R15
+r1
+!s85 0
+31
+R16
+!s107 C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/alu_cmp_tb_test.sv|
+!i113 0
 R17
+R18
+R9
+vdivision
+2C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv
+R11
+R12
 !i10b 1
 !s100 m<?U56dRcZL8hM^W;?]<l2
-ISk92@a55OFUl2=AaJCzKz0
+Ij7T0ZZ2NKV1@Oo1DK]zhm3
 S1
-R11
-R19
-8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv
-FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv
-!i122 5
-L0 14 51
-R12
 R13
+Z19 w1742759880
+8C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv
+FC:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv
+!i122 4
+L0 14 51
+R14
+R15
 r1
 !s85 0
 31
-R18
-!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv|
-!i113 0
-R15
 R16
-R7
-vfullAdder
-2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv
+!s107 C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/division.sv|
+!i113 0
+R17
+R18
 R9
-R10
+vfullAdder
+2C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv
+R11
+R12
 !i10b 1
 !s100 jRY04AGBA73d`f9lGMMXh0
-IRYzCnJ>N8Ack2Lg]JZn072
+IlQmVi3Vz5MUfF6g0:EN>V3
 S1
-R11
-R19
-8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv
-FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv
-!i122 3
-L0 1 22
-R12
 R13
+R19
+8C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv
+FC:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv
+!i122 2
+L0 1 22
+R14
+R15
 r1
 !s85 0
 31
-R14
-!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv|
-!i113 0
-R15
 R16
-R7
+!s107 C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/fullAdder.sv|
+!i113 0
+R17
+R18
+R9
 nfull@adder
 vnBitsSubstractor
-2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv
-R9
-R10
+2C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv
+R11
+R12
 !i10b 1
 !s100 ZG]jH>fZ38?1h[FLRhRk`0
-In9jW=YzJYI]gZ^i:3KTXo2
+ISjInYP`9`e]RIBk9D2BjJ3
 S1
-R11
-R19
-8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv
-FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv
-!i122 4
-L0 1 45
-R12
 R13
+R19
+8C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv
+FC:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv
+!i122 3
+L0 1 45
+R14
+R15
 r1
 !s85 0
 31
-R14
-!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv|
-!i113 0
-R15
 R16
-R7
+!s107 C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/nBitsSubstractor.sv|
+!i113 0
+R17
+R18
+R9
 nn@bits@substractor
 vsum_N
-2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv
-R9
-R10
+2C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv
+R11
+!s110 1742918632
 !i10b 1
 !s100 dQ0;N;6Eg7=eH2kYTS`:72
-I:XbQDM]8?XH^JfjG]PD4=3
+IcUU<b3hWjB`4P4Ak5MRfz2
 S1
-R11
-R19
-8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv
-FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv
-!i122 1
-L0 3 30
-R12
 R13
+R19
+8C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv
+FC:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv
+!i122 0
+L0 3 30
+R14
+R15
 r1
 !s85 0
 31
-R14
-!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv|
+!s108 1742918632.000000
+!s107 C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU|C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_2/ALU/sum_N.sv|
 !i113 0
-R15
-R16
-R7
+R17
+R18
+R9
 nsum_@n

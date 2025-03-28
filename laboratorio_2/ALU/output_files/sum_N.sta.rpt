@@ -1,5 +1,5 @@
 Timing Analyzer report for sum_N
-Sun Mar 23 00:10:11 2025
+Sun Mar 23 19:36:39 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -95,20 +95,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.14        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.2%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.2%      ;
-;     Processor 5            ;   2.2%      ;
-;     Processor 6            ;   2.2%      ;
-;     Processors 7-8         ;   0.8%      ;
+;     Processor 2            ;   2.4%      ;
+;     Processor 3            ;   2.4%      ;
+;     Processor 4            ;   2.3%      ;
+;     Processor 5            ;   2.3%      ;
+;     Processor 6            ;   2.3%      ;
+;     Processors 7-8         ;   1.0%      ;
 +----------------------------+-------------+
 
 
@@ -320,24 +320,24 @@ No synchronizer chains to report.
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+-------------------------------------------------------------+
-; Input Transition Times                                      ;
-+----------+--------------+-----------------+-----------------+
-; Pin      ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+----------+--------------+-----------------+-----------------+
-; B_inv[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[0]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; op[2]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; op[1]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; op[0]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; op[3]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[1]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; B_inv[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[2]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; B_inv[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[3]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; B_inv[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+----------+--------------+-----------------+-----------------+
++----------------------------------------------------------+
+; Input Transition Times                                   ;
++-------+--------------+-----------------+-----------------+
+; Pin   ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------+--------------+-----------------+-----------------+
+; op[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; A[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; A[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; B[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; op[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; op[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; op[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; A[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; B[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; A[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; B[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; B[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------+--------------+-----------------+-----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -501,10 +501,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; A[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; A[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; A[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; op[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; op[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; op[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -547,10 +547,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; A[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; A[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; A[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B_inv[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; op[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; op[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; op[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -590,7 +590,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Mar 23 00:10:05 2025
+    Info: Processing started: Sun Mar 23 19:36:35 2025
 Info: Command: quartus_sta sum_N -c sum_N
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -650,9 +650,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5358 megabytes
-    Info: Processing ended: Sun Mar 23 00:10:11 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 5374 megabytes
+    Info: Processing ended: Sun Mar 23 19:36:39 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
