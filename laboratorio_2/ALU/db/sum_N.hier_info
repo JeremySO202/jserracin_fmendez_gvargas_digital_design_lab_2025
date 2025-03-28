@@ -1,0 +1,261 @@
+|laboratorio_2
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => _.IN1
+B[1] => _.IN1
+B[2] => _.IN1
+B[3] => _.IN1
+op[0] => op[0].IN1
+op[1] => op[1].IN1
+op[2] => op[2].IN1
+op[3] => op[3].IN1
+op_result[0] << op_result[0].DB_MAX_OUTPUT_PORT_TYPE
+op_result[1] << op_result[1].DB_MAX_OUTPUT_PORT_TYPE
+op_result[2] << op_result[2].DB_MAX_OUTPUT_PORT_TYPE
+op_result[3] << op_result[3].DB_MAX_OUTPUT_PORT_TYPE
+seg_A[6] << bcd_4bits:bcd.y_A
+seg_A[5] << bcd_4bits:bcd.y_A
+seg_A[4] << bcd_4bits:bcd.y_A
+seg_A[3] << bcd_4bits:bcd.y_A
+seg_A[2] << bcd_4bits:bcd.y_A
+seg_A[1] << bcd_4bits:bcd.y_A
+seg_A[0] << bcd_4bits:bcd.y_A
+seg_B[6] << bcd_4bits:bcd.y_B
+seg_B[5] << bcd_4bits:bcd.y_B
+seg_B[4] << bcd_4bits:bcd.y_B
+seg_B[3] << bcd_4bits:bcd.y_B
+seg_B[2] << bcd_4bits:bcd.y_B
+seg_B[1] << bcd_4bits:bcd.y_B
+seg_B[0] << bcd_4bits:bcd.y_B
+N << alu:u_alu.N
+Z << alu:u_alu.Z
+C << alu:u_alu.C
+V << alu:u_alu.V
+
+
+|laboratorio_2|alu:u_alu
+A[0] => A[0].IN3
+A[1] => A[1].IN3
+A[2] => A[2].IN3
+A[3] => A[3].IN3
+B[0] => B[0].IN3
+B[1] => B[1].IN3
+B[2] => B[2].IN3
+B[3] => B[3].IN3
+op[0] => Mux0.IN15
+op[0] => Mux1.IN15
+op[0] => Mux2.IN15
+op[0] => Mux3.IN15
+op[0] => Decoder0.IN3
+op[1] => Mux0.IN14
+op[1] => Mux1.IN14
+op[1] => Mux2.IN14
+op[1] => Mux3.IN14
+op[1] => Decoder0.IN2
+op[2] => Mux0.IN13
+op[2] => Mux1.IN13
+op[2] => Mux2.IN13
+op[2] => Mux3.IN13
+op[2] => Decoder0.IN1
+op[3] => Mux0.IN12
+op[3] => Mux1.IN12
+op[3] => Mux2.IN12
+op[3] => Mux3.IN12
+op[3] => Decoder0.IN0
+op_result[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+op_result[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+op_result[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+op_result[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+N <= N.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+V <= <GND>
+
+
+|laboratorio_2|alu:u_alu|sum_N:sumN
+a[0] => c[0].IN0
+a[0] => y.IN0
+a[1] => c.IN0
+a[1] => c.IN1
+a[1] => y.IN0
+a[2] => c.IN0
+a[2] => c.IN1
+a[2] => y.IN0
+a[3] => c.IN0
+a[3] => c.IN1
+a[3] => y.IN0
+b[0] => c[0].IN1
+b[0] => y.IN1
+b[1] => c.IN1
+b[1] => c.IN1
+b[1] => y.IN1
+b[2] => c.IN1
+b[2] => c.IN1
+b[2] => y.IN1
+b[3] => c.IN1
+b[3] => c.IN1
+b[3] => y.IN1
+cout <= c.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|laboratorio_2|alu:u_alu|nBitsSubstractor:subs
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b_inv[0].IN1
+b[1] => b_inv[1].IN1
+b[2] => b_inv[2].IN1
+b[3] => b_inv[3].IN1
+s[0] <= fullAdder:adder_loop[0].adder.s
+s[1] <= fullAdder:adder_loop[1].adder.s
+s[2] <= fullAdder:adder_loop[2].adder.s
+s[3] <= fullAdder:adder_loop[3].adder.s
+cout <= fullAdder:adder_loop[3].adder.cout
+
+
+|laboratorio_2|alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[0].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|laboratorio_2|alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[1].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|laboratorio_2|alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[2].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|laboratorio_2|alu:u_alu|nBitsSubstractor:subs|fullAdder:adder_loop[3].adder
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|laboratorio_2|alu:u_alu|division:div
+dividendo[0] => Add3.IN8
+dividendo[0] => dividendo_reg.DATAA
+dividendo[1] => Add2.IN8
+dividendo[1] => dividendo_reg.DATAA
+dividendo[2] => Add1.IN8
+dividendo[2] => dividendo_reg.DATAA
+dividendo[3] => Add0.IN8
+dividendo[3] => dividendo_reg.DATAA
+divisor[0] => Add0.IN7
+divisor[0] => Add1.IN4
+divisor[0] => Add2.IN4
+divisor[0] => Add3.IN4
+divisor[1] => Add0.IN6
+divisor[1] => Add1.IN3
+divisor[1] => Add2.IN3
+divisor[1] => Add3.IN3
+divisor[2] => Add0.IN5
+divisor[2] => Add1.IN2
+divisor[2] => Add2.IN2
+divisor[2] => Add3.IN2
+divisor[3] => Add0.IN4
+divisor[3] => Add1.IN1
+divisor[3] => Add2.IN1
+divisor[3] => Add3.IN1
+cociente[0] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+cociente[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+cociente[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cociente[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+residuo[0] <= dividendo_reg.DB_MAX_OUTPUT_PORT_TYPE
+residuo[1] <= dividendo_reg.DB_MAX_OUTPUT_PORT_TYPE
+residuo[2] <= dividendo_reg.DB_MAX_OUTPUT_PORT_TYPE
+residuo[3] <= dividendo_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|laboratorio_2|bcd_4bits:bcd
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[3] => y_A.IN1
+num[2] => y_A.IN1
+num[2] => y_A.IN1
+num[2] => y_A.IN1
+num[2] => y_A.IN1
+num[2] => y_A.IN1
+num[2] => y_A.IN1
+num[2] => y_A.IN1
+num[2] => y_A.IN1
+num[1] => y_A.IN0
+num[1] => y_A.IN0
+num[1] => y_A.IN0
+num[1] => y_A.IN0
+num[0] => y_A.IN1
+num[0] => y_A.IN1
+num[0] => y_A.IN1
+num[0] => y_A.IN1
+y_A[6] <= y_A.DB_MAX_OUTPUT_PORT_TYPE
+y_A[5] <= y_A.DB_MAX_OUTPUT_PORT_TYPE
+y_A[4] <= y_A.DB_MAX_OUTPUT_PORT_TYPE
+y_A[3] <= y_A.DB_MAX_OUTPUT_PORT_TYPE
+y_A[2] <= y_A.DB_MAX_OUTPUT_PORT_TYPE
+y_A[1] <= y_A.DB_MAX_OUTPUT_PORT_TYPE
+y_A[0] <= y_A.DB_MAX_OUTPUT_PORT_TYPE
+y_B[6] <= <VCC>
+y_B[5] <= y_B.DB_MAX_OUTPUT_PORT_TYPE
+y_B[4] <= y_B.DB_MAX_OUTPUT_PORT_TYPE
+y_B[3] <= y_B.DB_MAX_OUTPUT_PORT_TYPE
+y_B[2] <= <GND>
+y_B[1] <= <GND>
+y_B[0] <= y_B.DB_MAX_OUTPUT_PORT_TYPE
+
+
