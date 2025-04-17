@@ -1,0 +1,33 @@
+`timescale 1ns/1ps
+
+module VGA_tb;
+
+  logic clk;
+  logic vgaclk;
+  logic hsync, vsync;
+  logic sync_b, blank_b;
+  logic [7:0] r, g, b;
+
+  VGA dut (
+    .clk(clk),
+    .vgaclk(vgaclk),
+    .hsync(hsync),
+    .vsync(vsync),
+    .sync_b(sync_b),
+    .blank_b(blank_b),
+    .r(r),
+    .g(g),
+    .b(b)
+  );
+
+  // Clock de 25 MHz (40 ns de periodo)
+  initial clk = 0;
+  always #20 clk = ~clk;
+
+  initial begin
+    // Simulación básica para ver señales en el waveform viewer
+    #1000; // 1000 ns (25 ciclos)
+    $stop; // Pausa la simulación para inspección
+  end
+
+endmodule
