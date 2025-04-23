@@ -10,12 +10,13 @@ typedef enum logic [4:0] {
 	 MENU,
 	 JUGADOR_INICIAL,
     TURNO_J1,   // Turno del jugador 1 (FPGA)
-	 FIN_TURNO_J1,
-	 RANDOM_J1,
 	 VERIFICAR_J1,
+	 TIEMPO_J1,
+	 RANDOM_J1,
 	 GANADOR_J1,
     TURNO_J2,   // Turno del jugador 2 (Arduino)
 	 VERIFICAR_J2,
+	 TIEMPO_J2,
 	 RANDOM_J2,
 	 GANADOR_J2,
 	 FIN_JUEGO

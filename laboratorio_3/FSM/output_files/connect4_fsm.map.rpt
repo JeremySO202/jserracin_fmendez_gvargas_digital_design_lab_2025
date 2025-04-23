@@ -1,5 +1,5 @@
 Analysis & Synthesis report for connect4_fsm
-Mon Apr 21 12:23:40 2025
+Tue Apr 22 21:18:37 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -46,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 21 12:23:40 2025          ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 22 21:18:37 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; connect4_fsm                                   ;
 ; Top-level Entity Name           ; connect4_fsm                                   ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
 ; Total registers                 ; 0                                              ;
-; Total pins                      ; 54                                             ;
+; Total pins                      ; 17                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -195,13 +195,13 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 54    ;
+; I/O pins                                    ; 17    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; t_J1  ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 54    ;
+; Total fan-out                               ; 17    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -211,28 +211,32 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; |connect4_fsm              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 54   ; 0            ; |connect4_fsm       ; connect4_fsm ; work         ;
+; |connect4_fsm              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 17   ; 0            ; |connect4_fsm       ; connect4_fsm ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |connect4_fsm|state                                                                                                                                                                           ;
-+-----------------------+-----------------+------------------+--------------------+----------------+------------------+--------------------+----------------+-----------------------+------------+--------------+
-; Name                  ; state.FIN_JUEGO ; state.GANADOR_J2 ; state.VERIFICAR_J2 ; state.TURNO_J2 ; state.GANADOR_J1 ; state.VERIFICAR_J1 ; state.TURNO_J1 ; state.JUGADOR_INICIAL ; state.MENU ; state.INICIO ;
-+-----------------------+-----------------+------------------+--------------------+----------------+------------------+--------------------+----------------+-----------------------+------------+--------------+
-; state.INICIO          ; 0               ; 0                ; 0                  ; 0              ; 0                ; 0                  ; 0              ; 0                     ; 0          ; 0            ;
-; state.MENU            ; 0               ; 0                ; 0                  ; 0              ; 0                ; 0                  ; 0              ; 0                     ; 1          ; 1            ;
-; state.JUGADOR_INICIAL ; 0               ; 0                ; 0                  ; 0              ; 0                ; 0                  ; 0              ; 1                     ; 0          ; 1            ;
-; state.TURNO_J1        ; 0               ; 0                ; 0                  ; 0              ; 0                ; 0                  ; 1              ; 0                     ; 0          ; 1            ;
-; state.VERIFICAR_J1    ; 0               ; 0                ; 0                  ; 0              ; 0                ; 1                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.GANADOR_J1      ; 0               ; 0                ; 0                  ; 0              ; 1                ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.TURNO_J2        ; 0               ; 0                ; 0                  ; 1              ; 0                ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.VERIFICAR_J2    ; 0               ; 0                ; 1                  ; 0              ; 0                ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.GANADOR_J2      ; 0               ; 1                ; 0                  ; 0              ; 0                ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.FIN_JUEGO       ; 1               ; 0                ; 0                  ; 0              ; 0                ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-+-----------------------+-----------------+------------------+--------------------+----------------+------------------+--------------------+----------------+-----------------------+------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |connect4_fsm|state                                                                                                                                                                                                                                                   ;
++-----------------------+-----------------+------------------+-----------------+-----------------+--------------------+----------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
+; Name                  ; state.FIN_JUEGO ; state.GANADOR_J2 ; state.RANDOM_J2 ; state.TIEMPO_J2 ; state.VERIFICAR_J2 ; state.TURNO_J2 ; state.GANADOR_J1 ; state.RANDOM_J1 ; state.TIEMPO_J1 ; state.VERIFICAR_J1 ; state.TURNO_J1 ; state.JUGADOR_INICIAL ; state.MENU ; state.INICIO ;
++-----------------------+-----------------+------------------+-----------------+-----------------+--------------------+----------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
+; state.INICIO          ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 0            ;
+; state.MENU            ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 1          ; 1            ;
+; state.JUGADOR_INICIAL ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 1                     ; 0          ; 1            ;
+; state.TURNO_J1        ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 1              ; 0                     ; 0          ; 1            ;
+; state.VERIFICAR_J1    ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 1                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.TIEMPO_J1       ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 1               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.RANDOM_J1       ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 1               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.GANADOR_J1      ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 1                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.TURNO_J2        ; 0               ; 0                ; 0               ; 0               ; 0                  ; 1              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.VERIFICAR_J2    ; 0               ; 0                ; 0               ; 0               ; 1                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.TIEMPO_J2       ; 0               ; 0                ; 0               ; 1               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.RANDOM_J2       ; 0               ; 0                ; 1               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.GANADOR_J2      ; 0               ; 1                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.FIN_JUEGO       ; 1               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
++-----------------------+-----------------+------------------+-----------------+-----------------+--------------------+----------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
 
 
 +-------------------------------------------------------------+
@@ -250,24 +254,29 @@ Encoding Type:  One-Hot
 ; state.JUGADOR_INICIAL                  ; Lost fanout        ;
 ; state.TURNO_J1                         ; Lost fanout        ;
 ; state.VERIFICAR_J1                     ; Lost fanout        ;
+; state.TIEMPO_J1                        ; Lost fanout        ;
+; state.RANDOM_J1                        ; Lost fanout        ;
 ; state.GANADOR_J1                       ; Lost fanout        ;
 ; state.TURNO_J2                         ; Lost fanout        ;
 ; state.VERIFICAR_J2                     ; Lost fanout        ;
+; state.TIEMPO_J2                        ; Lost fanout        ;
+; state.RANDOM_J2                        ; Lost fanout        ;
 ; state.GANADOR_J2                       ; Lost fanout        ;
 ; state.FIN_JUEGO                        ; Lost fanout        ;
-; Total Number of Removed Registers = 15 ;                    ;
+; Total Number of Removed Registers = 19 ;                    ;
 +----------------------------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                               ;
-+---------------+--------------------+----------------------------------------------------------------------+
-; Register name ; Reason for Removal ; Registers Removed due to This Register                               ;
-+---------------+--------------------+----------------------------------------------------------------------+
-; state~4       ; Lost Fanouts       ; state.INICIO, state.VERIFICAR_J1, state.TURNO_J2, state.VERIFICAR_J2 ;
-; state~6       ; Lost Fanouts       ; state.GANADOR_J1, state.GANADOR_J2, state.FIN_JUEGO                  ;
-; state~5       ; Lost Fanouts       ; state.TURNO_J1                                                       ;
-+---------------+--------------------+----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                  ;
++---------------+--------------------+-----------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal ; Registers Removed due to This Register                                                  ;
++---------------+--------------------+-----------------------------------------------------------------------------------------+
+; state~4       ; Lost Fanouts       ; state.VERIFICAR_J1, state.GANADOR_J1, state.TURNO_J2, state.TIEMPO_J2, state.RANDOM_J2, ;
+;               ;                    ; state.GANADOR_J2                                                                        ;
+; state~5       ; Lost Fanouts       ; state.RANDOM_J1                                                                         ;
+; state~6       ; Lost Fanouts       ; state.VERIFICAR_J2                                                                      ;
++---------------+--------------------+-----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -287,17 +296,14 @@ Encoding Type:  One-Hot
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 54                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 17                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -315,7 +321,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Apr 21 12:23:34 2025
+    Info: Processing started: Tue Apr 22 21:18:31 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect4_fsm -c connect4_fsm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -324,74 +330,34 @@ Info (12021): Found 2 design units, including 1 entities, in source file connect
     Info (12023): Found entity 1: connect4_fsm File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 3
 Info (12021): Found 0 design units, including 0 entities, in source file connect4_tipos.sv
 Info (12127): Elaborating entity "connect4_fsm" for the top level hierarchy
-Info (10264): Verilog HDL Case Statement information at connect4_fsm.sv(22): all case item expressions in this case statement are onehot File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 22
-Warning (10034): Output port "board" at connect4_fsm.sv(7) has no driver File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "board[0][0]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[0][1]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[0][2]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[0][3]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[0][4]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[0][5]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[0][6]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[1][0]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[1][1]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[1][2]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[1][3]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[1][4]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[1][5]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[1][6]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[2][0]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[2][1]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[2][2]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[2][3]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[2][4]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[2][5]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[2][6]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[3][0]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[3][1]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[3][2]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[3][3]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[3][4]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[3][5]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[3][6]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[4][0]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[4][1]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[4][2]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[4][3]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[4][4]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[4][5]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[4][6]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[5][0]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[5][1]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[5][2]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[5][3]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[5][4]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[5][5]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-    Warning (13410): Pin "board[5][6]" is stuck at GND File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
-Info (17049): 15 registers lost all their fanouts during netlist optimizations.
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "t_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
-    Warning (15610): No output dependent on input pin "tablero_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
     Warning (15610): No output dependent on input pin "t_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
-    Warning (15610): No output dependent on input pin "valido_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
-    Warning (15610): No output dependent on input pin "is_ganador_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
+    Warning (15610): No output dependent on input pin "volver_inicio" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 7
     Warning (15610): No output dependent on input pin "inicio_juego" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 4
-    Warning (15610): No output dependent on input pin "tablero_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
+    Warning (15610): No output dependent on input pin "tiempo_terminado_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
     Warning (15610): No output dependent on input pin "valido_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
-    Warning (15610): No output dependent on input pin "is_ganador_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
+    Warning (15610): No output dependent on input pin "gano_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
     Warning (15610): No output dependent on input pin "num_jugador" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 4
+    Warning (15610): No output dependent on input pin "tablero_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
+    Warning (15610): No output dependent on input pin "random_valido_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
+    Warning (15610): No output dependent on input pin "gano_J1" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 5
+    Warning (15610): No output dependent on input pin "tiempo_terminado_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
+    Warning (15610): No output dependent on input pin "valido_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
+    Warning (15610): No output dependent on input pin "tablero_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
+    Warning (15610): No output dependent on input pin "random_valido_J2" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 6
     Warning (15610): No output dependent on input pin "clk" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 4
     Warning (15610): No output dependent on input pin "rst" File: D:/Work/2025 I/Taller de Diseno Digital/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/FSM/connect4_fsm.sv Line: 4
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 42 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
+Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Mon Apr 21 12:23:40 2025
+    Info: Processing ended: Tue Apr 22 21:18:37 2025
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:13
 
 
