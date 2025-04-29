@@ -1,0 +1,33 @@
+|connect4_fsm
+clk => state~1.DATAIN
+rst => state~3.DATAIN
+inicio_juego => next_state.JUGADOR_INICIAL.DATAB
+inicio_juego => Selector0.IN2
+num_jugador => Selector1.IN5
+num_jugador => Selector4.IN1
+tablero_J1 => next_state.VERIFICAR_J1.DATAB
+tablero_J1 => next_state.TIEMPO_J1.DATAB
+t_J1 => ~NO_FANOUT~
+valido_J1 => Selector3.IN2
+valido_J1 => Selector1.IN2
+gano_J1 => Selector7.IN3
+gano_J1 => Selector4.IN2
+tiempo_terminado_J1 => Selector2.IN3
+tiempo_terminado_J1 => Selector1.IN1
+random_valido_J1 => Selector3.IN3
+random_valido_J1 => Selector2.IN1
+tablero_J2 => next_state.VERIFICAR_J2.DATAB
+tablero_J2 => next_state.TIEMPO_J2.DATAB
+t_J2 => ~NO_FANOUT~
+valido_J2 => Selector6.IN2
+valido_J2 => Selector4.IN4
+gano_J2 => Selector7.IN4
+gano_J2 => Selector1.IN3
+tiempo_terminado_J2 => Selector5.IN3
+tiempo_terminado_J2 => Selector4.IN3
+random_valido_J2 => Selector6.IN3
+random_valido_J2 => Selector5.IN1
+volver_inicio => next_state.INICIO.DATAB
+volver_inicio => Selector7.IN1
+
+

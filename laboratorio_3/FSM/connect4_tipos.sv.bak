@@ -1,0 +1,12 @@
+package connect4_tipos;
+
+
+typedef enum logic [4:0] {
+    INICIO,           // Estado inicial
+	 MENU,
+	 JUGADOR_INICIAL,
+    PLAYER1_TURN,   // Turno del jugador 1 (FPGA)
+    PLAYER2_TURN   // Turno del jugador 2 (Arduino)
+} game_state;
+
+endpackage
