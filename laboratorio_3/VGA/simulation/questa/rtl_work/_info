@@ -1,0 +1,160 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/simulation/questa
+T_opt
+!s110 1744765322
+VcCc`<g2W`[eXmkX1fZFJn0
+04 6 4 work VGA_tb fast 0
+=1-e0d55eabcbc1-67ff018a-1ce-3dc
+R0
+!s12b OEM100
+!s124 OEM10U5 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vclockDivider
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/clockDivider.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1744765321
+!i10b 1
+!s100 KE_m2SH3Lno?V6D9c3cD>3
+I>:P3?ifZR[Nlc83mZJWP73
+S1
+R1
+w1744587033
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/clockDivider.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/clockDivider.sv
+!i122 2
+L0 1 19
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1744765321.000000
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/clockDivider.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/clockDivider.sv|
+!i113 0
+Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+nclock@divider
+vRGB_Controller
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/RGB_Controller.sv
+R3
+R4
+!i10b 1
+!s100 5mI9cfhBnbcUYIf`_g0b:3
+I`QELdNffEo3MzaY=hjIkI1
+S1
+R1
+w1744763223
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/RGB_Controller.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/RGB_Controller.sv
+!i122 3
+L0 1 9
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/RGB_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/RGB_Controller.sv|
+!i113 0
+R8
+R9
+R2
+n@r@g@b_@controller
+vVGA
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA.sv
+R3
+R4
+!i10b 1
+!s100 9]nKnR0:]5>UKiEJcTH@W2
+IFM]_c<BkWUOGfRC3ihkB81
+S1
+R1
+w1744763256
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA.sv
+!i122 0
+L0 1 20
+R5
+R6
+r1
+!s85 0
+31
+!s108 1744765320.000000
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA.sv|
+!i113 0
+R8
+R9
+R2
+n@v@g@a
+vVGA_tb
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA_tb.sv
+R3
+R4
+!i10b 1
+!s100 QZ:iQJ@^2nf:Zf`m]MGom3
+I]ef[IN7H6nVAVZmEC=7zE2
+S1
+R1
+w1744763328
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA_tb.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA_tb.sv
+!i122 4
+L0 3 31
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/VGA_tb.sv|
+!i113 0
+R8
+R9
+R2
+n@v@g@a_tb
+vvgaController
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/vgaController.sv
+R3
+R4
+!i10b 1
+!s100 Ka;2[`j=R]A9n3HJB6n=L1
+ImYaCTPgnQk;ClPK^IU<ii0
+S1
+R1
+w1744587444
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/vgaController.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/vgaController.sv
+!i122 1
+L0 1 46
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/vgaController.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/VGA/vgaController.sv|
+!i113 0
+R8
+R9
+R2
+nvga@controller

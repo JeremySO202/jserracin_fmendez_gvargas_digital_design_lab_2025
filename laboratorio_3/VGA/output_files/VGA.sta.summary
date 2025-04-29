@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clockDivider:clkDiv|pos_edge'
+Slack : -3.540
+TNS   : -261.613
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -2.789
+TNS   : -2.789
+
+Type  : Slow 1100mV 85C Model Hold 'clockDivider:clkDiv|pos_edge'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 1.052
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clockDivider:clkDiv|pos_edge'
+Slack : -0.394
+TNS   : -51.450
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -0.773
+
+Type  : Slow 1100mV 0C Model Setup 'clockDivider:clkDiv|pos_edge'
+Slack : -3.525
+TNS   : -251.179
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -2.591
+TNS   : -2.591
+
+Type  : Slow 1100mV 0C Model Hold 'clockDivider:clkDiv|pos_edge'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.944
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.399
+TNS   : -0.793
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clockDivider:clkDiv|pos_edge'
+Slack : -0.394
+TNS   : -51.374
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -2.092
+TNS   : -2.092
+
+Type  : Fast 1100mV 85C Model Setup 'clockDivider:clkDiv|pos_edge'
+Slack : -1.775
+TNS   : -128.942
+
+Type  : Fast 1100mV 85C Model Hold 'clockDivider:clkDiv|pos_edge'
+Slack : 0.154
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.944
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.413
+TNS   : -0.475
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clockDivider:clkDiv|pos_edge'
+Slack : 0.026
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -1.711
+TNS   : -1.711
+
+Type  : Fast 1100mV 0C Model Setup 'clockDivider:clkDiv|pos_edge'
+Slack : -1.586
+TNS   : -111.591
+
+Type  : Fast 1100mV 0C Model Hold 'clockDivider:clkDiv|pos_edge'
+Slack : 0.137
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.651
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.416
+TNS   : -0.490
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clockDivider:clkDiv|pos_edge'
+Slack : 0.053
+TNS   : 0.000
+
+------------------------------------------------------------
