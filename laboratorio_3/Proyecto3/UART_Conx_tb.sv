@@ -1,0 +1,83 @@
+`timescale 1ns/1ps
+
+module UART_Conx_tb;
+
+    // Señales de prueba
+    logic clk;
+    logic rst;
+    logic rx;
+    logic [2:0] recep;
+    logic [15:0] BaudRate;
+    logic rxReady;
+    logic [7:0] rxOut;
+
+    // Instancia del módulo top
+    UART_Conx uut (
+        .clk(clk),
+        .rst(rst),
+        .rx(rx),
+        .recep(recep),
+        .BaudRate(BaudRate),
+        .rxReady(rxReady),
+        .rxOut(rxOut)
+    );
+
+    // Clock 50MHz (20ns periodo)
+    always #10 clk = ~clk;
+
+    // Tareas para simular transmisión UART
+    task send_uart_byte(input [7:0] data);
+        int i;
+        begin
+            // Start bit (0)
+            rx = 1'b0;
+            repeat (16) @(posedge clk); // 1 bit de duración (16 ticks)
+
+            // Data bits (LSB primero)
+            for (i = 0; i < 8; i = i + 1) begin
+                rx = data[i];
+                repeat (16) @(posedge clk);
+            end
+
+            // Stop bit (1)
+            rx = 1'b1;
+            repeat (16) @(posedge clk);
+        end
+    endtask
+
+    initial begin
+        // Inicialización
+        clk = 0;
+        rst = 0;
+        rx = 1;
+        recep = 3'd8;
+        BaudRate = 16'd325;
+
+        // Reset
+        #50;
+        rst = 1;
+
+        // Esperar estabilización
+        #100;
+
+        // Enviar varios bytes
+        $display("Transmitting UART data...");
+
+        send_uart_byte(8'hA5); // 0b10100101
+        send_uart_byte(8'h3C); // 0b00111100
+        send_uart_byte(8'hFF); // 0b11111111
+
+        // Esperar recepción
+        #1000;
+
+        $stop;
+    end
+
+    // Monitor
+    always @(posedge clk) begin
+        if (rxReady) begin
+            $display("Received: %h at time %t", rxOut, $time);
+        end
+    end
+
+endmodule

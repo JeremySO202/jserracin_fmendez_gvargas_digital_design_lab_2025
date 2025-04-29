@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rxReady",
+					"strict" : false
+				},
+				{
+					"name" : "rxOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rxOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rxOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rxOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rxOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rxOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rxOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "recep[1]",
+					"strict" : false
+				},
+				{
+					"name" : "recep[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
+					"strict" : false
+				},
+				{
+					"name" : "recep[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[15]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[14]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[12]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[13]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[11]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[9]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[10]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[8]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BaudRate[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

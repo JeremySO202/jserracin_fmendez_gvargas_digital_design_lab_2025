@@ -1,0 +1,103 @@
+module Sec_conx(
+	input logic clk, rst, rx, rx_e, time,
+	input logic[2:0] recep,
+	output logic rxReady,
+	output logic [7:0] rxOut
+
+);
+
+
+//2 estados, no leer y leer
+
+typedef enum logic {
+        IDLE = 1'b0,
+        READ = 1'b1
+} state_t;
+
+state_t State, Next;
+
+//variables para la maquina
+
+logic read_enable, start_bit;
+logic [4:0]  Bit;
+logic [3:0]  counter;
+logic [7:0]  read_data;
+
+
+initial begin
+	State = IDLE;
+	read_enable = 1'b0;
+	start_bit = 1'b1;
+	rxReady = 1'b0;
+	Bit = 5'd0;
+	counter = 4'd0;
+	read_data = 8'd0;
+	rxOut = 8'd0;
+end
+
+//primero hay q ver lo que pasa con el leer y no leer
+always_ff @(posedge clk or negedge rst) begin
+	if (!rst)
+    State <= IDLE;
+	else
+    State <= Next;
+end
+
+always_comb begin
+	case (State)
+		IDLE:  Next = (!rx && rx_e) ? READ : IDLE;
+      READ:  Next = rxReady ? IDLE : READ;
+      default: Next = IDLE;
+	endcase
+end
+	 
+always_comb begin 
+	case(State)
+		READ: read_enable = 1'b1;
+		IDLE: read_enable = 1'b0;
+		default: read_enable = 1'b0;
+	endcase
+end
+
+//ahora para lo que se recibe
+
+always_ff @(posedge tick) begin
+	if (read_enable) begin
+		rxReady <= 1'b0;
+		counter <= counter + 1;
+
+		//bit de inicio
+		if ((counter == 4'd8) && start_bit) begin
+			start_bit <= 1'b0;
+			counter <= 4'd0;
+		end
+
+		// leer
+		if ((counter == 4'd15) && !start_bit && (Bit < recep)) begin
+			Bit <= Bit + 1;
+			read_data <= {rx, read_data[7:1]};
+			counter <= 4'd0;
+		end
+
+   // ultimo flanco
+	if ((counter == 4'd15) && (Bit == recep) && rx) begin
+		Bit <= 5'd0;
+		rxReady <= 1'b1;
+		counter <= 4'd0;
+		start_bit <= 1'b1;
+		end
+	end
+end //end del amways com
+
+    ////////////////////////// OUTPUT ASSIGNMENT //////////////////////////
+
+    always_ff @(posedge clk) begin
+        case (recep)
+            4'd8: rxOut <= read_data;
+            4'd7: rxOut <= {1'b0, read_data[7:1]};
+            4'd6: rxOut <= {2'b00, read_data[7:2]};
+            default: rxOut <= 8'd0;
+        endcase
+    end
+
+endmodule

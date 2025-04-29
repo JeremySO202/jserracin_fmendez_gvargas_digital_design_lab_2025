@@ -1,0 +1,35 @@
+module UART_Conx (
+    input  logic        clk,        // 50MHz clock
+    input  logic        rst,        // Reset activo en bajo
+    input  logic        rx,         // Señal UART RX
+    input  logic [2:0]  recep,      // Cantidad de bits a recibir (6,7,8)
+    input  logic [15:0] BaudRate,   // Valor divisor de baudrate (ej. 325)
+
+    output logic        rxReady,    // Señal de dato recibido listo
+    output logic [7:0]  rxOut       // Dato recibido
+);
+
+    // Señal de "tick" generada por el baudrate generator
+    logic Tick;
+
+    // Instancia del generador de baudrate
+    UART_BaudRate_generator baud_gen (
+        .Clk       (clk),
+        .Rst_n     (rst),
+        .Tick      (Tick),
+        .BaudRate  (BaudRate)
+    );
+
+    // Instancia del receptor UART
+    Sec_conx uart_rx (
+        .clk       (clk),
+        .rst       (rst),
+        .rx        (rx),
+        .rx_e      (1'b1),    // habilitamos recepción siempre
+        .time      (Tick),    // el reloj de muestreo es Tick
+        .recep     (recep),
+        .rxReady   (rxReady),
+        .rxOut     (rxOut)
+    );
+
+endmodule

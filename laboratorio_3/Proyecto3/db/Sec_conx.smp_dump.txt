@@ -1,0 +1,5 @@
+
+State Machine - |UART_Conx|Sec_conx:uart_rx|State
+Name State.READ 
+State.IDLE 0 
+State.READ 1 
