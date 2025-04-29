@@ -1,0 +1,82 @@
+module Ganador(
+	input logic jugador,
+	input logic [5:0][6:0] board,
+	output logic ganador
+		
+);
+
+	localparam int rows = $size(board, 1);
+	localparam int columns = $size(board, 2);
+	
+// voy a empezar por iterar revisando horizontalmente en las primeras 4 columnas
+/* 0 0 0 0 0 0 0
+	0 0 0 0 0 0 0
+	0 0 0 0 0 0 0
+	0 0 0 0 0 0 0
+	0 0 0 0 0 0 0
+	0 0 0 0 0 0 0 */
+	
+	always_comb begin
+		ganador = 1'b0;
+
+		for(int c =0; c< columns-3; c++) begin
+			for (int r = 0; r<rows; r++) begin
+				if (board[r][c] == jugador &&
+					board[r][c+1] == jugador &&
+					board[r][c+2] == jugador && 
+					board[r][c+3] == jugador)
+					ganador = 1'b1;
+					break;
+			end
+		end
+		
+		if (ganador) break;	
+    end
+		
+		//ahora para los primeros 4 verticales
+		if (!ganador) begin
+			for(int c =0; c< columns; c++) begin
+				for (int r = 0; r<rows-3; r++) begin
+					if (board[r][c] == jugador &&
+						board[r+1][c] == jugador &&
+						board[r+2][c] == jugador && 
+						board[r+3][c] == jugador)
+						ganador = 1'b1;
+				end
+			end
+			if (ganador) break;	
+		 end
+		end
+		//diagonales para arriba
+		if (!ganador) begin
+			for(int c =0; c< columns-3; c++) begin
+				for (int r = 0; r<rows-3; r++) begin
+					if (board[r][c] == jugador &&
+						board[r+1][c+1] == jugador &&
+						board[r+2][c+2] == jugador && 
+						board[r+3][c+3] == jugador)
+						ganador = 1'b1;
+				end
+			end
+			if (ganador) break;	
+		 end
+		end
+		
+		//diagonales para abajo
+		if (!ganador) begin
+			for(int c =0; c< columns-3; c++) begin
+				for (int r = 3; r< rows; r++) begin
+					if (board[r][c] == jugador &&
+						board[r-1][c+1] == jugador &&
+						board[r-2][c+2] == jugador && 
+						board[r-3][c+3] == jugador)
+						ganador = 1'b1;
+				end
+			end
+		if (ganador) break;	
+		 end
+	end
+	
+	
+
+endmodule

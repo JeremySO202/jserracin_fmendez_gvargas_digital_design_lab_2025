@@ -1,0 +1,89 @@
+`timescale 1ns/1ps
+
+module Ganador_tb;
+
+  // Parámetros
+  localparam int rows = 6;
+  localparam int columns = 7;
+
+  // Entradas al DUT
+  logic jugador;
+  logic [rows-1:0][columns-1:0] board;
+
+  // Salida del DUT
+  logic ganador;
+
+  // Instanciar el módulo bajo prueba (DUT)
+  Ganador #(.rows(rows), .columns(columns)) dut (
+    .jugador(jugador),
+    .board(board),
+    .ganador(ganador)
+  );
+
+  // Procedimiento de prueba
+  initial begin
+    // Inicializar
+    jugador = 1'b1;
+    board = '0; // limpiar tablero (todo en 0)
+    
+    #5;
+    $display("Test 1: No hay ganador inicialmente");
+    assert(ganador == 0) else $fatal("Fallo: debería no haber ganador");
+
+    // Prueba 2: Horizontal (fila 0, columnas 0 a 3)
+    board[0][0] = jugador;
+    board[0][1] = jugador;
+    board[0][2] = jugador;
+    board[0][3] = jugador;
+
+    #5;
+    $display("Test 2: Ganador horizontal");
+    assert(ganador == 1) else $fatal("Fallo: debería detectar ganador horizontal");
+    
+    // Reset board
+    board = '0;
+    #5;
+
+    // Prueba 3: Vertical (columna 0, filas 0 a 3)
+    board[0][0] = jugador;
+    board[1][0] = jugador;
+    board[2][0] = jugador;
+    board[3][0] = jugador;
+
+    #5;
+    $display("Test 3: Ganador vertical");
+    assert(ganador == 1) else $fatal("Fallo: debería detectar ganador vertical");
+
+    // Reset board
+    board = '0;
+    #5;
+
+    // Prueba 4: Diagonal hacia abajo (\)
+    board[0][0] = jugador;
+    board[1][1] = jugador;
+    board[2][2] = jugador;
+    board[3][3] = jugador;
+
+    #5;
+    $display("Test 4: Ganador diagonal hacia abajo (\\)");
+    assert(ganador == 1) else $fatal("Fallo: debería detectar ganador diagonal hacia abajo");
+
+    // Reset board
+    board = '0;
+    #5;
+
+    // Prueba 5: Diagonal hacia arriba (/)
+    board[3][0] = jugador;
+    board[2][1] = jugador;
+    board[1][2] = jugador;
+    board[0][3] = jugador;
+
+    #5;
+    $display("Test 5: Ganador diagonal hacia arriba (/)");
+    assert(ganador == 1) else $fatal("Fallo: debería detectar ganador diagonal hacia arriba");
+
+    $display("Todas las pruebas PASARON ✅");
+    $finish;
+  end
+
+endmodule
