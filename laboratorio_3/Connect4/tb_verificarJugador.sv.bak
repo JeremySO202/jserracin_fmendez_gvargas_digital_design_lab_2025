@@ -1,0 +1,71 @@
+`timescale 1ns / 1ps
+
+module tb_verificarJugador;
+
+    // Entradas
+    logic enable;
+    logic btnIzq, btnDer, btnEnt;
+    logic jugador;
+
+    // Salidas
+    logic FT;
+    logic [5:0] posicion;
+    logic [5:0][6:0] tablero;
+    logic [5:0][6:0] fichas;
+
+    // Instancia del módulo
+    verificarJugador uut (
+        .enable(enable),
+        .btnIzq(btnIzq),
+        .btnDer(btnDer),
+        .btnEnt(btnEnt),
+        .jugador(jugador),
+        .FT(FT),
+        .posicion(posicion),
+        .tablero(tablero),
+        .fichas(fichas)
+    );
+
+    initial begin
+        // Inicialización
+        enable = 1;
+        jugador = 1;
+        btnIzq = 0;
+        btnDer = 0;
+        btnEnt = 0;
+
+        #10;
+
+        // Simula un clic en btnIzq
+        btnIzq = 1;
+        #10;
+        btnIzq = 0;
+        #10;
+
+        // Simula dos clics en btnDer
+        btnDer = 1;
+        #10;
+        btnDer = 0;
+        #10;
+        btnDer = 1;
+        #10;
+        btnDer = 0;
+        #10;
+
+        // Simula un clic en btnEnt
+        btnEnt = 1;
+        #10;
+        btnEnt = 0;
+        #10;
+
+        // Verificación del resultado
+        $display("Posición final: %b", posicion);
+        $display("Ficha colocada en tablero:");
+        for (int i = 0; i < 6; i++) begin
+            $display("Columna %0d: %b", i, tablero[i]);
+        end
+
+        $stop;
+    end
+
+endmodule
