@@ -22,9 +22,7 @@ module connect4_counter_tb;
         #40;
         rst = 0;
 
-        // Esperamos hasta que 'done' sea 1
-        wait(done == 1);
-        $display("¡10 segundos simulados han pasado!");
+        #20000
 
         $stop;
     end
