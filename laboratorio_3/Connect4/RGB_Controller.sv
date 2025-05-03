@@ -1,0 +1,72 @@
+module RGB_Controller(
+    input logic [6:0] posicion, // Posición del jugador (1 bit activo por columna)
+    input logic [5:0][6:0] tablero, // Matriz de 6x7 para el tablero
+    input logic [5:0][6:0] fichas,   // Matriz de 6x7 para las fichas
+    input logic [9:0] x, y, // Coordenadas del pixel
+    output logic [7:0] r, g, b // Salidas RGB combinadas
+);
+
+    // Definición de colores
+    parameter WHITE = 2'b00;
+    parameter RED = 2'b01;
+    parameter BLUE = 2'b10;
+    parameter BLACK = 2'b11;
+
+    // Variables para almacenar el color actual y las posiciones
+    logic [1:0] color;
+    integer columna;
+    integer fila;
+
+    // Lógica para dibujar las líneas, el cursor y las fichas
+    always_comb begin
+        // Inicializar color por defecto
+        color = BLACK;
+
+        // Determinar la columna y fila
+        columna = 6 -  x / 92; // 88 de grosor + 4 de línea divisora
+        fila = 5 - (y-28) / 76;
+
+		// Dibujar las líneas divisorias
+		if ((x % 92) >= 88 && (x % 92) < 92) begin
+			color = WHITE; // Líneas divisorias tienen mayor prioridad
+		end
+		// Dibujar las fichas
+		else if (fila >= 0 && fila < 6 && columna >= 0 && columna < 7 && tablero[fila][columna]) begin
+			color = fichas[fila][columna] ? RED : BLUE; // Fichas
+		end
+		// Dibujar el cursor
+		else if (y < 29 && columna >= 0 && columna < 7 && posicion[columna]) begin
+			color = WHITE; // Cursor
+		end
+
+        // Asignar los valores RGB según el color
+        case (color)
+            WHITE: begin
+                r = 8'hFF;
+                g = 8'hFF;
+                b = 8'hFF;
+            end
+            RED: begin
+                r = 8'hFF;
+                g = 8'h00;
+                b = 8'h00;
+            end
+            BLUE: begin
+                r = 8'h00;
+                g = 8'h00;
+                b = 8'hFF;
+            end
+            BLACK: begin
+                r = 8'h00;
+                g = 8'h00;
+                b = 8'h00;
+            end
+            default: begin
+                r = 8'h00;
+                g = 8'h00;
+                b = 8'h00;
+            end
+        endcase
+    end
+
+endmodule
