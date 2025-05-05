@@ -1,0 +1,5 @@
+module verificarJugador(
+	input logic enable,
+	input logic btnIzq, btnDer, btnEnt,
+	
+	

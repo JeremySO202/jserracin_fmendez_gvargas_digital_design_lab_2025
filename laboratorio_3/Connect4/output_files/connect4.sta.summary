@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -3.875
+TNS   : -327.591
+
+Type  : Slow 1100mV 85C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : -3.181
+TNS   : -66.778
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.216
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : 0.788
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.470
+TNS   : -80.302
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : -0.394
+TNS   : -11.251
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -3.708
+TNS   : -323.752
+
+Type  : Slow 1100mV 0C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : -3.209
+TNS   : -67.353
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : 0.795
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.479
+TNS   : -85.775
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : -0.394
+TNS   : -11.263
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -2.906
+TNS   : -134.352
+
+Type  : Fast 1100mV 85C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : -1.400
+TNS   : -30.335
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.494
+TNS   : -9.038
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -2.434
+TNS   : -114.651
+
+Type  : Fast 1100mV 0C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : -1.265
+TNS   : -27.419
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.476
+TNS   : -10.764
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
+Slack : 0.137
+TNS   : 0.000
+
+------------------------------------------------------------
