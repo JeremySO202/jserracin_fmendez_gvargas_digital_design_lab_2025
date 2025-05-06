@@ -2,6 +2,8 @@ module RGB_Controller(
     input logic [6:0] posicion, // Posición del jugador (1 bit activo por columna)
     input logic [5:0][6:0] tablero, // Matriz de 6x7 para el tablero
     input logic [5:0][6:0] fichas,   // Matriz de 6x7 para las fichas
+    input logic jugador, // Jugador actual (1 o 2)
+    input logic finJuego, // Fin del juego
     input logic [9:0] x, y, // Coordenadas del pixel
     output logic [7:0] r, g, b // Salidas RGB combinadas
 );
@@ -17,10 +19,23 @@ module RGB_Controller(
     integer columna;
     integer fila;
 
+    logic showWinner; // Señal para mostrar el cursor
+
+    WinnerScreen winnerScreen_inst (
+        .x(x),
+        .y(y),
+        .finJuego(finJuego),
+        .columna(columna),
+        .show(showWinner)
+    );
+
+
     // Lógica para dibujar las líneas, el cursor y las fichas
     always_comb begin
         // Inicializar color por defecto
         color = BLACK;
+
+
 
         // Determinar la columna y fila
         columna = 6 -  x / 92; // 88 de grosor + 4 de línea divisora
@@ -36,7 +51,8 @@ module RGB_Controller(
 		end
 		// Dibujar el cursor
 		else if (y < 29 && columna >= 0 && columna < 7 && posicion[columna]) begin
-			color = WHITE; // Cursor
+            
+			color = showWinner ? (jugador ? RED : BLUE) : WHITE; // Cursor
 		end
 
         // Asignar los valores RGB según el color

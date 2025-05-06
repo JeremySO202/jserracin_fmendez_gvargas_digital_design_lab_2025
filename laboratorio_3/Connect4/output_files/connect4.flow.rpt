@@ -1,5 +1,5 @@
 Flow report for connect4
-Mon May  5 13:41:31 2025
+Mon May  5 20:13:58 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Mon May  5 13:41:31 2025          ;
+; Flow Status                     ; Successful - Mon May  5 20:13:58 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; connect4                                       ;
 ; Top-level Entity Name           ; connect4                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSXFC6D6F31C6                                 ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 321 / 41,910 ( < 1 % )                         ;
-; Total registers                 ; 157                                            ;
-; Total pins                      ; 39 / 499 ( 8 % )                               ;
+; Logic utilization (in ALMs)     ; 502 / 41,910 ( 1 % )                           ;
+; Total registers                 ; 200                                            ;
+; Total pins                      ; 43 / 499 ( 9 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                          ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                                ;
+; Total DSP Blocks                ; 1 / 112 ( < 1 % )                              ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                  ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                  ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                  ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/05/2025 13:39:14 ;
+; Start date & time ; 05/05/2025 20:10:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; connect4            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 247207020972993.174647395406376        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 247207020972993.174649740604284        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -103,12 +103,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4898 MB             ; 00:00:29                           ;
-; Fitter               ; 00:01:43     ; 1.0                     ; 7018 MB             ; 00:05:15                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 5233 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.6                     ; 5374 MB             ; 00:00:09                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4745 MB             ; 00:00:01                           ;
-; Total                ; 00:02:12     ; --                      ; --                  ; 00:06:01                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4898 MB             ; 00:00:34                           ;
+; Fitter               ; 00:03:11     ; 1.0                     ; 7015 MB             ; 00:10:03                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 5233 MB             ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.6                     ; 5389 MB             ; 00:00:10                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4745 MB             ; 00:00:02                           ;
+; Total                ; 00:03:44     ; --                      ; --                  ; 00:10:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

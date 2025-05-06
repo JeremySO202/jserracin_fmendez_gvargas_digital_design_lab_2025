@@ -2,100 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : -6.352
+TNS   : -6.352
+
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -3.875
-TNS   : -327.591
+Slack : -3.479
+TNS   : -462.013
 
 Type  : Slow 1100mV 85C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : -3.181
-TNS   : -66.778
+Slack : -3.224
+TNS   : -80.974
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.216
+Slack : 0.131
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : 0.788
+Slack : 0.836
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : 3.116
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.470
-TNS   : -80.302
+Slack : -0.420
+TNS   : -98.775
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
 Slack : -0.394
-TNS   : -11.251
+TNS   : -14.245
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : -0.394
+TNS   : -0.509
+
+Type  : Slow 1100mV 0C Model Setup 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : -6.447
+TNS   : -6.447
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -3.708
-TNS   : -323.752
+Slack : -3.293
+TNS   : -453.614
 
 Type  : Slow 1100mV 0C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : -3.209
-TNS   : -67.353
+Slack : -3.275
+TNS   : -82.641
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.277
-TNS   : 0.000
+Slack : -0.193
+TNS   : -0.193
 
 Type  : Slow 1100mV 0C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : 0.795
+Slack : 0.786
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : 3.200
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.479
-TNS   : -85.775
+Slack : -0.444
+TNS   : -109.834
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
 Slack : -0.394
-TNS   : -11.263
+TNS   : -13.995
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : -0.394
+TNS   : -0.521
+
+Type  : Fast 1100mV 85C Model Setup 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : -3.886
+TNS   : -3.886
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -2.906
-TNS   : -134.352
+Slack : -2.650
+TNS   : -199.622
 
 Type  : Fast 1100mV 85C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : -1.400
-TNS   : -30.335
+Slack : -1.412
+TNS   : -35.216
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.100
+Slack : 0.104
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : 0.367
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : 1.650
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.494
-TNS   : -9.038
+Slack : -0.442
+TNS   : -10.973
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : 0.127
+Slack : 0.073
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : -3.682
+TNS   : -3.682
+
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.434
-TNS   : -114.651
+Slack : -2.212
+TNS   : -170.899
 
 Type  : Fast 1100mV 0C Model Setup 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : -1.265
-TNS   : -27.419
+Slack : -1.297
+TNS   : -31.899
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.085
+Slack : 0.005
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : 0.333
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : 1.599
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.476
-TNS   : -10.764
+Slack : -0.451
+TNS   : -13.803
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA:vga_inst|clockDivider:clkDiv|pos_edge'
-Slack : 0.137
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'connect4_fsm:fsm_inst|state.GANADOR_J1'
+Slack : 0.098
 TNS   : 0.000
 
 ------------------------------------------------------------

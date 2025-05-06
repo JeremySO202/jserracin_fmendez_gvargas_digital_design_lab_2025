@@ -1,5 +1,5 @@
 Analysis & Synthesis report for connect4
-Mon May  5 13:39:26 2025
+Mon May  5 20:10:23 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -13,21 +13,25 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |connect4|connect4_fsm:fsm_inst|state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: VGA:vga_inst|vgaController:vgaCont
- 15. Parameter Settings for User Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl
- 16. Parameter Settings for Inferred Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0
- 17. Parameter Settings for Inferred Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1
- 18. Parameter Settings for Inferred Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0
- 19. Port Connectivity Checks: "connect4_fsm:fsm_inst"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |connect4|connect4_fsm:fsm_inst|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: Ganador:ganador_inst
+ 16. Parameter Settings for User Entity Instance: VGA:vga_inst|vgaController:vgaCont
+ 17. Parameter Settings for User Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl
+ 18. Parameter Settings for Inferred Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0
+ 19. Parameter Settings for Inferred Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1
+ 20. Parameter Settings for Inferred Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0
+ 21. Port Connectivity Checks: "VGA:vga_inst|RGB_Controller:rgbCtrl|WinnerScreen:winnerScreen_inst"
+ 22. Port Connectivity Checks: "connect4_fsm:fsm_inst"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,17 +58,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May  5 13:39:26 2025          ;
+; Analysis & Synthesis Status     ; Successful - Mon May  5 20:10:23 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; connect4                                       ;
 ; Top-level Entity Name           ; connect4                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 138                                            ;
-; Total pins                      ; 39                                             ;
+; Total registers                 ; 141                                            ;
+; Total pins                      ; 43                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
+; Total DSP Blocks                ; 1                                              ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -174,7 +178,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -192,6 +197,8 @@ https://fpgasoftware.intel.com/eula.
 ; clockDivider.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/clockDivider.sv            ;         ;
 ; connect4.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv                ;         ;
 ; turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/turnos.sv                  ;         ;
+; Ganador.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv                 ;         ;
+; WinnerScreen.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv            ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                               ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc                              ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                          ;         ;
@@ -211,25 +218,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 341       ;
+; Estimate of Logic utilization (ALMs needed) ; 521       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 562       ;
-;     -- 7 input functions                    ; 1         ;
-;     -- 6 input functions                    ; 110       ;
-;     -- 5 input functions                    ; 35        ;
-;     -- 4 input functions                    ; 64        ;
-;     -- <=3 input functions                  ; 352       ;
+; Combinational ALUT usage for logic          ; 894       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 142       ;
+;     -- 5 input functions                    ; 126       ;
+;     -- 4 input functions                    ; 85        ;
+;     -- <=3 input functions                  ; 541       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 138       ;
+; Dedicated logic registers                   ; 141       ;
 ;                                             ;           ;
-; I/O pins                                    ; 39        ;
+; I/O pins                                    ; 43        ;
 ;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
+; Total DSP Blocks                            ; 1         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 118       ;
-; Total fan-out                               ; 2472      ;
-; Average fan-out                             ; 3.18      ;
+; Maximum fan-out                             ; 120       ;
+; Total fan-out                               ; 3585      ;
+; Average fan-out                             ; 3.20      ;
 +---------------------------------------------+-----------+
 
 
@@ -238,9 +245,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                           ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |connect4                                    ; 562 (4)             ; 138 (0)                   ; 0                 ; 0          ; 39   ; 0            ; |connect4                                                                                                                                     ; connect4            ; work         ;
-;    |VGA:vga_inst|                            ; 423 (0)             ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst                                                                                                                        ; VGA                 ; work         ;
-;       |RGB_Controller:rgbCtrl|               ; 392 (104)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl                                                                                                 ; RGB_Controller      ; work         ;
+; |connect4                                    ; 894 (10)            ; 141 (0)                   ; 0                 ; 1          ; 43   ; 0            ; |connect4                                                                                                                                     ; connect4            ; work         ;
+;    |Ganador:ganador_inst|                    ; 97 (97)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|Ganador:ganador_inst                                                                                                                ; Ganador             ; work         ;
+;    |VGA:vga_inst|                            ; 617 (0)             ; 21 (0)                    ; 0                 ; 1          ; 0    ; 0            ; |connect4|VGA:vga_inst                                                                                                                        ; VGA                 ; work         ;
+;       |RGB_Controller:rgbCtrl|               ; 586 (116)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl                                                                                                 ; RGB_Controller      ; work         ;
+;          |WinnerScreen:winnerScreen_inst|    ; 182 (182)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|WinnerScreen:winnerScreen_inst                                                                  ; WinnerScreen        ; work         ;
 ;          |lpm_divide:Div0|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_hbm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
 ;                |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
@@ -255,35 +264,48 @@ https://fpgasoftware.intel.com/eula.
 ;                   |alt_u_div_kve:divider|    ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
 ;       |clockDivider:clkDiv|                  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst|clockDivider:clkDiv                                                                                                    ; clockDivider        ; work         ;
 ;       |vgaController:vgaCont|                ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|VGA:vga_inst|vgaController:vgaCont                                                                                                  ; vgaController       ; work         ;
-;    |connect4_fsm:fsm_inst|                   ; 10 (10)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|connect4_fsm:fsm_inst                                                                                                               ; connect4_fsm        ; work         ;
+;    |connect4_fsm:fsm_inst|                   ; 13 (13)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|connect4_fsm:fsm_inst                                                                                                               ; connect4_fsm        ; work         ;
 ;    |turnos:turnoJ1_inst|                     ; 10 (10)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|turnos:turnoJ1_inst                                                                                                                 ; turnos              ; work         ;
 ;    |turnos:turnoJ2_inst|                     ; 10 (10)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|turnos:turnoJ2_inst                                                                                                                 ; turnos              ; work         ;
-;    |verificarJugador:verificarJugador_inst|  ; 105 (105)           ; 92 (92)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|verificarJugador:verificarJugador_inst                                                                                              ; verificarJugador    ; work         ;
+;    |verificarJugador:verificarJugador_inst|  ; 137 (137)           ; 92 (92)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|verificarJugador:verificarJugador_inst                                                                                              ; verificarJugador    ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
+
+
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |connect4|connect4_fsm:fsm_inst|state                                                                                                                                                                                                                                 ;
-+-----------------------+-----------------+------------------+-----------------+-----------------+--------------------+----------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
-; Name                  ; state.FIN_JUEGO ; state.GANADOR_J2 ; state.RANDOM_J2 ; state.TIEMPO_J2 ; state.VERIFICAR_J2 ; state.TURNO_J2 ; state.GANADOR_J1 ; state.RANDOM_J1 ; state.TIEMPO_J1 ; state.VERIFICAR_J1 ; state.TURNO_J1 ; state.JUGADOR_INICIAL ; state.MENU ; state.INICIO ;
-+-----------------------+-----------------+------------------+-----------------+-----------------+--------------------+----------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
-; state.INICIO          ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 0            ;
-; state.MENU            ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 1          ; 1            ;
-; state.JUGADOR_INICIAL ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 1                     ; 0          ; 1            ;
-; state.TURNO_J1        ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 1              ; 0                     ; 0          ; 1            ;
-; state.VERIFICAR_J1    ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 1                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.TIEMPO_J1       ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 1               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.RANDOM_J1       ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 1               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.GANADOR_J1      ; 0               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 1                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.TURNO_J2        ; 0               ; 0                ; 0               ; 0               ; 0                  ; 1              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.VERIFICAR_J2    ; 0               ; 0                ; 0               ; 0               ; 1                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.TIEMPO_J2       ; 0               ; 0                ; 0               ; 1               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.RANDOM_J2       ; 0               ; 0                ; 1               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.GANADOR_J2      ; 0               ; 1                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-; state.FIN_JUEGO       ; 1               ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
-+-----------------------+-----------------+------------------+-----------------+-----------------+--------------------+----------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |connect4|connect4_fsm:fsm_inst|state                                                                                                                                                                                                                                                         ;
++-----------------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
+; Name                  ; state.FIN_JUEGO_J2 ; state.GANADOR_J2 ; state.RANDOM_J2 ; state.TIEMPO_J2 ; state.VERIFICAR_J2 ; state.TURNO_J2 ; state.FIN_JUEGO_J1 ; state.GANADOR_J1 ; state.RANDOM_J1 ; state.TIEMPO_J1 ; state.VERIFICAR_J1 ; state.TURNO_J1 ; state.JUGADOR_INICIAL ; state.MENU ; state.INICIO ;
++-----------------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
+; state.INICIO          ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 0            ;
+; state.MENU            ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 1          ; 1            ;
+; state.JUGADOR_INICIAL ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 1                     ; 0          ; 1            ;
+; state.TURNO_J1        ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 1              ; 0                     ; 0          ; 1            ;
+; state.VERIFICAR_J1    ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 1                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.TIEMPO_J1       ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 1               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.RANDOM_J1       ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 1               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.GANADOR_J1      ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 1                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.FIN_JUEGO_J1    ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 1                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.TURNO_J2        ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 1              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.VERIFICAR_J2    ; 0                  ; 0                ; 0               ; 0               ; 1                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.TIEMPO_J2       ; 0                  ; 0                ; 0               ; 1               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.RANDOM_J2       ; 0                  ; 0                ; 1               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.GANADOR_J2      ; 0                  ; 1                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
+; state.FIN_JUEGO_J2    ; 1                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                  ; 0                ; 0               ; 0               ; 0                  ; 0              ; 0                     ; 0          ; 1            ;
++-----------------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -297,9 +319,8 @@ Encoding Type:  One-Hot
 ; connect4_fsm:fsm_inst|state~7         ; Lost fanout                            ;
 ; connect4_fsm:fsm_inst|state~8         ; Lost fanout                            ;
 ; connect4_fsm:fsm_inst|state.RANDOM_J1 ; Lost fanout                            ;
-; connect4_fsm:fsm_inst|state.FIN_JUEGO ; Lost fanout                            ;
 ; connect4_fsm:fsm_inst|state.RANDOM_J2 ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 8 ;                                        ;
+; Total Number of Removed Registers = 7 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -308,7 +329,6 @@ Encoding Type:  One-Hot
 +-------------------------------+--------------------+----------------------------------------+
 ; Register name                 ; Reason for Removal ; Registers Removed due to This Register ;
 +-------------------------------+--------------------+----------------------------------------+
-; connect4_fsm:fsm_inst|state~4 ; Lost Fanouts       ; connect4_fsm:fsm_inst|state.FIN_JUEGO  ;
 ; connect4_fsm:fsm_inst|state~5 ; Lost Fanouts       ; connect4_fsm:fsm_inst|state.RANDOM_J1  ;
 +-------------------------------+--------------------+----------------------------------------+
 
@@ -318,12 +338,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 138   ;
+; Total registers                              ; 141   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 117   ;
+; Number of registers using Asynchronous Clear ; 119   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 101   ;
+; Number of registers using Clock Enable       ; 99    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -333,7 +353,7 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------+---------+
 ; Inverted Register                                     ; Fan out ;
 +-------------------------------------------------------+---------+
-; verificarJugador:verificarJugador_inst|posicionReg[6] ; 16      ;
+; verificarJugador:verificarJugador_inst|posicionReg[6] ; 17      ;
 ; Total number of inverted registers = 1                ;         ;
 +-------------------------------------------------------+---------+
 
@@ -343,12 +363,23 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |connect4|verificarJugador:verificarJugador_inst|posicionReg[1] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |connect4|turnos:turnoJ1_inst|regDer                            ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |connect4|turnos:turnoJ2_inst|regDer                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|color.BLUE        ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; Yes        ; |connect4|verificarJugador:verificarJugador_inst|posicionReg[1] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|color.RED         ;
 ; 52:1               ; 2 bits    ; 68 LEs        ; 58 LEs               ; 10 LEs                 ; No         ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|Mux6              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Ganador:ganador_inst ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; rows           ; 6     ; Signed Integer                           ;
+; columns        ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------+
@@ -452,6 +483,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA:vga_inst|RGB_Controller:rgbCtrl|WinnerScreen:winnerScreen_inst"                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; columna ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (3 bits) it drives.  The 29 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------+
 ; Port Connectivity Checks: "connect4_fsm:fsm_inst"     ;
 +---------------------+-------+----------+--------------+
@@ -459,13 +499,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------+-------+----------+--------------+
 ; inicio_juego        ; Input ; Info     ; Stuck at VCC ;
 ; num_jugador         ; Input ; Info     ; Stuck at GND ;
-; gano_J1             ; Input ; Info     ; Stuck at GND ;
 ; tiempo_terminado_J1 ; Input ; Info     ; Stuck at GND ;
 ; random_valido_J1    ; Input ; Info     ; Stuck at GND ;
-; gano_J2             ; Input ; Info     ; Stuck at GND ;
 ; tiempo_terminado_J2 ; Input ; Info     ; Stuck at GND ;
 ; random_valido_J2    ; Input ; Info     ; Stuck at GND ;
-; volver_inicio       ; Input ; Info     ; Stuck at GND ;
 +---------------------+-------+----------+--------------+
 
 
@@ -474,35 +511,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 138                         ;
-;     CLR               ; 26                          ;
-;     ENA CLR           ; 91                          ;
+; arriav_ff             ; 141                         ;
+;     CLR               ; 30                          ;
+;     ENA CLR           ; 89                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 564                         ;
-;     arith             ; 220                         ;
-;         0 data inputs ; 51                          ;
-;         1 data inputs ; 63                          ;
-;         2 data inputs ; 10                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 896                         ;
+;     arith             ; 320                         ;
+;         0 data inputs ; 61                          ;
+;         1 data inputs ; 150                         ;
+;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 60                          ;
 ;         4 data inputs ; 36                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 319                         ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 93                          ;
-;         3 data inputs ; 43                          ;
-;         4 data inputs ; 28                          ;
-;         5 data inputs ; 35                          ;
-;         6 data inputs ; 110                         ;
-;     shared            ; 24                          ;
-;         0 data inputs ; 5                           ;
-;         1 data inputs ; 19                          ;
-; boundary_port         ; 39                          ;
+;     normal            ; 540                         ;
+;         1 data inputs ; 45                          ;
+;         2 data inputs ; 89                          ;
+;         3 data inputs ; 89                          ;
+;         4 data inputs ; 49                          ;
+;         5 data inputs ; 126                         ;
+;         6 data inputs ; 142                         ;
+;     shared            ; 36                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 20                          ;
+;         2 data inputs ; 10                          ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 43                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 24.70                       ;
-; Average LUT depth     ; 13.60                       ;
+; Max LUT depth         ; 25.20                       ;
+; Average LUT depth     ; 11.97                       ;
 +-----------------------+-----------------------------+
 
 
@@ -511,7 +548,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -521,7 +558,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon May  5 13:39:14 2025
+    Info: Processing started: Mon May  5 20:10:06 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect4 -c connect4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -559,26 +596,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file turnos.
     Info (12023): Found entity 1: turnos File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/turnos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file jugadoractual.sv
     Info (12023): Found entity 1: jugadorActual File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/jugadorActual.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at connect4.sv(11): created implicit net for "btnIzq" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at connect4.sv(12): created implicit net for "btnDer" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at connect4.sv(13): created implicit net for "btnEnt" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file ganador.sv
+    Info (12023): Found entity 1: Ganador File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file ganador_tb.sv
+    Info (12023): Found entity 1: Ganador_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador_tb.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file winnerscreen.sv
+    Info (12023): Found entity 1: WinnerScreen File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv Line: 1
 Info (12127): Elaborating entity "connect4" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at connect4.sv(11): object "btnIzq" assigned a value but never read File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 11
-Warning (10036): Verilog HDL or VHDL warning at connect4.sv(12): object "btnDer" assigned a value but never read File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 12
-Warning (10036): Verilog HDL or VHDL warning at connect4.sv(13): object "btnEnt" assigned a value but never read File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 13
-Info (12128): Elaborating entity "verificarJugador" for hierarchy "verificarJugador:verificarJugador_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 44
-Info (12128): Elaborating entity "turnos" for hierarchy "turnos:turnoJ1_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 58
-Info (12128): Elaborating entity "connect4_fsm" for hierarchy "connect4_fsm:fsm_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 97
-Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 112
-Info (12128): Elaborating entity "clockDivider" for hierarchy "VGA:vga_inst|clockDivider:clkDiv" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 15
-Info (12128): Elaborating entity "vgaController" for hierarchy "VGA:vga_inst|vgaController:vgaCont" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 17
-Info (12128): Elaborating entity "RGB_Controller" for hierarchy "VGA:vga_inst|RGB_Controller:rgbCtrl" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 28
+Info (12128): Elaborating entity "verificarJugador" for hierarchy "verificarJugador:verificarJugador_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 42
+Info (12128): Elaborating entity "Ganador" for hierarchy "Ganador:ganador_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 51
+Info (12128): Elaborating entity "turnos" for hierarchy "turnos:turnoJ1_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 66
+Info (12128): Elaborating entity "connect4_fsm" for hierarchy "connect4_fsm:fsm_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 107
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 124
+Info (12128): Elaborating entity "clockDivider" for hierarchy "VGA:vga_inst|clockDivider:clkDiv" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 17
+Info (12128): Elaborating entity "vgaController" for hierarchy "VGA:vga_inst|vgaController:vgaCont" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 19
+Info (12128): Elaborating entity "RGB_Controller" for hierarchy "VGA:vga_inst|RGB_Controller:rgbCtrl" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 32
+Info (12128): Elaborating entity "WinnerScreen" for hierarchy "VGA:vga_inst|RGB_Controller:rgbCtrl|WinnerScreen:winnerScreen_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at WinnerScreen.sv(13): truncated value with size 32 to match size of target (10) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv Line: 13
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Mod0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 30
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 26
-Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 30
-Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Mod0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 45
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 42
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
+Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 45
+Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 45
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -589,8 +629,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_nlh File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
     Info (12023): Found entity 1: alt_u_div_kve File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_kve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 27
-Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 27
+Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 42
+Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 42
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -601,30 +641,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_rlh File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_rlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
     Info (12023): Found entity 1: alt_u_div_sve File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_sve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 26
-Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 26
+Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
+Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
     Info (12023): Found entity 1: lpm_divide_hbm File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_hbm.tdf Line: 25
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/output_files/connect4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "btnIzqJ2" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
     Warning (15610): No output dependent on input pin "btnDerJ2" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
     Warning (15610): No output dependent on input pin "btnEntJ2" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
-Info (21057): Implemented 694 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 996 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 655 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 952 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4898 megabytes
-    Info: Processing ended: Mon May  5 13:39:26 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Processing ended: Mon May  5 20:10:23 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:35
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/output_files/connect4.map.smsg.
 
 

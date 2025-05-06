@@ -5,30 +5,35 @@ module Ganador#(
     parameter int rows = 6,
     parameter int columns = 7
 )(
+	input logic enable,
     input logic jugador,
-    input logic [5:0][6:0] board,
-    output logic ganador, jugador_w
+	input logic [5:0][6:0] tablero,
+    input logic [5:0][6:0] fichas,
+	
+    output logic ganador
 );
 // voy a empezar por iterar revisando horizontalmente en las primeras 4 columnas
-/* 0 0 0 0 0 0 0
+/*  0 0 0 0 0 0 0
 	0 0 0 0 0 0 0
 	0 0 0 0 0 0 0
 	0 0 0 0 0 0 0
 	0 0 0 0 0 0 0
 	0 0 0 0 0 0 0 */
 	
-	always_comb begin: gane
-		ganador = 1'b0;
-		jugador_w = 1'b0;
+	reg ganadorReg;
+
+	assign ganador = ganadorReg;
+
+	always @(posedge enable) begin: gane
+		ganadorReg = 1'b0;
 
 		for(int c =0; c< columns-3; c++) begin
 			for (int r = 0; r<rows; r++) begin
-				if (board[r][c] == jugador &&
-					board[r][c+1] == jugador &&
-					board[r][c+2] == jugador && 
-					board[r][c+3] == jugador)begin
-					ganador = 1'b1;
-					jugador_w = jugador+1;
+				if (fichas[r][c] == jugador && tablero[r][c] == 1'b1 &&
+					fichas[r][c+1] == jugador && tablero[r][c+1] == 1'b1 &&
+					fichas[r][c+2] == jugador && tablero[r][c+2] == 1'b1 &&
+					fichas[r][c+3] == jugador && tablero[r][c+3] == 1'b1)begin
+					ganadorReg <= 1'b1;
 					disable gane;
 				end
 			end
@@ -37,12 +42,11 @@ module Ganador#(
 		//ahora para los primeros 4 verticales
 		for(int c =0; c< columns; c++) begin
 			for (int r = 0; r<rows-3; r++) begin
-				if (board[r][c] == jugador &&
-					board[r+1][c] == jugador &&
-					board[r+2][c] == jugador && 
-					board[r+3][c] == jugador)begin
-					ganador = 1'b1;
-					jugador_w = jugador+1;
+				if (fichas[r][c] == jugador && tablero[r][c] == 1'b1 &&
+					fichas[r+1][c] == jugador && tablero[r+1][c] == 1'b1 &&
+					fichas[r+2][c] == jugador && tablero[r+2][c] == 1'b1 &&
+					fichas[r+3][c] == jugador && tablero[r+3][c] == 1'b1)begin
+					ganadorReg <= 1'b1;
 					disable gane;
 				end
 			end
@@ -52,12 +56,11 @@ module Ganador#(
 		//diagonales para arriba
 		for(int c =0; c< columns-3; c++) begin
 			for (int r = 0; r<rows-3; r++) begin
-				if (board[r][c] == jugador &&
-					board[r+1][c+1] == jugador &&
-					board[r+2][c+2] == jugador && 
-					board[r+3][c+3] == jugador)begin
-					ganador = 1'b1;
-					jugador_w = jugador+1;
+				if (fichas[r][c] == jugador && tablero[r][c] == 1'b1 &&
+					fichas[r+1][c+1] == jugador && tablero[r+1][c+1] == 1'b1 &&
+					fichas[r+2][c+2] == jugador && tablero[r+2][c+2] == 1'b1 &&
+					fichas[r+3][c+3] == jugador && tablero[r+3][c+3] == 1'b1)begin
+					ganadorReg <= 1'b1;
 					disable gane;
 				end
 			end
@@ -67,12 +70,11 @@ module Ganador#(
 		//diagonales para abajo
 		for(int c =0; c< columns-3; c++) begin
 			for (int r = 3; r< rows; r++) begin
-				if (board[r][c] == jugador &&
-					board[r-1][c+1] == jugador &&
-					board[r-2][c+2] == jugador && 
-					board[r-3][c+3] == jugador)begin
-					ganador = 1'b1;
-					jugador_w = jugador+1;
+				if (fichas[r][c] == jugador && tablero[r][c] == 1'b1 &&
+					fichas[r-1][c+1] == jugador && tablero[r-1][c+1] == 1'b1 &&
+					fichas[r-2][c+2] == jugador && tablero[r-2][c+2] == 1'b1 &&
+					fichas[r-3][c+3] == jugador && tablero[r-3][c+3] == 1'b1)begin
+					ganadorReg <= 1'b1;
 					disable gane;
 				end
 			end

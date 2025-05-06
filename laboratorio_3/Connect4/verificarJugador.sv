@@ -2,6 +2,7 @@ module verificarJugador(
     input logic clk, reset, enable,
     input logic btnIzq, btnDer, btnEnt, // Entradas crudas de los botones (ya con debounce)
     input logic jugador, // Jugador actual
+    input logic finPartida, // Condiciones de juego (entrada)
     output logic [6:0] posicion, // Posición actual del jugador (entrada)
     output logic [5:0][6:0] tablero, // Estado actual del tablero (entrada)
     output logic [5:0][6:0] fichas, // Estado actual de las fichas (entrada)
@@ -25,6 +26,9 @@ module verificarJugador(
             fichasReg <= '{default: 0};
             FT <= 0;
         end else begin
+            if (finPartida) begin
+                posicionReg <= 7'b0001000;
+            end
             if (enable) begin
                 if (btnIzq) begin
                     // Mover a la izquierda
