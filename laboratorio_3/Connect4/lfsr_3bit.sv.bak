@@ -1,0 +1,25 @@
+module lfsr_3bit (
+    input logic clk,
+    input logic rst,
+    input logic en,
+    input logic [2:0] seed,
+    output logic [2:0] rnd
+);
+
+    logic [2:0] lfsr;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            lfsr <= 3'b001;  // Semilla no nula
+        else begin
+            lfsr[0] <= lfsr[2];
+            lfsr[1] <= lfsr[0];
+            lfsr[2] <= lfsr[1] ^ lfsr[2];  // Tap feedback
+        end
+        if (en) begin
+            rnd <= lfsr;
+        end else begin
+            rnd <= 3'b000;  // Salida en cero si no está habilitado
+        end
+    end
+endmodule

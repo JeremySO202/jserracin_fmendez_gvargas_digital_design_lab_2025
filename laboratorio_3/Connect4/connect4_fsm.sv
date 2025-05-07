@@ -4,11 +4,11 @@ module connect4_fsm(
 	input clk, rst, inicio_juego, num_jugador,
 	input t_J1, valido_J1, gano_J1, tiempo_terminado_J1, random_valido_J1,
 	input t_J2, valido_J2, gano_J2, tiempo_terminado_J2, random_valido_J2,
-	output logic jugador, // Salida para habilitar el turno de cada jugador
-	output logic enTurno1, enTurno2, // Salida para habilitar el turno de cada jugador
-	output logic enVerificar1, enVerificar2, // Salida para habilitar la verificación de cada jugada
-	output logic enGanador, // Salida para habilitar la verificación del ganador
-	output logic finJuego1, finJuego2 // Salida para habilitar la verificación de cada jugada
+	output logic jugador, 
+	output logic enTurno1, enTurno2, 
+	output logic enVerificar1, enVerificar2, 
+	output logic enGanador, 
+	output logic finJuego1, finJuego2 
 	);
 	
 
