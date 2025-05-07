@@ -9,14 +9,14 @@ module connect4(
 
 	logic jugador, FT, ganador, enGanador, finJuego1, finJuego2, timeOut;
 
-    // Tablero y fichas compartidos
+    
     logic [5:0][6:0] tablero;
     logic [5:0][6:0] fichas;
     logic [6:0] posicion;
 
  
 
-    // Señales de control para turnos y verificaciones
+    
     
     logic enTurno1, enTurno2, jugada1, jugada2;
     logic pressDerJ1, pressIzqJ1, pressEntJ1, pressDerJ2, pressIzqJ2, pressEntJ2;
@@ -34,12 +34,12 @@ module connect4(
         .btnIzq(jugador ? pressIzqJ2 : pressIzqJ1),
         .btnDer(jugador ? pressDerJ2 : pressDerJ1),
         .btnEnt(jugador ? pressEntJ2 : pressEntJ1),
-        .jugador(jugador), // Jugador 1 o 2
-        .finPartida(finJuego1 | finJuego2), // Condiciones de juego (entrada)
+        .jugador(jugador), 
+        .finPartida(finJuego1 | finJuego2), 
         .posicion(posicion),
         .tablero(tablero),
         .fichas(fichas),
-        .FT(FT) // Turno finalizado
+        .FT(FT) 
     );
 	 
 	 //gane de un jugador

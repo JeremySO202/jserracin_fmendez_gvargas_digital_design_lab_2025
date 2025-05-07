@@ -1,25 +1,23 @@
 module RGB_Controller(
-    input logic [6:0] posicion, // Posición del jugador (1 bit activo por columna)
-    input logic [5:0][6:0] tablero, // Matriz de 6x7 para el tablero
-    input logic [5:0][6:0] fichas,   // Matriz de 6x7 para las fichas
-    input logic jugador, // Jugador actual (1 o 2)
-    input logic finJuego, // Fin del juego
-    input logic [9:0] x, y, // Coordenadas del pixel
-    output logic [7:0] r, g, b // Salidas RGB combinadas
+    input logic [6:0] posicion,
+    input logic [5:0][6:0] tablero, 
+    input logic [5:0][6:0] fichas,  
+    input logic jugador, 
+    input logic finJuego, 
+    input logic [9:0] x, y,
+    output logic [7:0] r, g, b 
 );
 
-    // Definición de colores
     parameter WHITE = 2'b00;
     parameter RED = 2'b01;
     parameter BLUE = 2'b10;
     parameter BLACK = 2'b11;
 
-    // Variables para almacenar el color actual y las posiciones
     logic [1:0] color;
     integer columna;
     integer fila;
 
-    logic showWinner; // Señal para mostrar el cursor
+    logic showWinner; 
 
     WinnerScreen winnerScreen_inst (
         .x(x),
@@ -30,32 +28,30 @@ module RGB_Controller(
     );
 
 
-    // Lógica para dibujar las líneas, el cursor y las fichas
+    
     always_comb begin
-        // Inicializar color por defecto
+       
         color = BLACK;
 
-
-
-        // Determinar la columna y fila
-        columna = 6 -  x / 92; // 88 de grosor + 4 de línea divisora
+        
+        columna = 6 -  x / 92; // 88 de grosor y 4 de línea divisora
         fila = 5 - (y-28) / 76;
 
-		// Dibujar las líneas divisorias
+		// líneas divisorias
 		if ((x % 92) >= 88 && (x % 92) < 92) begin
-			color = WHITE; // Líneas divisorias tienen mayor prioridad
+			color = WHITE; 
 		end
-		// Dibujar las fichas
+		// fichas
 		else if (fila >= 0 && fila < 6 && columna >= 0 && columna < 7 && tablero[fila][columna]) begin
-			color = fichas[fila][columna] ? RED : BLUE; // Fichas
+			color = fichas[fila][columna] ? RED : BLUE; 
 		end
-		// Dibujar el cursor
+		// cursor
 		else if (y < 29 && columna >= 0 && columna < 7 && posicion[columna]) begin
             
-			color = showWinner ? WHITE : (jugador ? RED : BLUE); // Cursor
+			color = showWinner ? WHITE : (jugador ? RED : BLUE); 
 		end
 
-        // Asignar los valores RGB según el color
+        // para asignar los colores
         case (color)
             WHITE: begin
                 r = 8'hFF;

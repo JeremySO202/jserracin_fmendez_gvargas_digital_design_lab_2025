@@ -1,5 +1,5 @@
 Timing Analyzer report for connect4
-Wed May  7 06:37:54 2025
+Wed May  7 09:34:09 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -99,21 +99,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.53        ;
+; Average used               ; 1.63        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   8.2%      ;
-;     Processor 3            ;   8.0%      ;
-;     Processor 4            ;   7.8%      ;
-;     Processor 5            ;   7.2%      ;
-;     Processor 6            ;   7.2%      ;
-;     Processor 7            ;   7.2%      ;
-;     Processor 8            ;   7.2%      ;
+;     Processor 2            ;   9.4%      ;
+;     Processor 3            ;   9.1%      ;
+;     Processor 4            ;   9.0%      ;
+;     Processor 5            ;   8.9%      ;
+;     Processor 6            ;   8.8%      ;
+;     Processor 7            ;   8.8%      ;
+;     Processor 8            ;   8.8%      ;
 +----------------------------+-------------+
 
 
@@ -133,8 +133,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
 +------------+-----------------+-------------------------------------------+------+
-; 145.43 MHz ; 145.43 MHz      ; clk                                       ;      ;
-; 224.16 MHz ; 224.16 MHz      ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ;      ;
+; 125.19 MHz ; 125.19 MHz      ; clk                                       ;      ;
+; 221.63 MHz ; 221.63 MHz      ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ;      ;
 +------------+-----------------+-------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,21 +150,21 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.186 ; -6.186        ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -3.461 ; -77.958       ;
-; clk                                       ; -3.432 ; -474.813      ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.378 ; -6.378        ;
+; clk                                       ; -4.221 ; -564.556      ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -3.512 ; -92.959       ;
 +-------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                ;
-+-------------------------------------------+-------+---------------+
-; Clock                                     ; Slack ; End Point TNS ;
-+-------------------------------------------+-------+---------------+
-; clk                                       ; 0.218 ; 0.000         ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.687 ; 0.000         ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 3.259 ; 0.000         ;
-+-------------------------------------------+-------+---------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                 ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk                                       ; -0.012 ; -0.012        ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.821  ; 0.000         ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 3.040  ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 +----------------------------------------+
@@ -172,7 +172,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -6.390 ; -216.294              ;
+; clk   ; -6.462 ; -205.760              ;
 +-------+--------+-----------------------+
 
 
@@ -181,7 +181,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 1.141 ; 0.000                 ;
+; clk   ; 0.977 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -190,9 +190,9 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -0.400 ; -111.951      ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -0.394 ; -13.685       ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -0.394 ; -0.547        ;
+; clk                                       ; -0.442 ; -114.574      ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -0.394 ; -15.676       ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -0.394 ; -0.582        ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -208,8 +208,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+-------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
 +------------+-----------------+-------------------------------------------+------+
-; 157.38 MHz ; 157.38 MHz      ; clk                                       ;      ;
-; 220.95 MHz ; 220.95 MHz      ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ;      ;
+; 127.62 MHz ; 127.62 MHz      ; clk                                       ;      ;
+; 221.93 MHz ; 221.93 MHz      ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ;      ;
 +------------+-----------------+-------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -219,21 +219,21 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.369 ; -6.369        ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -3.526 ; -78.481       ;
-; clk                                       ; -3.212 ; -455.234      ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.565 ; -6.565        ;
+; clk                                       ; -4.030 ; -552.371      ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -3.506 ; -93.567       ;
 +-------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                 ;
-+-------------------------------------------+-------+---------------+
-; Clock                                     ; Slack ; End Point TNS ;
-+-------------------------------------------+-------+---------------+
-; clk                                       ; 0.225 ; 0.000         ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.676 ; 0.000         ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 3.351 ; 0.000         ;
-+-------------------------------------------+-------+---------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                  ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk                                       ; -0.323 ; -0.610        ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.766  ; 0.000         ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 3.116  ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 +---------------------------------------+
@@ -241,7 +241,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -6.073 ; -205.508             ;
+; clk   ; -6.150 ; -195.826             ;
 +-------+--------+----------------------+
 
 
@@ -250,7 +250,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.724 ; 0.000                ;
+; clk   ; 0.580 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -259,9 +259,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -0.415 ; -124.257      ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -0.394 ; -13.658       ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -0.394 ; -0.542        ;
+; clk                                       ; -0.445 ; -125.255      ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -0.394 ; -15.321       ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -0.394 ; -0.596        ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -277,9 +277,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -3.425 ; -3.425        ;
-; clk                                       ; -2.836 ; -205.137      ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -1.525 ; -33.188       ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -3.500 ; -3.500        ;
+; clk                                       ; -2.739 ; -243.757      ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -1.506 ; -40.001       ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -288,9 +288,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------+-------+---------------+
 ; Clock                                     ; Slack ; End Point TNS ;
 +-------------------------------------------+-------+---------------+
-; clk                                       ; 0.128 ; 0.000         ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.354 ; 0.000         ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 1.777 ; 0.000         ;
+; clk                                       ; 0.141 ; 0.000         ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.428 ; 0.000         ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 1.691 ; 0.000         ;
 +-------------------------------------------+-------+---------------+
 
 
@@ -299,7 +299,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -3.954 ; -133.722              ;
+; clk   ; -4.047 ; -128.952              ;
 +-------+--------+-----------------------+
 
 
@@ -308,7 +308,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.759 ; 0.000                 ;
+; clk   ; 0.680 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -317,9 +317,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -0.423 ; -13.860       ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 0.028  ; 0.000         ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.049  ; 0.000         ;
+; clk                                       ; -0.459 ; -13.859       ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.005  ; 0.000         ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 0.033  ; 0.000         ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -335,21 +335,21 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -3.314 ; -3.314        ;
-; clk                                       ; -2.252 ; -171.537      ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -1.391 ; -30.166       ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; -3.366 ; -3.366        ;
+; clk                                       ; -2.271 ; -209.717      ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -1.366 ; -36.616       ;
 +-------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                 ;
-+-------------------------------------------+-------+---------------+
-; Clock                                     ; Slack ; End Point TNS ;
-+-------------------------------------------+-------+---------------+
-; clk                                       ; 0.110 ; 0.000         ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.322 ; 0.000         ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 1.749 ; 0.000         ;
-+-------------------------------------------+-------+---------------+
++--------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                  ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk                                       ; -0.021 ; -0.021        ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.376  ; 0.000         ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 1.632  ; 0.000         ;
++-------------------------------------------+--------+---------------+
 
 
 +---------------------------------------+
@@ -357,7 +357,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -3.371 ; -114.070             ;
+; clk   ; -3.472 ; -110.580             ;
 +-------+--------+----------------------+
 
 
@@ -366,7 +366,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.417 ; 0.000                ;
+; clk   ; 0.353 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -375,9 +375,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------+--------+---------------+
 ; Clock                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------+--------+---------------+
-; clk                                       ; -0.433 ; -16.508       ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 0.054  ; 0.000         ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.068  ; 0.000         ;
+; clk                                       ; -0.454 ; -16.337       ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 0.042  ; 0.000         ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 0.049  ; 0.000         ;
 +-------------------------------------------+--------+---------------+
 
 
@@ -388,20 +388,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                      ;
-+--------------------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                                      ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                           ; -6.369   ; 0.110 ; -6.390   ; 0.417   ; -0.433              ;
-;  VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -3.526   ; 0.322 ; N/A      ; N/A     ; -0.394              ;
-;  clk                                       ; -3.432   ; 0.110 ; -6.390   ; 0.417   ; -0.433              ;
-;  connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.369   ; 1.749 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS                            ; -558.957 ; 0.0   ; -216.294 ; 0.0     ; -138.457            ;
-;  VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -78.481  ; 0.000 ; N/A      ; N/A     ; -13.685             ;
-;  clk                                       ; -474.813 ; 0.000 ; -216.294 ; 0.000   ; -124.257            ;
-;  connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.369   ; 0.000 ; N/A      ; N/A     ; -0.547              ;
-+--------------------------------------------+----------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                       ;
++--------------------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                                      ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack                           ; -6.565   ; -0.323 ; -6.462   ; 0.353   ; -0.459              ;
+;  VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -3.512   ; 0.376  ; N/A      ; N/A     ; -0.394              ;
+;  clk                                       ; -4.221   ; -0.323 ; -6.462   ; 0.353   ; -0.459              ;
+;  connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.565   ; 1.632  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                            ; -663.893 ; -0.61  ; -205.76  ; 0.0     ; -141.172            ;
+;  VGA:vga_inst|clockDivider:clkDiv|pos_edge ; -93.567  ; 0.000  ; N/A      ; N/A     ; -15.676             ;
+;  clk                                       ; -564.556 ; -0.610 ; -205.760 ; 0.000   ; -125.255            ;
+;  connect4_fsm:fsm_inst|state.GANADOR_J1    ; -6.565   ; 0.000  ; N/A      ; N/A     ; -0.596              ;
++--------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -452,8 +452,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; clk        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; jugadorIni ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btnIzqJ1   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; btnDerJ1   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btnIzqJ1   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; btnEntJ1   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +------------+--------------+-----------------+-----------------+
 
@@ -611,11 +611,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                ; To Clock                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
-; clk                                       ; clk                                       ; 1617     ; 11       ; 675      ; 1139     ;
+; clk                                       ; clk                                       ; 1516     ; 9        ; 2366     ; 1477     ;
 ; connect4_fsm:fsm_inst|state.GANADOR_J1    ; clk                                       ; 6        ; 2        ; 0        ; 0        ;
 ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; clk                                       ; 1        ; 1        ; 0        ; 0        ;
 ; clk                                       ; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 762      ; 276      ; 0        ; 0        ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 2222     ; 0        ; 0        ; 0        ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 2339     ; 0        ; 0        ; 0        ;
 +-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -625,11 +625,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                ; To Clock                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
-; clk                                       ; clk                                       ; 1617     ; 11       ; 675      ; 1139     ;
+; clk                                       ; clk                                       ; 1516     ; 9        ; 2366     ; 1477     ;
 ; connect4_fsm:fsm_inst|state.GANADOR_J1    ; clk                                       ; 6        ; 2        ; 0        ; 0        ;
 ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; clk                                       ; 1        ; 1        ; 0        ; 0        ;
 ; clk                                       ; connect4_fsm:fsm_inst|state.GANADOR_J1    ; 762      ; 276      ; 0        ; 0        ;
-; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 2222     ; 0        ; 0        ; 0        ;
+; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; VGA:vga_inst|clockDivider:clkDiv|pos_edge ; 2339     ; 0        ; 0        ; 0        ;
 +-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -639,8 +639,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------+----------+----------+----------+----------+----------+
 ; From Clock                             ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------+----------+----------+----------+----------+----------+
-; clk                                    ; clk      ; 34       ; 0        ; 0        ; 0        ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1 ; clk      ; 34       ; 34       ; 0        ; 0        ;
+; clk                                    ; clk      ; 32       ; 0        ; 0        ; 0        ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1 ; clk      ; 32       ; 32       ; 0        ; 0        ;
 +----------------------------------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -650,8 +650,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------+----------+----------+----------+----------+----------+
 ; From Clock                             ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------+----------+----------+----------+----------+----------+
-; clk                                    ; clk      ; 34       ; 0        ; 0        ; 0        ;
-; connect4_fsm:fsm_inst|state.GANADOR_J1 ; clk      ; 34       ; 34       ; 0        ; 0        ;
+; clk                                    ; clk      ; 32       ; 0        ; 0        ; 0        ;
+; connect4_fsm:fsm_inst|state.GANADOR_J1 ; clk      ; 32       ; 32       ; 0        ; 0        ;
 +----------------------------------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -676,9 +676,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 215   ; 215  ;
+; Unconstrained Input Port Paths  ; 231   ; 231  ;
 ; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 2597  ; 2597 ;
+; Unconstrained Output Port Paths ; 2545  ; 2545 ;
 +---------------------------------+-------+------+
 
 
@@ -799,7 +799,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed May  7 06:37:45 2025
+    Info: Processing started: Wed May  7 09:34:04 2025
 Info: Command: quartus_sta connect4 -c connect4
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -818,32 +818,32 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.186
+Info (332146): Worst-case setup slack is -6.378
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.186              -6.186 connect4_fsm:fsm_inst|state.GANADOR_J1 
-    Info (332119):    -3.461             -77.958 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):    -3.432            -474.813 clk 
-Info (332146): Worst-case hold slack is 0.218
+    Info (332119):    -6.378              -6.378 connect4_fsm:fsm_inst|state.GANADOR_J1 
+    Info (332119):    -4.221            -564.556 clk 
+    Info (332119):    -3.512             -92.959 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+Info (332146): Worst-case hold slack is -0.012
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.218               0.000 clk 
-    Info (332119):     0.687               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):     3.259               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
-Info (332146): Worst-case recovery slack is -6.390
+    Info (332119):    -0.012              -0.012 clk 
+    Info (332119):     0.821               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):     3.040               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
+Info (332146): Worst-case recovery slack is -6.462
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.390            -216.294 clk 
-Info (332146): Worst-case removal slack is 1.141
+    Info (332119):    -6.462            -205.760 clk 
+Info (332146): Worst-case removal slack is 0.977
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.141               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.400
+    Info (332119):     0.977               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.442
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.400            -111.951 clk 
-    Info (332119):    -0.394             -13.685 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):    -0.394              -0.547 connect4_fsm:fsm_inst|state.GANADOR_J1 
+    Info (332119):    -0.442            -114.574 clk 
+    Info (332119):    -0.394             -15.676 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):    -0.394              -0.582 connect4_fsm:fsm_inst|state.GANADOR_J1 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -852,32 +852,32 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.369
+Info (332146): Worst-case setup slack is -6.565
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.369              -6.369 connect4_fsm:fsm_inst|state.GANADOR_J1 
-    Info (332119):    -3.526             -78.481 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):    -3.212            -455.234 clk 
-Info (332146): Worst-case hold slack is 0.225
+    Info (332119):    -6.565              -6.565 connect4_fsm:fsm_inst|state.GANADOR_J1 
+    Info (332119):    -4.030            -552.371 clk 
+    Info (332119):    -3.506             -93.567 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+Info (332146): Worst-case hold slack is -0.323
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.225               0.000 clk 
-    Info (332119):     0.676               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):     3.351               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
-Info (332146): Worst-case recovery slack is -6.073
+    Info (332119):    -0.323              -0.610 clk 
+    Info (332119):     0.766               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):     3.116               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
+Info (332146): Worst-case recovery slack is -6.150
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.073            -205.508 clk 
-Info (332146): Worst-case removal slack is 0.724
+    Info (332119):    -6.150            -195.826 clk 
+Info (332146): Worst-case removal slack is 0.580
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.724               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.415
+    Info (332119):     0.580               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.445
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.415            -124.257 clk 
-    Info (332119):    -0.394             -13.658 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):    -0.394              -0.542 connect4_fsm:fsm_inst|state.GANADOR_J1 
+    Info (332119):    -0.445            -125.255 clk 
+    Info (332119):    -0.394             -15.321 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):    -0.394              -0.596 connect4_fsm:fsm_inst|state.GANADOR_J1 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -886,72 +886,72 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.425
+Info (332146): Worst-case setup slack is -3.500
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.425              -3.425 connect4_fsm:fsm_inst|state.GANADOR_J1 
-    Info (332119):    -2.836            -205.137 clk 
-    Info (332119):    -1.525             -33.188 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-Info (332146): Worst-case hold slack is 0.128
+    Info (332119):    -3.500              -3.500 connect4_fsm:fsm_inst|state.GANADOR_J1 
+    Info (332119):    -2.739            -243.757 clk 
+    Info (332119):    -1.506             -40.001 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+Info (332146): Worst-case hold slack is 0.141
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.128               0.000 clk 
-    Info (332119):     0.354               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):     1.777               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
-Info (332146): Worst-case recovery slack is -3.954
+    Info (332119):     0.141               0.000 clk 
+    Info (332119):     0.428               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):     1.691               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
+Info (332146): Worst-case recovery slack is -4.047
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.954            -133.722 clk 
-Info (332146): Worst-case removal slack is 0.759
+    Info (332119):    -4.047            -128.952 clk 
+Info (332146): Worst-case removal slack is 0.680
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.759               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.423
+    Info (332119):     0.680               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.459
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.423             -13.860 clk 
-    Info (332119):     0.028               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
-    Info (332119):     0.049               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):    -0.459             -13.859 clk 
+    Info (332119):     0.005               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):     0.033               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.314
+Info (332146): Worst-case setup slack is -3.366
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.314              -3.314 connect4_fsm:fsm_inst|state.GANADOR_J1 
-    Info (332119):    -2.252            -171.537 clk 
-    Info (332119):    -1.391             -30.166 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-Info (332146): Worst-case hold slack is 0.110
+    Info (332119):    -3.366              -3.366 connect4_fsm:fsm_inst|state.GANADOR_J1 
+    Info (332119):    -2.271            -209.717 clk 
+    Info (332119):    -1.366             -36.616 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+Info (332146): Worst-case hold slack is -0.021
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.110               0.000 clk 
-    Info (332119):     0.322               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
-    Info (332119):     1.749               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
-Info (332146): Worst-case recovery slack is -3.371
+    Info (332119):    -0.021              -0.021 clk 
+    Info (332119):     0.376               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):     1.632               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
+Info (332146): Worst-case recovery slack is -3.472
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.371            -114.070 clk 
-Info (332146): Worst-case removal slack is 0.417
+    Info (332119):    -3.472            -110.580 clk 
+Info (332146): Worst-case removal slack is 0.353
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.417               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.433
+    Info (332119):     0.353               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.454
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.433             -16.508 clk 
-    Info (332119):     0.054               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
-    Info (332119):     0.068               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):    -0.454             -16.337 clk 
+    Info (332119):     0.042               0.000 VGA:vga_inst|clockDivider:clkDiv|pos_edge 
+    Info (332119):     0.049               0.000 connect4_fsm:fsm_inst|state.GANADOR_J1 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5389 megabytes
-    Info: Processing ended: Wed May  7 06:37:54 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 5390 megabytes
+    Info: Processing ended: Wed May  7 09:34:09 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at Ganador.sv(27): always construct contains both blocking and non-blocking assignments File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv Line: 27
+Warning (10268): Verilog HDL information at Ganador.sv(27): always construct contains both blocking and non-blocking assignments File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv Line: 27
