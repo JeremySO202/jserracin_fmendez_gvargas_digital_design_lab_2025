@@ -1,7 +1,7 @@
 module WinnerScreen (
     input logic [9:0] x, y,
-    input logic finJuego, // Fin del juego
-    input logic [2:0] columna, // columna activa (0-6)
+    input logic finJuego, 
+    input logic [2:0] columna, 
     output logic show
 );
 
@@ -9,7 +9,7 @@ module WinnerScreen (
     logic [9:0] cursorY;
 
     always_comb begin
-        // Posición superior izquierda donde empieza la palabra
+       
         cursorX = columna * 92 + 10;
         cursorY = 0;
 

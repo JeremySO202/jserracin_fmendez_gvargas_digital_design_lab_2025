@@ -5,14 +5,14 @@ module connect4_counter_tb;
     logic clk, rst;
     logic done;
 
-    // Instancia del DUT
+   
     connect4_counter dut (
         .clk(clk),
         .rst(rst),
         .done(done)
     );
 
-    // Generador de reloj: 50 MHz (periodo = 20 ns)
+    
     always #10 clk = ~clk;
 
     initial begin

@@ -1,4 +1,4 @@
-// Añadir guardas de inclusión para prevenir múltiples declaraciones
+
 `ifndef CONNECT4_TYPES_SV
 `define CONNECT4_TYPES_SV
 
@@ -6,7 +6,7 @@ package connect4_tipos;
 
 
 typedef enum logic [4:0] {
-	INICIO,           // Estado inicial
+	INICIO,          
 	MENU,
 	JUGADOR_INICIAL,
 	TURNO_J1,   // Turno del jugador 1 (FPGA)

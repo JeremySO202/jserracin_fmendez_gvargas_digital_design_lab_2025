@@ -1,5 +1,5 @@
 Analysis & Synthesis report for connect4
-Wed May  7 06:34:26 2025
+Wed May  7 09:31:00 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -27,12 +27,10 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  19. Parameter Settings for Inferred Entity Instance: VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0
  20. Port Connectivity Checks: "VGA:vga_inst|RGB_Controller:rgbCtrl|WinnerScreen:winnerScreen_inst"
  21. Port Connectivity Checks: "connect4_fsm:fsm_inst"
- 22. Port Connectivity Checks: "turnos:turnoJ2_inst"
- 23. Port Connectivity Checks: "turnos:turnoJ1_inst"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
- 27. Analysis & Synthesis Suppressed Messages
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -59,13 +57,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May  7 06:34:26 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed May  7 09:31:00 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; connect4                                       ;
 ; Top-level Entity Name           ; connect4                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 166                                            ;
+; Total registers                 ; 173                                            ;
 ; Total pins                      ; 38                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -171,7 +169,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -183,35 +181,35 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/vgaController.sv           ;         ;
-; VGA.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv                     ;         ;
-; verificarJugador.sv              ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv        ;         ;
-; RGB_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv          ;         ;
-; connect4_tipos.sv                ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_tipos.sv          ;         ;
-; connect4_fsm.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_fsm.sv            ;         ;
-; connect4_counter.sv              ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter.sv        ;         ;
-; clockDivider.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/clockDivider.sv            ;         ;
-; connect4.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv                ;         ;
-; turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/turnos.sv                  ;         ;
-; Ganador.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv                 ;         ;
-; WinnerScreen.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv            ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                               ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc                              ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                          ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                               ;         ;
-; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_k3m.tdf      ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_nlh.tdf ;         ;
-; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_kve.tdf       ;         ;
-; db/lpm_divide_lbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_lbm.tdf      ;         ;
-; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_rlh.tdf ;         ;
-; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_sve.tdf       ;         ;
-; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_hbm.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/vgaController.sv           ;         ;
+; VGA.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv                     ;         ;
+; verificarJugador.sv              ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv        ;         ;
+; RGB_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv          ;         ;
+; connect4_tipos.sv                ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_tipos.sv          ;         ;
+; connect4_fsm.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_fsm.sv            ;         ;
+; connect4_counter.sv              ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter.sv        ;         ;
+; clockDivider.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/clockDivider.sv            ;         ;
+; connect4.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv                ;         ;
+; turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/turnos.sv                  ;         ;
+; Ganador.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv                 ;         ;
+; WinnerScreen.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc                                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                   ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                        ;         ;
+; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_k3m.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_kve.tdf       ;         ;
+; db/lpm_divide_lbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_lbm.tdf      ;         ;
+; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_rlh.tdf ;         ;
+; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_sve.tdf       ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_hbm.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -219,25 +217,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 497       ;
+; Estimate of Logic utilization (ALMs needed) ; 502       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 879       ;
-;     -- 7 input functions                    ; 4         ;
-;     -- 6 input functions                    ; 102       ;
-;     -- 5 input functions                    ; 134       ;
-;     -- 4 input functions                    ; 83        ;
-;     -- <=3 input functions                  ; 556       ;
+; Combinational ALUT usage for logic          ; 896       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 99        ;
+;     -- 5 input functions                    ; 131       ;
+;     -- 4 input functions                    ; 102       ;
+;     -- <=3 input functions                  ; 564       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 166       ;
+; Dedicated logic registers                   ; 173       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 38        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 1         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 145       ;
-; Total fan-out                               ; 3566      ;
-; Average fan-out                             ; 3.18      ;
+; Maximum fan-out                             ; 152       ;
+; Total fan-out                               ; 3631      ;
+; Average fan-out                             ; 3.17      ;
 +---------------------------------------------+-----------+
 
 
@@ -246,7 +244,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                           ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |connect4                                    ; 879 (2)             ; 166 (0)                   ; 0                 ; 1          ; 38   ; 0            ; |connect4                                                                                                                                     ; connect4            ; work         ;
+; |connect4                                    ; 896 (5)             ; 173 (0)                   ; 0                 ; 1          ; 38   ; 0            ; |connect4                                                                                                                                     ; connect4            ; work         ;
 ;    |Ganador:ganador_inst|                    ; 83 (83)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|Ganador:ganador_inst                                                                                                                ; Ganador             ; work         ;
 ;    |VGA:vga_inst|                            ; 625 (0)             ; 21 (0)                    ; 0                 ; 1          ; 0    ; 0            ; |connect4|VGA:vga_inst                                                                                                                        ; VGA                 ; work         ;
 ;       |RGB_Controller:rgbCtrl|               ; 594 (115)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl                                                                                                 ; RGB_Controller      ; work         ;
@@ -268,7 +266,8 @@ https://fpgasoftware.intel.com/eula.
 ;    |connect4_counter:comb_14|                ; 40 (40)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|connect4_counter:comb_14                                                                                                            ; connect4_counter    ; work         ;
 ;    |connect4_fsm:fsm_inst|                   ; 18 (18)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|connect4_fsm:fsm_inst                                                                                                               ; connect4_fsm        ; work         ;
 ;    |turnos:turnoJ1_inst|                     ; 10 (10)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|turnos:turnoJ1_inst                                                                                                                 ; turnos              ; work         ;
-;    |verificarJugador:verificarJugador_inst|  ; 101 (101)           ; 92 (92)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|verificarJugador:verificarJugador_inst                                                                                              ; verificarJugador    ; work         ;
+;    |turnos:turnoJ2_inst|                     ; 10 (10)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |connect4|turnos:turnoJ2_inst                                                                                                                 ; turnos              ; work         ;
+;    |verificarJugador:verificarJugador_inst|  ; 105 (105)           ; 92 (92)                   ; 0                 ; 0          ; 0    ; 0            ; |connect4|verificarJugador:verificarJugador_inst                                                                                              ; verificarJugador    ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -309,25 +308,18 @@ Encoding Type:  One-Hot
 +-----------------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+--------------------+------------------+-----------------+-----------------+--------------------+----------------+-----------------------+------------+--------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; turnos:turnoJ2_inst|jugada             ; Merged with turnos:turnoJ1_inst|jugada      ;
-; turnos:turnoJ2_inst|regDer             ; Merged with turnos:turnoJ1_inst|regDer      ;
-; turnos:turnoJ2_inst|regIzq             ; Merged with turnos:turnoJ1_inst|regIzq      ;
-; turnos:turnoJ2_inst|regEnt             ; Merged with turnos:turnoJ1_inst|regEnt      ;
-; turnos:turnoJ2_inst|btnEnt_prev        ; Merged with turnos:turnoJ1_inst|btnEnt_prev ;
-; turnos:turnoJ2_inst|btnDer_prev        ; Merged with turnos:turnoJ1_inst|btnDer_prev ;
-; turnos:turnoJ2_inst|btnIzq_prev        ; Merged with turnos:turnoJ1_inst|btnIzq_prev ;
-; connect4_fsm:fsm_inst|state~4          ; Lost fanout                                 ;
-; connect4_fsm:fsm_inst|state~5          ; Lost fanout                                 ;
-; connect4_fsm:fsm_inst|state~6          ; Lost fanout                                 ;
-; connect4_fsm:fsm_inst|state~7          ; Lost fanout                                 ;
-; connect4_fsm:fsm_inst|state~8          ; Lost fanout                                 ;
-; Total Number of Removed Registers = 12 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; connect4_fsm:fsm_inst|state~4         ; Lost fanout        ;
+; connect4_fsm:fsm_inst|state~5         ; Lost fanout        ;
+; connect4_fsm:fsm_inst|state~6         ; Lost fanout        ;
+; connect4_fsm:fsm_inst|state~7         ; Lost fanout        ;
+; connect4_fsm:fsm_inst|state~8         ; Lost fanout        ;
+; Total Number of Removed Registers = 5 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -335,12 +327,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 166   ;
+; Total registers                              ; 173   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 144   ;
+; Number of registers using Asynchronous Clear ; 151   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 116   ;
+; Number of registers using Clock Enable       ; 128   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -361,7 +353,8 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |connect4|turnos:turnoJ1_inst|regDer                            ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; Yes        ; |connect4|verificarJugador:verificarJugador_inst|posicionReg[3] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |connect4|turnos:turnoJ2_inst|regDer                            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; Yes        ; |connect4|verificarJugador:verificarJugador_inst|posicionReg[1] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|color.BLUE        ;
 ; 52:1               ; 2 bits    ; 68 LEs        ; 58 LEs               ; 10 LEs                 ; No         ; |connect4|VGA:vga_inst|RGB_Controller:rgbCtrl|Mux6              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
@@ -488,35 +481,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "connect4_fsm:fsm_inst"                                                                          ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; inicio_juego     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; random_valido_J1 ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; random_valido_J2 ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; enTurno1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; enTurno2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------+
-; Port Connectivity Checks: "turnos:turnoJ2_inst" ;
-+--------+-------+----------+---------------------+
-; Port   ; Type  ; Severity ; Details             ;
-+--------+-------+----------+---------------------+
-; enable ; Input ; Info     ; Stuck at VCC        ;
-+--------+-------+----------+---------------------+
-
-
-+-------------------------------------------------+
-; Port Connectivity Checks: "turnos:turnoJ1_inst" ;
-+--------+-------+----------+---------------------+
-; Port   ; Type  ; Severity ; Details             ;
-+--------+-------+----------+---------------------+
-; enable ; Input ; Info     ; Stuck at VCC        ;
-+--------+-------+----------+---------------------+
++----------------------------------------------------+
+; Port Connectivity Checks: "connect4_fsm:fsm_inst"  ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; inicio_juego     ; Input ; Info     ; Stuck at VCC ;
+; random_valido_J1 ; Input ; Info     ; Stuck at VCC ;
+; random_valido_J2 ; Input ; Info     ; Stuck at VCC ;
++------------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -524,28 +497,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 166                         ;
-;     CLR               ; 38                          ;
-;     ENA CLR           ; 106                         ;
+; arriav_ff             ; 173                         ;
+;     CLR               ; 33                          ;
+;     ENA CLR           ; 118                         ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 880                         ;
+; arriav_lcell_comb     ; 897                         ;
 ;     arith             ; 358                         ;
 ;         0 data inputs ; 61                          ;
 ;         1 data inputs ; 188                         ;
 ;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 60                          ;
 ;         4 data inputs ; 36                          ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 482                         ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 92                          ;
-;         3 data inputs ; 99                          ;
-;         4 data inputs ; 47                          ;
-;         5 data inputs ; 134                         ;
-;         6 data inputs ; 102                         ;
+;     normal            ; 503                         ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 93                          ;
+;         3 data inputs ; 103                         ;
+;         4 data inputs ; 66                          ;
+;         5 data inputs ; 131                         ;
+;         6 data inputs ; 99                          ;
 ;     shared            ; 36                          ;
 ;         0 data inputs ; 6                           ;
 ;         1 data inputs ; 20                          ;
@@ -554,7 +525,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 38                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.20                       ;
-; Average LUT depth     ; 11.77                       ;
+; Average LUT depth     ; 11.69                       ;
 +-----------------------+-----------------------------+
 
 
@@ -563,7 +534,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -573,125 +544,125 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed May  7 06:34:09 2025
+    Info: Processing started: Wed May  7 09:30:51 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect4 -c connect4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_test.sv
-    Info (12023): Found entity 1: VGA_test File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA_test.sv Line: 1
+    Info (12023): Found entity 1: VGA_test File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA_test.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_tb.sv
-    Info (12023): Found entity 1: VGA_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA_tb.sv Line: 3
+    Info (12023): Found entity 1: VGA_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/vgaController.sv Line: 1
+    Info (12023): Found entity 1: vgaController File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/vgaController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: VGA File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 1
+    Info (12023): Found entity 1: VGA File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verificarjugador.sv
-    Info (12023): Found entity 1: verificarJugador File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv Line: 1
+    Info (12023): Found entity 1: verificarJugador File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_verificarjugador.sv
-    Info (12023): Found entity 1: tb_verificarJugador File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/tb_verificarJugador.sv Line: 3
+    Info (12023): Found entity 1: tb_verificarJugador File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/tb_verificarJugador.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rgb_controller.sv
-    Info (12023): Found entity 1: RGB_Controller File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 1
+    Info (12023): Found entity 1: RGB_Controller File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lfsr_3bit.sv
-    Info (12023): Found entity 1: lfsr_3bit File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/lfsr_3bit.sv Line: 1
+    Info (12023): Found entity 1: lfsr_3bit File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/lfsr_3bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file genrect.sv
-    Info (12023): Found entity 1: genRect File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/genRect.sv Line: 1
+    Info (12023): Found entity 1: genRect File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/genRect.sv Line: 1
 Info (12021): Found 1 design units, including 0 entities, in source file connect4_tipos.sv
-    Info (12022): Found design unit 1: connect4_tipos (SystemVerilog) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_tipos.sv Line: 5
+    Info (12022): Found design unit 1: connect4_tipos (SystemVerilog) File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_tipos.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file connect4_fsm.sv
-    Info (12023): Found entity 1: connect4_fsm File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_fsm.sv Line: 3
+    Info (12023): Found entity 1: connect4_fsm File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_fsm.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file connect4_counter_tb.sv
-    Info (12023): Found entity 1: connect4_counter_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter_tb.sv Line: 3
+    Info (12023): Found entity 1: connect4_counter_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file connect4_counter.sv
-    Info (12023): Found entity 1: connect4_counter File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter.sv Line: 1
+    Info (12023): Found entity 1: connect4_counter File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.sv
-    Info (12023): Found entity 1: clockDivider File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/clockDivider.sv Line: 1
+    Info (12023): Found entity 1: clockDivider File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/clockDivider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file connect4.sv
-    Info (12023): Found entity 1: connect4 File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 1
+    Info (12023): Found entity 1: connect4 File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file turnos.sv
-    Info (12023): Found entity 1: turnos File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/turnos.sv Line: 1
+    Info (12023): Found entity 1: turnos File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/turnos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file jugadoractual.sv
-    Info (12023): Found entity 1: jugadorActual File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/jugadorActual.sv Line: 1
+    Info (12023): Found entity 1: jugadorActual File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/jugadorActual.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ganador.sv
-    Info (12023): Found entity 1: Ganador File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv Line: 4
+    Info (12023): Found entity 1: Ganador File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file ganador_tb.sv
-    Info (12023): Found entity 1: Ganador_tb File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador_tb.sv Line: 3
+    Info (12023): Found entity 1: Ganador_tb File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/Ganador_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file winnerscreen.sv
-    Info (12023): Found entity 1: WinnerScreen File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at connect4.sv(87): instance has no name File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 87
+    Info (12023): Found entity 1: WinnerScreen File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at connect4.sv(87): instance has no name File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 87
 Info (12127): Elaborating entity "connect4" for the top level hierarchy
-Info (12128): Elaborating entity "verificarJugador" for hierarchy "verificarJugador:verificarJugador_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 43
-Info (12128): Elaborating entity "Ganador" for hierarchy "Ganador:ganador_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 52
-Info (12128): Elaborating entity "turnos" for hierarchy "turnos:turnoJ1_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 67
-Info (12128): Elaborating entity "connect4_counter" for hierarchy "connect4_counter:comb_14" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 87
-Warning (10230): Verilog HDL assignment warning at connect4_counter.sv(17): truncated value with size 32 to match size of target (29) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter.sv Line: 17
-Info (12128): Elaborating entity "connect4_fsm" for hierarchy "connect4_fsm:fsm_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 114
-Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 131
-Info (12128): Elaborating entity "clockDivider" for hierarchy "VGA:vga_inst|clockDivider:clkDiv" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 17
-Info (12128): Elaborating entity "vgaController" for hierarchy "VGA:vga_inst|vgaController:vgaCont" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 19
-Info (12128): Elaborating entity "RGB_Controller" for hierarchy "VGA:vga_inst|RGB_Controller:rgbCtrl" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 32
-Info (12128): Elaborating entity "WinnerScreen" for hierarchy "VGA:vga_inst|RGB_Controller:rgbCtrl|WinnerScreen:winnerScreen_inst" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at WinnerScreen.sv(13): truncated value with size 32 to match size of target (10) File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv Line: 13
+Info (12128): Elaborating entity "verificarJugador" for hierarchy "verificarJugador:verificarJugador_inst" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 43
+Info (12128): Elaborating entity "Ganador" for hierarchy "Ganador:ganador_inst" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 52
+Info (12128): Elaborating entity "turnos" for hierarchy "turnos:turnoJ1_inst" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 67
+Info (12128): Elaborating entity "connect4_counter" for hierarchy "connect4_counter:comb_14" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at connect4_counter.sv(16): truncated value with size 32 to match size of target (29) File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4_counter.sv Line: 16
+Info (12128): Elaborating entity "connect4_fsm" for hierarchy "connect4_fsm:fsm_inst" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 114
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga_inst" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 131
+Info (12128): Elaborating entity "clockDivider" for hierarchy "VGA:vga_inst|clockDivider:clkDiv" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 18
+Info (12128): Elaborating entity "vgaController" for hierarchy "VGA:vga_inst|vgaController:vgaCont" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 20
+Info (12128): Elaborating entity "RGB_Controller" for hierarchy "VGA:vga_inst|RGB_Controller:rgbCtrl" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/VGA.sv Line: 33
+Info (12128): Elaborating entity "WinnerScreen" for hierarchy "VGA:vga_inst|RGB_Controller:rgbCtrl|WinnerScreen:winnerScreen_inst" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at WinnerScreen.sv(13): truncated value with size 32 to match size of target (10) File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/WinnerScreen.sv Line: 13
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Mod0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 45
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 42
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
-Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 45
-Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 45
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Mod0" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div1" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA:vga_inst|RGB_Controller:rgbCtrl|Div0" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 37
+Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
+Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Mod0" with the following parameter: File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
-    Info (12023): Found entity 1: lpm_divide_k3m File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_k3m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_k3m File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_k3m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_nlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_kve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 42
-Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 42
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_kve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 38
+Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div1" with the following parameter: File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lbm.tdf
-    Info (12023): Found entity 1: lpm_divide_lbm File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_lbm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_lbm File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_lbm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_rlh File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_rlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/sign_div_unsign_rlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
-    Info (12023): Found entity 1: alt_u_div_sve File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_sve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
-Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" with the following parameter: File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 41
+    Info (12023): Found entity 1: alt_u_div_sve File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/alt_u_div_sve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 37
+Info (12133): Instantiated megafunction "VGA:vga_inst|RGB_Controller:rgbCtrl|lpm_divide:Div0" with the following parameter: File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/RGB_Controller.sv Line: 37
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_hbm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/db/lpm_divide_hbm.tdf Line: 25
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 5 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/output_files/connect4.map.smsg
+Info (144001): Generated suppressed messages file C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/output_files/connect4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "btnIzqJ2" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
-    Warning (15610): No output dependent on input pin "btnDerJ2" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
-    Warning (15610): No output dependent on input pin "btnEntJ2" File: D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
-Info (21057): Implemented 1010 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "btnIzqJ2" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
+    Warning (15610): No output dependent on input pin "btnDerJ2" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
+    Warning (15610): No output dependent on input pin "btnEntJ2" File: C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/connect4.sv Line: 4
+Info (21057): Implemented 1028 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 971 logic cells
+    Info (21061): Implemented 989 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4898 megabytes
-    Info: Processing ended: Wed May  7 06:34:26 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Wed May  7 09:31:00 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/output_files/connect4.map.smsg.
+The suppressed messages can be found in C:/MPointer/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/output_files/connect4.map.smsg.
 
 

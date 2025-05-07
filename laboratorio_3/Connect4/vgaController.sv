@@ -17,16 +17,16 @@ module vgaController #(
         output logic [9:0] x, y
     );
 
-   // Inicialización de senales
+
 	initial begin
 		x = 0;
 		y = 0;
 	end
 
-	 //Conteo de la posicion del pixel
+	 //aquí se empieza a contar por pixeles
 	always @(posedge vgaclk) begin
 		x++;
-		if (x == HMAX) begin //Cuando llega al maximo se reinicia y aumenta el vertical(y)
+		if (x == HMAX) begin //cuando llega al maximo empieza desde arriba
 			x = 0;
 			y++;
 			if (y == VMAX) 
@@ -34,7 +34,7 @@ module vgaController #(
 		end
 	end
 
-    // Verifica que esté dentro de la zona utilizable
+    // se hace la prueba de que si esté en la zona
     wire hsync_zone = (x >= HACTIVE + HFP) && (x < HACTIVE + HFP + HSYN);
     wire vsync_zone = (y >= VACTIVE + VFP) && (y < VACTIVE + VFP + VSYN);
 
