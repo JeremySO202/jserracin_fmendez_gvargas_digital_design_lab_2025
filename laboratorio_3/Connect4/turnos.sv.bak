@@ -1,0 +1,3 @@
+module turnos(
+	input logic btnIzq, btnDer, btnEnt
+	output);

@@ -1,0 +1,65 @@
+module verificarJugador(
+    input logic clk, reset, enable,
+    input logic btnIzq, btnDer, btnEnt, // Entradas crudas de los botones (ya con debounce)
+    input logic jugador, // Jugador actual
+    output logic [6:0] posicion, // Posición actual del jugador (entrada)
+    output logic [5:0][6:0] tablero, // Estado actual del tablero (entrada)
+    output logic [5:0][6:0] fichas, // Estado actual de las fichas (entrada)
+    output logic FT // Señal de turno finalizado
+);
+
+    reg [6:0] posicionReg; // Posición actual del jugador (salida)
+    reg logic [5:0][6:0] tableroReg; // Estado actual del tablero (salida)
+    reg [5:0][6:0] fichasReg; // Estado actual de las fichas (salida)
+
+    assign posicion = posicionReg;
+    assign tablero = tableroReg;
+    assign fichas = fichasReg;
+
+    // Lógica principal
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            // Inicialización de salidas
+            posicionReg <= 7'b1000000;
+            tableroReg <= '{default: 0};
+            fichasReg <= '{default: 0};
+            FT <= 0;
+        end else begin
+            if (enable) begin
+                if (btnIzq) begin
+                    // Mover a la izquierda
+                    if (posicionReg[6]) begin
+                        posicion <= 7'b0000001; // Límite izquierdo
+                    end else begin
+                        posicionReg <= posicionReg << 1;
+                    end
+                end else if (btnDer) begin
+                    // Mover a la derecha
+                    if (posicionReg[0]) begin
+                        posicionReg <= 7'b1000000; // Límite derecho
+                    end else begin
+                        posicionReg <= posicionReg >> 1;
+                    end
+                end else if (btnEnt) begin
+                    // Colocar ficha en el tablero
+                    for (int j = 0; j < 7; j++) begin
+                        if (posicionReg[j]) begin
+                            for (int i = 0; i < 6; i++) begin
+                                if (tableroReg[i][j] == 0) begin
+                                    tableroReg[i][j] <= 1; // Actualizar tablero
+                                    fichasReg[i][j] <= jugador; // Actualizar fichas
+                                    FT <= 1; // Turno finalizado
+                                    break;
+                                end
+                            end
+                        end
+                    end
+                end else begin
+                    FT <= 0; // Ningún botón presionado
+                end
+            end
+        end
+    end
+
+endmodule
+

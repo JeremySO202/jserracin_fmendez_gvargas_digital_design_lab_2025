@@ -1,0 +1,17 @@
+
+State Machine - |connect4_fsm|state
+Name state.FIN_JUEGO state.GANADOR_J2 state.RANDOM_J2 state.TIEMPO_J2 state.VERIFICAR_J2 state.TURNO_J2 state.GANADOR_J1 state.RANDOM_J1 state.TIEMPO_J1 state.VERIFICAR_J1 state.TURNO_J1 state.JUGADOR_INICIAL state.MENU state.INICIO 
+state.INICIO 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.MENU 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.JUGADOR_INICIAL 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.TURNO_J1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.VERIFICAR_J1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.TIEMPO_J1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.RANDOM_J1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.GANADOR_J1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.TURNO_J2 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.VERIFICAR_J2 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.TIEMPO_J2 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.RANDOM_J2 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.GANADOR_J2 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.FIN_JUEGO 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
