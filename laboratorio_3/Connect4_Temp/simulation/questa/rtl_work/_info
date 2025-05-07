@@ -1,0 +1,79 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/simulation/questa
+T_opt
+!s110 1746037370
+V?^AQ3C[[i;D[EYc7^cak:1
+04 19 4 work tb_verificarJugador fast 0
+=1-e0d55eabcbc1-68126a7a-1dd-35c0
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vtb_verificarJugador
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/tb_verificarJugador.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1746037369
+!i10b 1
+!s100 MFjZ2C1T@?[gMF>EWAA;j2
+IEZI^bU=BZ9bPaZZ[fFig:1
+S1
+R1
+w1746036952
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/tb_verificarJugador.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/tb_verificarJugador.sv
+!i122 1
+L0 3 76
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1746037369.000000
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/tb_verificarJugador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/tb_verificarJugador.sv|
+!i113 0
+Z6 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 !s92 -sv -work work +incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+ntb_verificar@jugador
+vverificarJugador
+2D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv
+R3
+!s110 1746037368
+!i10b 1
+!s100 7PkL>B8gNS2LAR5m?h[fT0
+IC=AH]33NX2W:T[>ozzR8D2
+S1
+R1
+w1746037172
+8D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv
+FD:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv
+!i122 0
+L0 1 61
+R4
+R5
+r1
+!s85 0
+31
+!s108 1746037368.000000
+!s107 D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4|D:/jserracin_fmendez_gvargas_digital_design_lab_2025/laboratorio_3/Connect4/verificarJugador.sv|
+!i113 0
+R6
+R7
+R2
+nverificar@jugador
