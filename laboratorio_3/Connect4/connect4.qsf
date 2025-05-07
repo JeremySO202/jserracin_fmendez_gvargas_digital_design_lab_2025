@@ -111,12 +111,8 @@ set_location_assignment PIN_AA30 -to reset
 set_location_assignment PIN_AJ22 -to sync_b
 set_location_assignment PIN_AK21 -to vgaclk
 set_location_assignment PIN_AK18 -to vsync
-set_location_assignment PIN_AC22 -to jugador
-set_location_assignment PIN_AA24 -to FT
 set_global_assignment -name SYSTEMVERILOG_FILE Ganador.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Ganador_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE WinnerScreen.sv
-set_location_assignment PIN_Y27 -to ganador
-set_location_assignment PIN_AC23 -to finJuego1
-set_location_assignment PIN_AB23 -to finJuego2
+set_location_assignment PIN_AB30 -to jugadorIni
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -120,30 +120,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "jugador",
-					"strict" : false
-				},
-				{
-					"name" : "FT",
-					"strict" : false
-				},
-				{
-					"name" : "ganador",
-					"strict" : false
-				},
-				{
-					"name" : "enGanador",
-					"strict" : false
-				},
-				{
-					"name" : "finJuego1",
-					"strict" : false
-				},
-				{
-					"name" : "finJuego2",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -152,11 +128,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "btnDerJ1",
+					"name" : "jugadorIni",
 					"strict" : false
 				},
 				{
 					"name" : "btnIzqJ1",
+					"strict" : false
+				},
+				{
+					"name" : "btnDerJ1",
 					"strict" : false
 				},
 				{

@@ -2,11 +2,12 @@ module connect4(
     input logic clk, reset,
     input logic btnIzqJ1, btnDerJ1, btnEntJ1,
     input logic btnIzqJ2, btnDerJ2, btnEntJ2,
+	 input logic jugadorIni,
     output logic vgaclk, hsync, vsync, sync_b, blank_b,
-    output logic [7:0] r, g, b,
-    output logic jugador, FT, ganador, enGanador, finJuego1, finJuego2
+    output logic [7:0] r, g, b
 );
 
+	logic jugador, FT, ganador, enGanador, finJuego1, finJuego2, timeOut;
 
     // Tablero y fichas compartidos
     logic [5:0][6:0] tablero;
@@ -79,23 +80,29 @@ module connect4(
         .jugada(jugada2)
     );
 
+    connect4_counter (
+        .clk(clk),
+        .rst(enGanador | reset),
+        .done(timeOut)
+    );
+
     
 
     connect4_fsm fsm_inst (
         .clk(clk),
         .rst(reset),
         .inicio_juego(1'b1),
-        .num_jugador(1'b0),
+        .num_jugador(jugadorIni),
         .t_J1(jugada1),
         .valido_J1(FT),
-        .gano_J1(ganador), //hay que ver esta parte pq si él solo manda el jugador en el que está por el turno entonces si se puede dejar así
-        .tiempo_terminado_J1(1'b0),
-        .random_valido_J1(1'b0),
+        .gano_J1(ganador), 
+        .tiempo_terminado_J1(timeOut),
+        .random_valido_J1(1'b1),
         .t_J2(jugada2),
         .valido_J2(FT),
         .gano_J2(ganador),
-        .tiempo_terminado_J2(1'b0),
-        .random_valido_J2(1'b0),
+        .tiempo_terminado_J2(timeOut),
+        .random_valido_J2(1'b1),
         .jugador(jugador),
         .enTurno1(enTurno1),
         .enVerificar1(enVerificarJ1),

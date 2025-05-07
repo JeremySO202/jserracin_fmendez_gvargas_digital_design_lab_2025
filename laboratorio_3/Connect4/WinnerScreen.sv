@@ -10,7 +10,7 @@ module WinnerScreen (
 
     always_comb begin
         // Posición superior izquierda donde empieza la palabra
-        cursorX = columna * 92;
+        cursorX = columna * 92 + 10;
         cursorY = 0;
 
         show = 0;

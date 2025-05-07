@@ -52,7 +52,7 @@ module RGB_Controller(
 		// Dibujar el cursor
 		else if (y < 29 && columna >= 0 && columna < 7 && posicion[columna]) begin
             
-			color = showWinner ? (jugador ? RED : BLUE) : WHITE; // Cursor
+			color = showWinner ? WHITE : (jugador ? RED : BLUE); // Cursor
 		end
 
         // Asignar los valores RGB según el color
